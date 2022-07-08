@@ -31,7 +31,7 @@ public class Peep extends AbstractEntity {
 	@NotNull
 	@Past
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date instantationMoment;
+	protected Date moment;
 
 	@NotBlank
 	@Length(max = 100)
