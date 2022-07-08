@@ -67,7 +67,7 @@ public class FineDish extends AbstractEntity {
 	@URL
 	protected String info;
 
-	protected boolean draftMode;
+	protected boolean draft;
 
 	// Derived attributes -----------------------------------------------------
 
