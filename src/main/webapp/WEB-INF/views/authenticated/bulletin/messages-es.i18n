@@ -1,0 +1,7 @@
+authenticated.bulletin.moment=Momento
+authenticated.bulletin.heading=Cabecera
+authenticated.bulletin.text=Texto
+authenticated.bulletin.critical=Crítico
+authenticated.bulletin.critical.true=Si
+authenticated.bulletin.critical.false=No
+authenticated.bulletin.link=Link
