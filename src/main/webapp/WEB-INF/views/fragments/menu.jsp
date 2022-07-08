@@ -22,6 +22,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.greortsol" action="https://es.nttdata.com/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.any">			
+			<acme:menu-suboption code="master.menu.any.peep.list-recent" action="/any/peep/list-recent"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">			
 			<acme:menu-suboption code="master.menu.authenticated.bulletin.list-recent" action="/authenticated/bulletin/list-recent"/>
 		</acme:menu-option>
