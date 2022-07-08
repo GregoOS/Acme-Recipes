@@ -65,7 +65,7 @@ public class FineDish extends AbstractEntity {
 	protected Date endDate;
 
 	@URL
-	protected String info;
+	protected String link;
 
 	protected boolean draft;
 
