@@ -1,0 +1,8 @@
+any.element.name=Nombre
+any.element.code=Código
+any.element.description=Descrición
+any.element.price=Precio
+any.element.link=Enlace
+any.element.type=Tipo
+any.element.type.ingredient=Ingrediente
+any.element.type.utensil=Utensilio

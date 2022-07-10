@@ -24,6 +24,8 @@ master.menu.anonymous.favourite-link.greortsol = 30271286C: Ortega Soldado, Greg
 
 master.menu.any = Cualquiera
 master.menu.any.peep.list-recent = Listar peeps recientes
+master.menu.any.element.list= Listar elementos
+
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Autentificado
