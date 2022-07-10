@@ -20,6 +20,11 @@ master.menu.sign-out = Sign out
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link.greortsol = 30271286C: Ortega Soldado, Gregorio
 
+# master.menu.any #######################################################
+
+master.menu.any = Any
+master.menu.any.peep.list-recent = List recent peeps
+
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Authenticated
