@@ -44,6 +44,9 @@ master.menu.administrator.shut-down = Parar el sistema
 
 master.menu.chef = Chef
 master.menu.chef.element.list = Listar mis elementos
+master.menu.chef.finedish.list=Listar mis platos
+master.menu.chef.finedish.listproposed=Listar mis platos propuestos
+master.menu.chef.memorandum.list=Listar mis memorandums
 
 # master.menu.epicure ##########################################################
 
