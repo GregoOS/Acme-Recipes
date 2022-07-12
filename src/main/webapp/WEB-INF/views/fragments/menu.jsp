@@ -32,6 +32,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
+			<acme:menu-suboption code="master.menu.chef.element.list" action="/chef/element/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
