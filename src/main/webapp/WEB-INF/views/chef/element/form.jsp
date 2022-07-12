@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:input-textbox code="chef.element.name" path="name"/>
-	<acme:input-textbox code="chef.element.code" path="code" placeholder="ABC-123-D"/>
+	<acme:input-textbox code="chef.element.code" path="code" placeholder="AA:AAA-111"/>
 	<acme:input-textarea code="chef.element.description" path="description"/>
 	<acme:input-money code="chef.element.retailprice" path="retailPrice"/>
 	<acme:input-url code="chef.element.link" path="link"/>
