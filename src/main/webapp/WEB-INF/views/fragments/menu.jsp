@@ -33,6 +33,9 @@
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
 			<acme:menu-suboption code="master.menu.chef.element.list" action="/chef/element/list"/>
+			<acme:menu-suboption code="master.menu.chef.finedish.list" action="/chef/fine-dish/list"/>
+			<acme:menu-suboption code="master.menu.chef.finedish.listproposed" action="/chef/fine-dish/list-proposed"/>
+			<acme:menu-suboption code="master.menu.chef.memorandum.list" action="/chef/memorandum/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
