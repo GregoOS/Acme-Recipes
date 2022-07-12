@@ -1,0 +1,9 @@
+chef.element.name=Nombre
+chef.element.code=Código
+chef.element.description=Descripción
+chef.element.retailprice=Precio
+chef.element.link=Link
+chef.element.type=Tipo
+chef.element.type.utensil=Utensilio
+chef.element.type.ingredient=Ingrediente
+chef.element.published=Publicado

@@ -43,6 +43,7 @@ master.menu.administrator.shut-down = Parar el sistema
 # master.menu.chef ########################################################
 
 master.menu.chef = Chef
+master.menu.chef.element.list = Listar mis elementos
 
 # master.menu.epicure ##########################################################
 
