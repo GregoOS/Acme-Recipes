@@ -30,6 +30,6 @@ public class Chef extends UserRole {
 	protected String assertion;
 
 	@URL
-	protected String info;
+	protected String link;
 
 }

@@ -1,0 +1,25 @@
+epicure.finedish.status=Status
+epicure.finedish.code=Código
+epicure.finedish.request=Petición
+epicure.finedish.budget=Presupuesto
+epicure.finedish.creation-date=Fecha de creación
+epicure.finedish.startdate=Fecha de comienzo
+epicure.finedish.enddate=Fecha de fin
+epicure.finedish.link=Enlace
+epicure.finedish.chefdata=Datos del chef
+epicure.finedish.chef.name=Nombre
+epicure.finedish.chef.surname=Apellido
+epicure.finedish.chef.email=Correo
+epicure.finedish.chef.organisation=Organización
+epicure.finedish.chef.link=Enlace
+epicure.finedish.memorandums=Memorandums
+epicure.finedish.button.update=Actualizar
+epicure.finedish.button.delete=Borrar
+epicure.finedish.button.publish=Publicar
+epicure.finedish.button.create=Crear
+
+epicure.finedish.error.startsearly=Tiene que empezar en un mes a partir del día de hoy
+epicure.finedish.error.endsearly=Tiene que durar un mes mínimo
+epicure.finedish.error.codeduplicated=Código duplicado
+epicure.finedish.error.notacceptedcurrency=La divisa no es correcta
+epicure.finedish.error.negativebudget=El presupuesto tiene que ser positivo
