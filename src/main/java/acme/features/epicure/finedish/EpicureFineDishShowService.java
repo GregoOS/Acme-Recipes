@@ -1,4 +1,4 @@
-package acme.features.chef.finedish;
+package acme.features.epicure.finedish;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,36 +7,34 @@ import acme.entities.finedish.FineDish;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
-import acme.roles.Chef;
+import acme.roles.Epicure;
 
 @Service
-public class ChefFineDishShowService implements AbstractShowService<Chef, FineDish> {
+public class EpicureFineDishShowService implements AbstractShowService<Epicure, FineDish> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected ChefFineDishRepository repository;
+	protected EpicureFineDishRepository repository;
 
 	@Override
 	public boolean authorise(final Request<FineDish> request) {
 		assert request != null;
+		boolean res;
 
 		final int epicureId = request.getPrincipal().getActiveRoleId();
 		final int fineDishId = request.getModel().getInteger("id");
-		final FineDish fineDish = this.repository.findOneFineDishById(fineDishId);
-		final int fineDishChefId = fineDish.getChef().getId();
+		final int fineDishInventorId = this.repository.findOneFineDishById(fineDishId).getEpicure().getId();
 
-		return epicureId == fineDishChefId && !fineDish.isDraft();
+		res = epicureId == fineDishInventorId;
+		return res;
 	}
 
 	@Override
 	public FineDish findOne(final Request<FineDish> request) {
 		assert request != null;
 
-		int id;
-
-		id = request.getModel().getInteger("id");
-
+		final int id = request.getModel().getInteger("id");
 		return this.repository.findOneFineDishById(id);
 	}
 
@@ -46,16 +44,16 @@ public class ChefFineDishShowService implements AbstractShowService<Chef, FineDi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "startDate", "endDate", "link");
+		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "startDate", "endDate","link", "draft");
 
 		final int masterId = request.getModel().getInteger("id");
 		model.setAttribute("masterId", masterId);
 
-		model.setAttribute("epicureName", entity.getEpicure().getIdentity().getName());
-		model.setAttribute("epicureSurname", entity.getEpicure().getIdentity().getSurname());
-		model.setAttribute("epicureEmail", entity.getEpicure().getIdentity().getEmail());
-		model.setAttribute("epicureOrganisation", entity.getEpicure().getOrganisation());
-		model.setAttribute("epicureAssertion", entity.getEpicure().getAssertion());
-		model.setAttribute("epicureLink", entity.getEpicure().getLink());
+		model.setAttribute("chefName", entity.getChef().getIdentity().getName());
+		model.setAttribute("chefSurname", entity.getChef().getIdentity().getSurname());
+		model.setAttribute("chefEmail", entity.getChef().getIdentity().getEmail());
+		model.setAttribute("chefOrganisation", entity.getChef().getOrganisation());
+		model.setAttribute("chefAssertion", entity.getChef().getAssertion());
+		model.setAttribute("chefLink", entity.getChef().getLink());
 	}
 }
