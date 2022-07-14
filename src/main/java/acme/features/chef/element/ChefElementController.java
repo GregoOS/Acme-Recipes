@@ -18,9 +18,25 @@ public class ChefElementController extends AbstractController<Chef, Element> {
 	@Autowired
 	protected ChefElementShowService show;
 
+	@Autowired
+	protected ChefElementCreateService create;
+
+	@Autowired
+	protected ChefElementUpdateService update;
+
+	@Autowired
+	protected ChefElementPublishService publish;
+
+	@Autowired
+	protected ChefElementDeleteService delete;
+
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.show);
 		super.addCommand("list", this.list);
+		super.addCommand("create", this.create);
+		super.addCommand("update", this.update);
+		super.addCommand("delete", this.delete);
+		super.addCommand("publish", "update", this.publish);
 	}
 }
