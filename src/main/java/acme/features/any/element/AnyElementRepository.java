@@ -15,7 +15,7 @@ public interface AnyElementRepository extends AbstractRepository {
 	@Query("select r from Recipe r where r.id = :masterId")
 	Recipe findOneRecipeById(int masterId);
 
-	@Query("select e from Element e where e.draf = false")
+	@Query("select e from Element e where e.draft = false")
 	Collection<Element> findElements();
 
 	@Query("select e from Element e where e.id = :id")

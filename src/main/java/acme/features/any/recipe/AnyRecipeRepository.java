@@ -21,7 +21,7 @@ public interface AnyRecipeRepository extends AbstractRepository{
 	@Query("select r from Recipe r where r.id = :id")
 	Recipe findRecipeById(int id);
 
-	@Query("select distinct(a.item) from Amount a where a.recipe.id = :id")
+	@Query("select distinct(a.element) from Amount a where a.recipe.id = :id")
 	List<Element> findElementsByRecipeId(int id);
 	
 	@Query("select a from Amount a where a.recipe.id = :id")
