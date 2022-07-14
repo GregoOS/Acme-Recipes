@@ -1,4 +1,4 @@
-package acme.features.chef.memorandum;
+package acme.features.epicure.memorandum;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,23 +7,23 @@ import acme.entities.memorandum.Memorandum;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
-import acme.roles.Chef;
+import acme.roles.Epicure;
 
 @Service
-public class ChefMemorandumShowService implements AbstractShowService<Chef,Memorandum>{
+public class EpicureMemorandumShowService implements AbstractShowService<Epicure,Memorandum>{
 	
 	@Autowired
-	protected ChefMemorandumRepository repository;
+	protected EpicureMemorandumRepository repository;
 	
 	@Override
 	public boolean authorise(final Request<Memorandum> request) {
 		assert request != null;
 		
-		final int chefId = request.getPrincipal().getActiveRoleId();
+		final int epicureId = request.getPrincipal().getActiveRoleId();
 		final int memorandumId = request.getModel().getInteger("id");
-		final int patronageChefId=this.repository.findChefIdByMemorandumId(memorandumId);
+		final int patronageEpicureId=this.repository.findEpicureIdByMemorandumId(memorandumId);
 		
-		return  chefId == patronageChefId; 
+		return  epicureId == patronageEpicureId; 
 	}
 
 	@Override

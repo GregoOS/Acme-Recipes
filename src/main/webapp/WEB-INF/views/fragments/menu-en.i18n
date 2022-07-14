@@ -51,6 +51,8 @@ master.menu.chef.memorandum.list=List my memorandums
 # master.menu.epicure ##########################################################
 
 master.menu.epicure = Epicure
+master.menu.epicure.finedish.list=List my fine dishes
+master.menu.epicure.memorandum.list=List my memorandums
 
 # master.menu.user-account ####################################################
 

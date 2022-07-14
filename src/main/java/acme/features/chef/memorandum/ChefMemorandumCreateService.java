@@ -54,7 +54,7 @@ public class ChefMemorandumCreateService implements AbstractCreateService<Chef, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "sequenceNumber", "report", "info");
+		request.unbind(entity, model, "sequenceNumber", "report", "link");
 
 		Integer masterId;
 

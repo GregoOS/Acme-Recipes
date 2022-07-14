@@ -51,6 +51,8 @@ master.menu.chef.memorandum.list=Listar mis memorandums
 # master.menu.epicure ##########################################################
 
 master.menu.epicure = Sibarita
+master.menu.epicure.finedish.list=Listar mis platos
+master.menu.epicure.memorandum.list=Listar mis memorandums
 
 # master.menu.user-account ####################################################
 

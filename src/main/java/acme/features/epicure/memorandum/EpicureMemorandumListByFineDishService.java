@@ -1,4 +1,4 @@
-package acme.features.chef.memorandum;
+package acme.features.epicure.memorandum;
 
 import java.util.Collection;
 
@@ -10,24 +10,24 @@ import acme.entities.memorandum.Memorandum;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
-import acme.roles.Chef;
+import acme.roles.Epicure;
 
 @Service
-public class ChefMemorandumListByFineDishService implements AbstractListService<Chef, Memorandum> {
+public class EpicureMemorandumListByFineDishService implements AbstractListService<Epicure, Memorandum> {
 
 	@Autowired
-	protected ChefMemorandumRepository repository;
+	protected EpicureMemorandumRepository repository;
 
 	@Override
 	public boolean authorise(final Request<Memorandum> request) {
 		assert request != null;
 
-		final int chefId = request.getPrincipal().getActiveRoleId();
+		final int epicureId = request.getPrincipal().getActiveRoleId();
 		final int fineDishId = request.getModel().getInteger("masterId");
 		final FineDish fineDish = this.repository.findOneFineDishById(fineDishId);
-		final int fineDishChefId = fineDish.getChef().getId();
+		final int fineDishEpicureId = fineDish.getEpicure().getId();
 		
-		return chefId == fineDishChefId && !fineDish.isDraft(); 
+		return epicureId == fineDishEpicureId && !fineDish.isDraft(); 
 	}
 
 	@Override
