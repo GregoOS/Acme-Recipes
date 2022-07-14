@@ -17,10 +17,10 @@ public interface AnyAmountRepository extends AbstractRepository {
 	@Query("select e from Element e")
 	Collection<Element> findAllElements();
 
-	@Query("select a from Amount a where a.Recipe.id = :id")
+	@Query("select a from Amount a where a.recipe.id = :id")
 	Collection<Amount> findManyAmountByRecipeId(int id);
 
-	@Query("select distinct(a.Element) from Amount a where a.recipe.id = :id")
+	@Query("select distinct(a.element) from Amount a where a.recipe.id = :id")
 	Collection<Element> findManyElementByRecipeId(int id);
 
 	@Query("select e from Element e where e.code = :code")
