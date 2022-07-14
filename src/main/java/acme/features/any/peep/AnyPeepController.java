@@ -12,18 +12,17 @@ import acme.framework.roles.Any;
 @Controller
 public class AnyPeepController extends AbstractController<Any, Peep> {
 
-	// Internal state ----------------------------- ----------------------------
-
 	@Autowired
 	protected AnyPeepListService listRecentService;
 	
-
-	// Constructors -----------------------------------------------------------
-
+	@Autowired
+	protected AnyPeepCreateService create;
 
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list-recent", "list", this.listRecentService);
+		super.addCommand("create", this.create);
+
 	}
 
 }

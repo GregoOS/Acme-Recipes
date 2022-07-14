@@ -3,3 +3,6 @@ any.peep.writer=Writer
 any.peep.text=Text
 any.peep.email=Email
 any.chirp.moment=Creation Moment
+any.peep.confirmation=Confirm
+any.peep.button.create=Create
+any.peep.form.spam=This can't contain spam

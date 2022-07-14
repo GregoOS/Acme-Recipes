@@ -10,5 +10,9 @@
 	<acme:input-textbox code="any.peep.text" path="text"/>
 	<acme:input-email code="any.peep.email" path="email"/>
 	
+	<jstl:if test="${command=='create'}">
+		<acme:input-checkbox code="any.peep.confirmation" path="confirmation"/>
+		<acme:submit code="any.peep.button.create" action="/any/peep/create"/>
+	</jstl:if>
 </acme:form>
 
