@@ -39,6 +39,8 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
+			<acme:menu-suboption code="master.menu.epicure.finedish.list" action="/epicure/fine-dish/list"/>
+			<acme:menu-suboption code="master.menu.epicure.memorandum.list" action="/epicure/memorandum/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

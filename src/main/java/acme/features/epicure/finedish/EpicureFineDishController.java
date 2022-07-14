@@ -38,7 +38,7 @@ public class EpicureFineDishController extends AbstractController<Epicure, FineD
 		
 		@PostConstruct
 		protected void initialise() {
-			super.addCommand("list-mine", "list", this.list);
+			super.addCommand("list", this.list);
 			super.addCommand("show", this.show);
 			super.addCommand("create", this.create);
 			super.addCommand("update", this.update);
