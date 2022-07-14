@@ -10,3 +10,7 @@
 	<acme:list-column code="chef.element.type" path="type" width="10%"/>
 	<acme:list-column code="chef.element.published" path="published" width="10%"/>
 </acme:list>
+
+<jstl:if test="${command == 'list'}">
+	<acme:button code="chef.element.button.create" action="/chef/element/create"/>
+</jstl:if>
