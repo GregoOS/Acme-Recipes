@@ -1,0 +1,9 @@
+authenticated.epicure.form.title.create = Become epicure
+authenticated.epicure.form.title.update = Update epicure
+
+authenticated.epicure.form.label.company=Company
+authenticated.epicure.form.label.assertion=Assertion
+authenticated.epicure.form.label.link=Link
+
+authenticated.epicure.form.button.create = Sign Up
+authenticated.epicure.form.button.update = Update
