@@ -13,6 +13,7 @@
 		<acme:menu-option code="master.menu.any">			
 			<acme:menu-suboption code="master.menu.any.peep.list-recent" action="/any/peep/list-recent"/>
 			<acme:menu-suboption code="master.menu.any.element.list" action="/any/element/list"/>
+			<acme:menu-suboption code="master.menu.any.useraccount.list" action="/any/user-account/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">			
@@ -53,6 +54,7 @@
 			<acme:menu-suboption code="master.menu.user-account.chef" action="/authenticated/chef/update" access="hasRole('Chef')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-epicure" action="/authenticated/epicure/create" access="!hasRole('Epicure')"/>
 			<acme:menu-suboption code="master.menu.user-account.epicure" action="/authenticated/epicure/update" access="hasRole('Epicure')"/>
+
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>

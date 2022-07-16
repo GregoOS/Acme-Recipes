@@ -50,7 +50,7 @@ master.menu.epicure.memorandum.list=Listar mis memorandums
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.chef = Datos de chef
+master.menu.user-account.chef = Actualizar datos de chef
 master.menu.user-account.become-chef = Hazte chef
-master.menu.user-account.epicure = Datos de sibarita
+master.menu.user-account.epicure =Actualizar datos de sibarita
 master.menu.user-account.become-epicure = Hazte sibarita
