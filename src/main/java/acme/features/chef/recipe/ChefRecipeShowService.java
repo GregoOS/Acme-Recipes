@@ -1,5 +1,4 @@
-package acme.features.any.recipe;
-
+package acme.features.chef.recipe;
 
 import java.util.List;
 
@@ -12,41 +11,34 @@ import acme.entities.recipe.Recipe;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
-import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
-
-
+import acme.roles.Chef;
 
 @Service
-public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
+public class ChefRecipeShowService implements AbstractShowService<Chef, Recipe> {
 
 	@Autowired
-	protected AnyRecipeRepository repository;
+	protected ChefRecipeRepository repository;
 
 	@Override
 	public boolean authorise(final Request<Recipe> request) {
+
 		assert request != null;
-		
+
 		int id;
-		Recipe Recipe;
-		boolean res;
-		
+		final Recipe recipe;
+
 		id = request.getModel().getInteger("id");
-		Recipe = this.repository.findRecipeById(id);
-		res=!Recipe.isDraft();
-		return res;
+		recipe = this.repository.findOneRecipeById(id);
+		return recipe != null && (request.isPrincipal(recipe.getChef()) || !recipe.isDraft());
 	}
-	
+
 	@Override
 	public Recipe findOne(final Request<Recipe> request) {
-	
 		assert request != null;
 
-		int id;
-		
-		id = request.getModel().getInteger("id");
-
-		return this.repository.findRecipeById(id);
+		final int id = request.getModel().getInteger("id");
+		return this.repository.findOneRecipeById(id);
 	}
 
 	@Override
@@ -76,7 +68,7 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 	}
 	
 	public Double getRetailPriceAmountByRecipeId(final int id) {
-		final List<Amount> amounts=this.repository.findAmountsByRecipeId(id);
+		final List<Amount> amounts=(List<Amount>) this.repository.findAmountsByRecipeId(id);
 		Double res=0.;
 		for(final Amount amount:amounts) {
 			if(amount.getElement().getType()==Type.INGREDIENT) {
@@ -89,4 +81,5 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 		
 		return res;
 	}
+
 }

@@ -10,20 +10,20 @@ import acme.framework.services.AbstractShowService;
 import acme.roles.Epicure;
 
 @Service
-public class EpicureMemorandumShowService implements AbstractShowService<Epicure,Memorandum>{
-	
+public class EpicureMemorandumShowService implements AbstractShowService<Epicure, Memorandum> {
+
 	@Autowired
 	protected EpicureMemorandumRepository repository;
-	
+
 	@Override
 	public boolean authorise(final Request<Memorandum> request) {
 		assert request != null;
-		
+
 		final int epicureId = request.getPrincipal().getActiveRoleId();
 		final int memorandumId = request.getModel().getInteger("id");
-		final int patronageEpicureId=this.repository.findEpicureIdByMemorandumId(memorandumId);
-		
-		return  epicureId == patronageEpicureId; 
+		final int fineDishEpicureId = this.repository.findEpicureIdByMemorandumId(memorandumId);
+
+		return epicureId == fineDishEpicureId;
 	}
 
 	@Override
@@ -39,12 +39,12 @@ public class EpicureMemorandumShowService implements AbstractShowService<Epicure
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		request.unbind(entity, model, "sequenceNumber", "creationTime", "report", "link");	
-	
+
+		request.unbind(entity, model, "sequenceNumber", "creationTime", "report", "link");
+
 		final int masterId = request.getModel().getInteger("id");
 		model.setAttribute("masterId", masterId);
-		
+
 		model.setAttribute("fineDishStatus", entity.getFineDish().getStatus());
 		model.setAttribute("fineDishRequest", entity.getFineDish().getRequest());
 		model.setAttribute("fineDishBudget", entity.getFineDish().getBudget());

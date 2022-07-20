@@ -11,6 +11,4 @@
 	<acme:list-column code="chef.element.published" path="published" width="10%"/>
 </acme:list>
 
-<jstl:if test="${command == 'list'}">
-	<acme:button code="chef.element.button.create" action="/chef/element/create"/>
-</jstl:if>
+<acme:button code="chef.element.button.create" action="/chef/element/create"/>

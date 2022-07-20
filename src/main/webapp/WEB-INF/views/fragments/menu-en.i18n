@@ -39,6 +39,7 @@ master.menu.chef.element.list = List my elements
 master.menu.chef.finedish.list=List my fine dishes
 master.menu.chef.finedish.listproposed=List my proposed fine dishes
 master.menu.chef.memorandum.list=List my memorandums
+master.menu.chef.recipe.list=List my recipes
 
 # master.menu.epicure ##########################################################
 

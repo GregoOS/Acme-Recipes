@@ -24,9 +24,9 @@ public class EpicureFineDishShowService implements AbstractShowService<Epicure, 
 
 		final int epicureId = request.getPrincipal().getActiveRoleId();
 		final int fineDishId = request.getModel().getInteger("id");
-		final int fineDishInventorId = this.repository.findOneFineDishById(fineDishId).getEpicure().getId();
+		final int fineDishChefId = this.repository.findOneFineDishById(fineDishId).getEpicure().getId();
 
-		res = epicureId == fineDishInventorId;
+		res = epicureId == fineDishChefId;
 		return res;
 	}
 
@@ -44,7 +44,8 @@ public class EpicureFineDishShowService implements AbstractShowService<Epicure, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "startDate", "endDate","link", "draft");
+		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "startDate", "endDate",
+				"link", "draft");
 
 		final int masterId = request.getModel().getInteger("id");
 		model.setAttribute("masterId", masterId);

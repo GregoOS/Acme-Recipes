@@ -55,7 +55,7 @@ public class ChefElementPublishService implements AbstractUpdateService<Chef, El
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors);
+		request.bind(entity, errors, "name", "code", "description", "retailPrice", "link", "type");
 	}
 
 	@Override
@@ -63,6 +63,37 @@ public class ChefElementPublishService implements AbstractUpdateService<Chef, El
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if (!errors.hasErrors("name")) {
+			//errors.state(request, !this.spamService.isSpam(entity.getName()), "name", "chef.element.error.spam");
+		}
+
+		if (!errors.hasErrors("code")) {
+			Element existing;
+			Integer id;
+
+			existing = this.repository.findOneElementByCode(entity.getCode());
+			id = request.getModel().getInteger("id");
+
+			errors.state(request, existing == null || existing.getId() == id, "code",
+					"chef.element.error.duplicated");
+		}
+
+		if (!errors.hasErrors("retailPrice")) {
+			Double retailPrice;
+			String currency;
+
+			retailPrice = entity.getRetailPrice().getAmount();
+			currency = entity.getRetailPrice().getCurrency();
+
+			errors.state(request, this.repository.isAcceptedCurrency(currency), "retailPrice",
+					"chef.element.error.notacceptedcurrency");
+			errors.state(request, retailPrice > 0.0, "retailPrice", "chef.element.error.negativeprice");
+		}
+
+		if (!errors.hasErrors("description")) {
+			// errors.state(request, !this.spamService.isSpam(entity.getDescription()),"description","chef.element.form.error.spam");
+		}
 	}
 
 	@Override

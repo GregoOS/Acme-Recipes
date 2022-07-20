@@ -10,20 +10,20 @@ import acme.framework.services.AbstractShowService;
 import acme.roles.Chef;
 
 @Service
-public class ChefMemorandumShowService implements AbstractShowService<Chef,Memorandum>{
-	
+public class ChefMemorandumShowService implements AbstractShowService<Chef, Memorandum> {
+
 	@Autowired
 	protected ChefMemorandumRepository repository;
-	
+
 	@Override
 	public boolean authorise(final Request<Memorandum> request) {
 		assert request != null;
-		
+
 		final int chefId = request.getPrincipal().getActiveRoleId();
 		final int memorandumId = request.getModel().getInteger("id");
-		final int patronageChefId=this.repository.findChefIdByMemorandumId(memorandumId);
-		
-		return  chefId == patronageChefId; 
+		final int fineDishChefId = this.repository.findChefIdByMemorandumId(memorandumId);
+
+		return chefId == fineDishChefId;
 	}
 
 	@Override
@@ -39,12 +39,12 @@ public class ChefMemorandumShowService implements AbstractShowService<Chef,Memor
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		request.unbind(entity, model, "sequenceNumber", "creationTime", "report", "link");	
-	
+
+		request.unbind(entity, model, "sequenceNumber", "creationTime", "report", "link");
+
 		final int masterId = request.getModel().getInteger("id");
 		model.setAttribute("masterId", masterId);
-		
+
 		model.setAttribute("fineDishStatus", entity.getFineDish().getStatus());
 		model.setAttribute("fineDishRequest", entity.getFineDish().getRequest());
 		model.setAttribute("fineDishBudget", entity.getFineDish().getBudget());

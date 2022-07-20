@@ -5,7 +5,7 @@
 
 <acme:form>
 
-	<acme:input-textbox code="any.amount.recipe" path="toolkitTitle"/>
+	<acme:input-textbox code="any.amount.recipe" path="recipeTitle"/>
 
 	<acme:input-select code="any.amount.elements" path="elements">
 		<jstl:forEach items="${elements}" var="element">
