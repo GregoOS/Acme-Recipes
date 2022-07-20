@@ -117,12 +117,12 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 		final int masterId = request.getModel().getInteger("id");
 		model.setAttribute("masterId", masterId);
 
-		model.setAttribute("inventorName", entity.getChef().getIdentity().getName());
-		model.setAttribute("inventorSurname", entity.getChef().getIdentity().getSurname());
-		model.setAttribute("inventorEmail", entity.getChef().getIdentity().getEmail());
-		model.setAttribute("inventorOrganisation", entity.getChef().getOrganisation());
-		model.setAttribute("inventorAssertion", entity.getChef().getAssertion());
-		model.setAttribute("inventorLink", entity.getChef().getLink());
+		model.setAttribute("chefName", entity.getChef().getIdentity().getName());
+		model.setAttribute("chefSurname", entity.getChef().getIdentity().getSurname());
+		model.setAttribute("chefEmail", entity.getChef().getIdentity().getEmail());
+		model.setAttribute("chefOrganisation", entity.getChef().getOrganisation());
+		model.setAttribute("chefAssertion", entity.getChef().getAssertion());
+		model.setAttribute("chefLink", entity.getChef().getLink());
 	}
 
 	@Override

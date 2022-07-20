@@ -21,12 +21,12 @@ public class ChefFineDishAcceptService implements AbstractUpdateService<Chef, Fi
 	public boolean authorise(final Request<FineDish> request) {
 		assert request != null;
 
-		final int patronId = request.getPrincipal().getActiveRoleId();
+		final int epicureId = request.getPrincipal().getActiveRoleId();
 		final int fineDishId = request.getModel().getInteger("id");
 		final FineDish fineDish = this.repository.findOneFineDishById(fineDishId);
 		final int fineDishChefId = fineDish.getChef().getId();
 
-		return patronId == fineDishChefId && !fineDish.isDraft()
+		return epicureId == fineDishChefId && !fineDish.isDraft()
 				&& fineDish.getStatus().equals(Status.PROPOSED);
 	}
 

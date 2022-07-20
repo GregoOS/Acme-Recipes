@@ -30,7 +30,7 @@
 	<acme:input-textbox code="epicure.finedish.chef.email" path="chefEmail" readonly="true"/>
 	<acme:input-textbox code="epicure.finedish.chef.organisation" path="chefOrganisation" readonly="true"/>
 	<acme:input-textbox code="epicure.finedish.chef.assertion" path="chefAssertion" readonly="true"/>
-	<acme:input-url code="epicure.finedish.chef.link" path="inventorLink" readonly="true"/>
+	<acme:input-url code="epicure.finedish.chef.link" path="chefLink" readonly="true"/>
 	</jstl:if>
 	
 	<jstl:choose>	 
