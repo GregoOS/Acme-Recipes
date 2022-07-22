@@ -8,6 +8,11 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.greortsol" action="https://es.nttdata.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.ferclavar" action="https://www.youtube.com/shorts/GLY3-81TxDA"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.pabsanval1" action="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.mancabmor1" action="https://www.youtube.com/watch?v=-3JbbFL-aks"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.alegestor" action="https://twitter.com/juanminismo/status/1464982823874486274"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.jaistomen" action="http://www.gendesign.co.jp/E_index.html"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.any">			
@@ -29,6 +34,7 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
+			<acme:menu-suboption code="master.menu.epicure.dashboard" action="/epicure/epicure-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.epicure.finedish.list" action="/epicure/fine-dish/list"/>
 			<acme:menu-suboption code="master.menu.epicure.memorandum.list" action="/epicure/memorandum/list"/>
 		</acme:menu-option>

@@ -9,6 +9,11 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link.greortsol = 30271286C: Ortega Soldado, Gregorio
+master.menu.anonymous.favourite-link.ferclavar = 47561328L: Claros Barrero, Fernando
+master.menu.anonymous.favourite-link.mancabmor1 = 47561328L: Cabra Morón, Manuel
+master.menu.anonymous.favourite-link.alegestor = 30260633Q: Gestoso Torres, Alejandro
+master.menu.anonymous.favourite-link.jaistomen = 30696480J: Stockwell Mendoza, Jaime
+master.menu.anonymous.favourite-link.pabsanval1 = 30246142S: Sánchez Valenzuela, Pablo
 
 # master.menu.any #######################################################
 
@@ -46,6 +51,7 @@ master.menu.chef.recipe.list=Listar mis recetas
 master.menu.epicure = Sibarita
 master.menu.epicure.finedish.list=Listar mis platos
 master.menu.epicure.memorandum.list=Listar mis memorandums
+master.menu.epicure.dashboard=Tablero de sibaritas
 
 # master.menu.user-account ####################################################
 

@@ -1,0 +1,9 @@
+epicure.epicure-dasboard.form.title = Your fine dish stadistics
+epicure.epicure-dashobard.form.total = Total fine dishes
+epicure.epicure-dashobard.form.average = Average of fine dishes per state
+epicure.epicure-dashobard.form.deviation = Standard Deviation of fine dishes per state
+epicure.epicure-dashboard.max = Maximum budget
+epicure.epicure-dashboard.min = Minimum budget
+epicure.epicure-dashobard.form.accepted = Accepted
+epicure.epicure-dashobard.form.proposed = Proposed
+epicure.epicure-dashobard.form.denied = Denied
