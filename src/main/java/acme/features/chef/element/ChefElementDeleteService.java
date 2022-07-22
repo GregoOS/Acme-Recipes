@@ -51,7 +51,7 @@ public class ChefElementDeleteService implements AbstractDeleteService<Chef, Ele
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "name", "code", "description", "retailPrice", "link", "type");
+		request.bind(entity, errors, "name", "code", "description", "retailPrice", "link", "type","amountUnit");
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class ChefElementDeleteService implements AbstractDeleteService<Chef, Ele
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "code", "description", "retailPrice", "link", "type", "draft");
+		request.unbind(entity, model, "name", "code", "description", "retailPrice", "link", "type", "draft","amountUnit");
 	}
 
 	@Override

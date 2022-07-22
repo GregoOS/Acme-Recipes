@@ -1,0 +1,16 @@
+chef.quantity.recipe=Recipe
+chef.quantity.elements=Elements
+chef.quantity.amount=Amount
+chef.quantity.button.update=Update
+chef.quantity.button.delete=Delete
+chef.quantity.button.create=Create
+chef.quantity.code=Code
+chef.quantity.name=Name
+chef.quantity.retailprice=Retail price
+chef.quantity.type=Type
+chef.quantity.recipe=Recipe
+chef.quantity.amount=Amount
+chef.quantity.button.addelement=Add element
+chef.quantity.error.repeatedutensil=There can only be one utensil
+chef.quantity.error.wrongcurrency=Wrong currency
+chef.quantity.error.draftmodeelement=The element is a draft

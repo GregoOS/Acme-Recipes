@@ -1,12 +1,12 @@
-package acme.features.any.amount;
+package acme.features.any.quantity;
 
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.amount.Amount;
 import acme.entities.element.Element;
+import acme.entities.quantity.Quantity;
 import acme.entities.recipe.Recipe;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
@@ -14,13 +14,13 @@ import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnyAmountShowService implements AbstractShowService<Any, Amount> {
+public class AnyQuantityShowService implements AbstractShowService<Any, Quantity> {
 
 	@Autowired
-	protected AnyAmountRepository repository;
+	protected AnyQuantityRepository repository;
 
 	@Override
-	public boolean authorise(final Request<Amount> request) {
+	public boolean authorise(final Request<Quantity> request) {
 		assert request != null;
 
 		boolean result;
@@ -37,11 +37,11 @@ public class AnyAmountShowService implements AbstractShowService<Any, Amount> {
 	}
 
 	@Override
-	public Amount findOne(final Request<Amount> request) {
+	public Quantity findOne(final Request<Quantity> request) {
 		assert request != null;
 
 		int id;
-		Amount result;
+		Quantity result;
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneAmountById(id);
@@ -50,16 +50,16 @@ public class AnyAmountShowService implements AbstractShowService<Any, Amount> {
 	}
 
 	@Override
-	public void unbind(final Request<Amount> request, final Amount entity, final Model model) {
+	public void unbind(final Request<Quantity> request, final Quantity entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "number", "unit");
+		request.unbind(entity, model, "amount");
 
 		Element element;
 
-		model.setAttribute("recipeTitle", entity.getRecipe().getHeading());
+		model.setAttribute("recipeHeading", entity.getRecipe().getHeading());
 
 		element = entity.getElement();
 		model.setAttribute("elements", Arrays.asList(element));

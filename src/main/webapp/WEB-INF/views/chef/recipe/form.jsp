@@ -16,10 +16,10 @@
 	
 	<jstl:choose>
 		<jstl:when test="${command == 'show' && draft == false}">
-			<acme:button code="chef.recipe.button.elements" action="/chef/amount/list?recipeId=${id}"/>
+			<acme:button code="chef.recipe.button.elements" action="/chef/quantity/list?recipeId=${id}"/>
 		</jstl:when>	 
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && draft == true}">
-			<acme:button code="chef.recipe.button.elements" action="/chef/amount/list?recipeId=${id}"/>
+			<acme:button code="chef.recipe.button.elements" action="/chef/quantity/list?recipeId=${id}"/>
 			<acme:submit code="chef.recipe.button.update" action="/chef/recipe/update"/>
 			<acme:submit code="chef.recipe.button.delete" action="/chef/recipe/delete"/>
 			<acme:submit code="chef.recipe.button.publish" action="/chef/recipe/publish"/>

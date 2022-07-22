@@ -1,13 +1,10 @@
-package acme.entities.amount;
+package acme.entities.quantity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Length;
 
 import acme.entities.element.Element;
 import acme.entities.recipe.Recipe;
@@ -18,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Amount extends AbstractEntity {
+public class Quantity extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -27,11 +24,7 @@ public class Amount extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Min(1)
-	protected int number;
-	
-	@NotBlank
-	@Length(max = 10)
-	protected String unit;
+	protected int amount;
 
 	// Derived attributes ----------------------------------------------------
 
