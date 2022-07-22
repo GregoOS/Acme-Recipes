@@ -9,6 +9,11 @@ master.menu.sign-out = Sign out
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link.greortsol = 30271286C: Ortega Soldado, Gregorio
+master.menu.anonymous.favourite-link.ferclavar = 47561328L: Claros Barrero, Fernando
+master.menu.anonymous.favourite-link.mancabmor1 = 47561328L: Cabra Morón, Manuel
+master.menu.anonymous.favourite-link.alegestor = 30260633Q: Gestoso Torres, Alejandro
+master.menu.anonymous.favourite-link.jaistomen = 30696480J: Stockwell Mendoza, Jaime
+master.menu.anonymous.favourite-link.pabsanval1 = 30246142S: Sánchez Valenzuela, Pablo
 
 # master.menu.any #######################################################
 
@@ -46,6 +51,7 @@ master.menu.chef.recipe.list=List my recipes
 master.menu.epicure = Epicure
 master.menu.epicure.finedish.list=List my fine dishes
 master.menu.epicure.memorandum.list=List my memorandums
+master.menu.epicure.dashboard=Epicure dashboard
 
 # master.menu.user-account ####################################################
 
