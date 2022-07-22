@@ -1,9 +1,6 @@
-authenticated.epicure.form.title.create = Convertirse en sibarita
-authenticated.epicure.form.title.update = Actualizar sibarita
+authenticated.epicure.organisation=Organización
+authenticated.epicure.assertion=Aserción
+authenticated.epicure.link= Enlace
 
-authenticated.epicure.form.label.organisation=Organización
-authenticated.epicure.form.label.assertion=Aserción
-authenticated.epicure.form.label.link= Enlace
-
-authenticated.epicure.form.button.create=Registrar
-authenticated.epicure.form.button.update=Actualizar 
+authenticated.epicure.button.create=Registrar
+authenticated.epicure.button.update=Actualizar 

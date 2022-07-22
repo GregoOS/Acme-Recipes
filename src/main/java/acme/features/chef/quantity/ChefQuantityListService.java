@@ -1,29 +1,27 @@
-package acme.features.any.amount;
+package acme.features.chef.quantity;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.amount.Amount;
 import acme.entities.element.Element;
+import acme.entities.quantity.Quantity;
 import acme.entities.recipe.Recipe;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.helpers.CollectionHelper;
-import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
+import acme.roles.Chef;
 
 @Service
-public class AnyAmountListService implements AbstractListService<Any, Amount> {
-
-	// Internal state ---------------------------------------------------------
+public class ChefQuantityListService implements AbstractListService<Chef, Quantity> {
 
 	@Autowired
-	protected AnyAmountRepository repository;
+	protected ChefQuantityRepository repository;
 
 	@Override
-	public boolean authorise(final Request<Amount> request) {
+	public boolean authorise(final Request<Quantity> request) {
 		assert request != null;
 
 		int id;
@@ -32,51 +30,57 @@ public class AnyAmountListService implements AbstractListService<Any, Amount> {
 		id = request.getModel().getInteger("recipeId");
 		requested = this.repository.findOneRecipeById(id);
 
-		return !requested.isDraft();
+		return !requested.isDraft() || request.isPrincipal(requested.getChef());
 	}
 
 	@Override
-	public Collection<Amount> findMany(final Request<Amount> request) {
+	public Collection<Quantity> findMany(final Request<Quantity> request) {
 		assert request != null;
 
 		int id;
-		Collection<Amount> result;
+		Collection<Quantity> res;
 
 		id = request.getModel().getInteger("recipeId");
-		result = this.repository.findManyAmountByRecipeId(id);
+		res = this.repository.findManyQuantityByRecipeId(id);
 
-		return result;
+		return res;
 	}
 
 	@Override
-	public void unbind(final Request<Amount> request, final Collection<Amount> entities,
-			final Model model) {
+	public void unbind(final Request<Quantity> request, final Collection<Quantity> entities, final Model model) {
 		assert request != null;
 		assert !CollectionHelper.someNull(entities);
 		assert model != null;
 
 		int id;
+		Recipe recipe;
+		boolean showAddItem;
 
 		id = request.getModel().getInteger("recipeId");
+		recipe = this.repository.findOneRecipeById(id);
+		showAddItem = (recipe.isDraft() && request.isPrincipal(recipe.getChef()));
 
 		model.setAttribute("recipeId", id);
+		model.setAttribute("showAddItem", showAddItem);
 	}
 
 	@Override
-	public void unbind(final Request<Amount> request, final Amount entity, final Model model) {
+	public void unbind(final Request<Quantity> request, final Quantity entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "number","unit");
+		request.unbind(entity, model, "amount");
 
 		Element element;
 
 		element = entity.getElement();
 		model.setAttribute("name", element.getName());
-		model.setAttribute("recipeTitle", entity.getRecipe().getHeading());
 		model.setAttribute("code", element.getCode());
+		model.setAttribute("description", element.getDescription());
 		model.setAttribute("retailPrice", element.getRetailPrice());
+		model.setAttribute("amountUnit", element.getAmountUnit());
+		model.setAttribute("link", element.getLink());
 		model.setAttribute("type", element.getType());
 	}
 }

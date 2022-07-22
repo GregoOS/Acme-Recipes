@@ -6,7 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.amount.Amount;
+import acme.entities.quantity.Quantity;
 import acme.entities.recipe.Recipe;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -81,7 +81,7 @@ public class ChefRecipeDeleteService implements AbstractDeleteService<Chef, Reci
 		assert entity != null;
 
 		int id;
-		Collection<Amount> amounts;
+		Collection<Quantity> amounts;
 
 		id = request.getModel().getInteger("id");
 		amounts = this.repository.findAmountsByRecipeId(id);

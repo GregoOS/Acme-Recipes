@@ -1,13 +1,11 @@
 package acme.features.chef.recipe;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.amount.Amount;
-import acme.entities.element.Type;
+import acme.entities.quantity.Quantity;
 import acme.entities.recipe.Recipe;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -81,7 +79,7 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 		}
 
 		if (!errors.hasErrors("retailPrice")) {
-			Collection<Amount> amounts;
+			Collection<Quantity> amounts;
 			Integer id;
 
 			id = request.getModel().getInteger("id");
@@ -111,7 +109,7 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 		String currency;
 		double amount;
 
-		amount = this.getRetailPriceAmountByRecipeId(id);
+		amount = this.repository.findRetailPriceAmountByRecipeId(id);
 		if (amount<=0.) {
 			currency = "";
 		}else {
@@ -123,19 +121,6 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 		retailPrice.setCurrency(currency);
 
 		model.setAttribute("retailPrice", retailPrice);
-	}
-	
-	public Double getRetailPriceAmountByRecipeId(final int id) {
-		final List<Amount> amounts=(List<Amount>) this.repository.findAmountsByRecipeId(id);
-		Double res=0.;
-		for(final Amount amount:amounts) {
-			if(amount.getElement().getType()==Type.INGREDIENT) {
-				res=res+amount.getElement().getRetailPrice().getAmount();
-			}else {
-				res=res+amount.getElement().getRetailPrice().getAmount()*amount.getNumber();
-			}
-		}
-		return res;
 	}
 
 	@Override

@@ -3,6 +3,5 @@ any.amount.name=Name
 any.amount.retailprice=Retail Price
 any.amount.type=Type
 any.amount.recipe=Recipe
-any.amount.number=Number
-any.amount.unit=Unit
+any.amount.amount=Amount
 any.amount.elements=Elements

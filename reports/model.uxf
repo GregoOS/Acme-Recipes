@@ -6,7 +6,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>1246</x>
-      <y>217</y>
+      <y>133</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -21,7 +21,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1085</x>
-      <y>217</y>
+      <y>133</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -36,7 +36,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1169</x>
-      <y>217</y>
+      <y>133</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -51,7 +51,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1113</x>
-      <y>252</y>
+      <y>168</y>
       <w>105</w>
       <h>63</h>
     </coordinates>
@@ -62,7 +62,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1197</x>
-      <y>252</y>
+      <y>168</y>
       <w>98</w>
       <h>63</h>
     </coordinates>
@@ -73,7 +73,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1197</x>
-      <y>252</y>
+      <y>168</y>
       <w>21</w>
       <h>63</h>
     </coordinates>
@@ -84,7 +84,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1120</x>
-      <y>301</y>
+      <y>217</y>
       <w>168</w>
       <h>42</h>
     </coordinates>
@@ -98,7 +98,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>791</x>
-      <y>378</y>
+      <y>294</y>
       <w>245</w>
       <h>70</h>
     </coordinates>
@@ -114,7 +114,7 @@ Chef
     <id>Relation</id>
     <coordinates>
       <x>1029</x>
-      <y>308</y>
+      <y>224</y>
       <w>105</w>
       <h>98</h>
     </coordinates>
@@ -125,7 +125,7 @@ Chef
     <id>UMLClass</id>
     <coordinates>
       <x>798</x>
-      <y>273</y>
+      <y>189</y>
       <w>245</w>
       <h>77</h>
     </coordinates>
@@ -141,7 +141,7 @@ Epicure
     <id>Relation</id>
     <coordinates>
       <x>1036</x>
-      <y>308</y>
+      <y>224</y>
       <w>98</w>
       <h>21</h>
     </coordinates>
@@ -152,7 +152,7 @@ Epicure
     <id>UMLClass</id>
     <coordinates>
       <x>1106</x>
-      <y>441</y>
+      <y>357</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -167,7 +167,7 @@ ElementType
     <id>UMLClass</id>
     <coordinates>
       <x>210</x>
-      <y>238</y>
+      <y>154</y>
       <w>84</w>
       <h>70</h>
     </coordinates>
@@ -183,7 +183,7 @@ Status
     <id>UMLClass</id>
     <coordinates>
       <x>70</x>
-      <y>91</y>
+      <y>7</y>
       <w>273</w>
       <h>91</h>
     </coordinates>
@@ -201,7 +201,7 @@ Bulletin
     <id>UMLClass</id>
     <coordinates>
       <x>336</x>
-      <y>294</y>
+      <y>210</y>
       <w>350</w>
       <h>133</h>
     </coordinates>
@@ -223,9 +223,9 @@ FineDish
     <id>UMLClass</id>
     <coordinates>
       <x>826</x>
-      <y>511</y>
+      <y>427</y>
       <w>357</w>
-      <h>119</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Element
@@ -236,14 +236,15 @@ Element
 + retailPrice: Money {NotNull, Valid}
 + link : String {URL}
 + type: ItemType {NotNull}
-+ draft: boolean</panel_attributes>
++ draft: boolean
++amountUnit: String {Lenght(max=10)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>777</x>
-      <y>84</y>
+      <y>0</y>
       <w>546</w>
       <h>105</h>
     </coordinates>
@@ -260,7 +261,7 @@ SystemConfiguration
     <id>UMLClass</id>
     <coordinates>
       <x>406</x>
-      <y>91</y>
+      <y>7</y>
       <w>308</w>
       <h>91</h>
     </coordinates>
@@ -278,7 +279,7 @@ Peep
     <id>UMLClass</id>
     <coordinates>
       <x>315</x>
-      <y>504</y>
+      <y>420</y>
       <w>420</w>
       <h>77</h>
     </coordinates>
@@ -295,7 +296,7 @@ Memorandum
     <id>UMLClass</id>
     <coordinates>
       <x>1246</x>
-      <y>378</y>
+      <y>294</y>
       <w>357</w>
       <h>98</h>
     </coordinates>
@@ -314,7 +315,7 @@ Recipe
     <id>Relation</id>
     <coordinates>
       <x>511</x>
-      <y>420</y>
+      <y>336</y>
       <w>35</w>
       <h>98</h>
     </coordinates>
@@ -328,22 +329,21 @@ has</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1260</x>
-      <y>553</y>
+      <y>469</y>
       <w>140</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Amount
+Quantity
 --
-+ unit: String
-+ number: int {positive,min(1)}</panel_attributes>
++ amount: double {positive,min(0)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1176</x>
-      <y>560</y>
+      <y>476</y>
       <w>98</w>
       <h>35</h>
     </coordinates>
@@ -358,7 +358,7 @@ m1=1
     <id>Relation</id>
     <coordinates>
       <x>1316</x>
-      <y>469</y>
+      <y>385</y>
       <w>35</w>
       <h>98</h>
     </coordinates>
@@ -373,7 +373,7 @@ m1=1
     <id>Relation</id>
     <coordinates>
       <x>889</x>
-      <y>441</y>
+      <y>357</y>
       <w>63</w>
       <h>84</h>
     </coordinates>
@@ -388,7 +388,7 @@ creates ^</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>679</x>
-      <y>308</y>
+      <y>224</y>
       <w>133</w>
       <h>35</h>
     </coordinates>
@@ -402,7 +402,7 @@ offered by ^</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>679</x>
-      <y>378</y>
+      <y>294</y>
       <w>126</w>
       <h>133</h>
     </coordinates>
@@ -426,7 +426,7 @@ is offered</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>1400</x>
-      <y>119</y>
+      <y>35</y>
       <w>154</w>
       <h>77</h>
     </coordinates>
@@ -439,7 +439,7 @@ weight</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1316</x>
-      <y>147</y>
+      <y>63</y>
       <w>98</w>
       <h>21</h>
     </coordinates>
@@ -450,7 +450,7 @@ weight</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>182</x>
-      <y>364</y>
+      <y>280</y>
       <w>168</w>
       <h>21</h>
     </coordinates>
@@ -461,12 +461,16 @@ weight</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>819</x>
-      <y>693</y>
+      <y>609</y>
       <w>126</w>
       <h>35</h>
     </coordinates>
-    <panel_attributes>The RetailPrice must be a
-positive number 
+    <panel_attributes>The RetailPrice must be
+positive.
+
+If the type is UTENSIL,
+amountUnit must be blank,
+otherwise it must be filled.
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -474,18 +478,18 @@ positive number
     <id>Relation</id>
     <coordinates>
       <x>868</x>
-      <y>623</y>
+      <y>546</y>
       <w>21</w>
-      <h>84</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
       <x>0</x>
-      <y>511</y>
+      <y>427</y>
       <w>210</w>
       <h>63</h>
     </coordinates>
@@ -499,7 +503,7 @@ generated number.
     <id>Relation</id>
     <coordinates>
       <x>203</x>
-      <y>539</y>
+      <y>455</y>
       <w>126</w>
       <h>28</h>
     </coordinates>
@@ -510,7 +514,7 @@ generated number.
     <id>UMLNote</id>
     <coordinates>
       <x>28</x>
-      <y>336</y>
+      <y>252</y>
       <w>161</w>
       <h>70</h>
     </coordinates>
@@ -525,19 +529,24 @@ The budget must be positive</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>1274</x>
-      <y>658</y>
+      <y>574</y>
       <w>140</w>
-      <h>42</h>
+      <h>77</h>
     </coordinates>
-    <panel_attributes>If the element is an Utensil, 
-the unit will be "unit"</panel_attributes>
+    <panel_attributes>If the element is of type 
+INGREDIENT, then the 
+amount must not be nought 
+and positive and if the type 
+is UTENSIL, the amount must 
+be 1.
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1309</x>
-      <y>602</y>
+      <y>518</y>
       <w>21</w>
       <h>70</h>
     </coordinates>

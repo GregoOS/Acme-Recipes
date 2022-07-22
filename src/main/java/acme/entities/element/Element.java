@@ -40,6 +40,10 @@ public class Element extends AbstractEntity {
 	@NotBlank
 	@Length(max = 255)
 	protected String description;
+	
+	@NotBlank
+	@Length(max = 10)
+	protected String amountUnit;
 
 	@NotNull
 	@Valid
@@ -52,10 +56,6 @@ public class Element extends AbstractEntity {
 	protected Type type;
 
 	protected boolean draft;
-
-	// Derived attributes ----------------------------------------------------
-
-	// Relationships ----------------------------------------------------
 
 	@NotNull
 	@Valid

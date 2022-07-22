@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.amount.Amount;
 import acme.entities.element.Element;
+import acme.entities.quantity.Quantity;
 import acme.entities.recipe.Recipe;
 import acme.framework.repositories.AbstractRepository;
 
@@ -21,12 +21,15 @@ public interface AnyRecipeRepository extends AbstractRepository{
 	@Query("select r from Recipe r where r.id = :id")
 	Recipe findRecipeById(int id);
 
-	@Query("select distinct(a.element) from Amount a where a.recipe.id = :id")
+	@Query("select distinct(q.element) from Quantity q where q.recipe.id = :id")
 	List<Element> findElementsByRecipeId(int id);
 	
-	@Query("select a from Amount a where a.recipe.id = :id")
-	List<Amount> findAmountsByRecipeId(int id);
+	@Query("select q from Quantity q where q.recipe.id = :id")
+	List<Quantity> findAmountsByRecipeId(int id);
 	
-	@Query("select distinct(a.element.retailPrice.currency) from Amount a where a.recipe.id = :id")
+	@Query("select distinct(q.element.retailPrice.currency) from Quantity q where q.recipe.id = :id")
 	String findRetailPriceCurrencyByRecipeId(int id);
+	
+	@Query("select sum(q.amount*q.element.retailPrice.amount) from Quantity q where q.recipe.id = :id")
+	Double findRetailPriceAmountByRecipeId(int id);
 }

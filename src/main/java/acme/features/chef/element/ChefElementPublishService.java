@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.element.Element;
+import acme.entities.element.Type;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -55,7 +56,7 @@ public class ChefElementPublishService implements AbstractUpdateService<Chef, El
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "name", "code", "description", "retailPrice", "link", "type");
+		request.bind(entity, errors, "name", "code", "description", "retailPrice", "link", "type","amountUnit");
 	}
 
 	@Override
@@ -94,6 +95,13 @@ public class ChefElementPublishService implements AbstractUpdateService<Chef, El
 		if (!errors.hasErrors("description")) {
 			// errors.state(request, !this.spamService.isSpam(entity.getDescription()),"description","chef.element.form.error.spam");
 		}
+		
+		if (!errors.hasErrors("amountUnit")) {
+			Element existing;
+			
+			existing = this.repository.findOneElementByCode(entity.getCode());
+			errors.state(request, !(existing.getType()==Type.UTENSIL && existing.getAmountUnit().compareTo("")==0), "amountUnit","chef.element.error.amountunit");
+		}
 	}
 
 	@Override
@@ -102,7 +110,7 @@ public class ChefElementPublishService implements AbstractUpdateService<Chef, El
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "code", "description", "retailPrice", "link", "type", "draft");
+		request.unbind(entity, model, "name", "code", "description", "retailPrice", "link", "type", "draft","amountUnit");
 	}
 
 	@Override

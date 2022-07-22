@@ -5,8 +5,8 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.amount.Amount;
 import acme.entities.element.Element;
+import acme.entities.quantity.Quantity;
 import acme.entities.recipe.Recipe;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Chef;
@@ -23,17 +23,17 @@ public interface ChefElementRepository extends AbstractRepository {
 	@Query("select r from Recipe r where r.id = :masterId")
 	Recipe findOneRecipeById(int masterId);
 
-	@Query("select distinct(a.element) from Amount a where a.recipe.id = :masterId")
+	@Query("select distinct(q.element) from Quantity q where q.recipe.id = :masterId")
 	Collection<Element> findElementsByRecipeId(int masterId);
 
-	@Query("select a.recipe from Amount a where a.element.id = :id")
+	@Query("select q.recipe from Quantity q where q.element.id = :id")
 	Recipe findOneRecipeByElementId(int id);
 
 	@Query("select e from Element e where e.code = :code")
 	Element findOneElementByCode(String code);
 
-	@Query("select a from Amount a where a.element.id = :elementId and a.recipe.id = :recipeId")
-	Amount findAmountInRecipe(int elementId, int recipeId);
+	@Query("select q from Quantity q where q.element.id = :elementId and q.recipe.id = :recipeId")
+	Quantity findAmountInRecipe(int elementId, int recipeId);
 
 	@Query("select sc.currency from SystemConfiguration sc")
 	String findSystemCurrency();

@@ -10,5 +10,5 @@
 	<acme:input-textarea code="any.recipe.preparationnotes" path="preparationNotes"/>
 	<acme:input-url code="any.recipe.link" path="link"/>
 	<acme:input-textbox code="any.recipe.retailprice" path="retailPrice"/>
-	<acme:button code="any.recipe.button.elements" action="/any/amount/list?recipeId=${id}"/>
+	<acme:button code="any.recipe.button.elements" action="/any/quantity/list?recipeId=${id}"/>
 </acme:form>

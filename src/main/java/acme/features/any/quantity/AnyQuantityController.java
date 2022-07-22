@@ -1,22 +1,22 @@
-package acme.features.any.amount;
+package acme.features.any.quantity;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.amount.Amount;
+import acme.entities.quantity.Quantity;
 import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Any;
 
 @Controller
-public class AnyAmountController extends AbstractController<Any, Amount> {
+public class AnyQuantityController extends AbstractController<Any, Quantity> {
 
 	@Autowired
-	protected AnyAmountListService list;
+	protected AnyQuantityListService list;
 
 	@Autowired
-	protected AnyAmountShowService show;
+	protected AnyQuantityShowService show;
 
 	@PostConstruct
 	protected void initialize() {
