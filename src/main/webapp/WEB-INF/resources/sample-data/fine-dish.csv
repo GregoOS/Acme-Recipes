@@ -17,12 +17,12 @@ fine-dish-15,ACCEPTED,AA:AAA-015,Test request,EUR 100.00,2021/12/31 23:59,2022/0
 fine-dish-16,ACCEPTED,AA:AAA-016,Test request,EUR 100.00,2021/12/31 00:00,2022/02/01 00:00,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
 fine-dish-17,ACCEPTED,AA:AAA-017,Test request,EUR 100.00,2022/07/22 00:00,2022/02/01 00:00,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
 fine-dish-18,ACCEPTED,AA:AAA-018,Test request,EUR 100.00,2022/07/21 23:59,2022/02/01 00:00,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
-fine-dish-19,ACCEPTED,AA:AAA-019,Test request,EUR 100.00,2021/11/31 23:59,2021/12/31 23:59,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
-fine-dish-20,ACCEPTED,AA:AAA-020,Test request,EUR 100.00,2021/11/31 00:00,2021/12/31 00:00,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
+fine-dish-19,ACCEPTED,AA:AAA-019,Test request,EUR 100.00,2021/11/30 23:59,2021/12/31 23:59,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
+fine-dish-20,ACCEPTED,AA:AAA-020,Test request,EUR 100.00,2021/11/30 00:00,2021/12/31 00:00,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
 fine-dish-21,ACCEPTED,AA:AAA-021,Test request,EUR 100.00,2022/06/22 00:00,2022/07/22 00:00,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
 fine-dish-22,ACCEPTED,AA:AAA-022,Test request,EUR 100.00,2022/06/21 23:59,2022/07/21 23:59,2022/03/01 00:00,https://acme.com,false,chef-01,epicure-01
-fine-dish-23,ACCEPTED,AA:AAA-023,Test request,EUR 100.00,2021/10/31 23:59,2021/11/31 23:59,2021/12/31 23:59,https://acme.com,false,chef-01,epicure-01
-fine-dish-24,ACCEPTED,AA:AAA-024,Test request,EUR 100.00,2021/10/31 00:00,2021/11/31 00:00,2021/12/31 00:00,https://acme.com,false,chef-01,epicure-01
+fine-dish-23,ACCEPTED,AA:AAA-023,Test request,EUR 100.00,2021/10/31 23:59,2021/11/30 23:59,2021/12/31 23:59,https://acme.com,false,chef-01,epicure-01
+fine-dish-24,ACCEPTED,AA:AAA-024,Test request,EUR 100.00,2021/10/31 00:00,2021/11/30 00:00,2021/12/31 00:00,https://acme.com,false,chef-01,epicure-01
 fine-dish-25,ACCEPTED,AA:AAA-025,Test request,EUR 100.00,2022/05/22 00:00,2022/06/22 00:00,2022/07/22 00:00,https://acme.com,false,chef-01,epicure-01
 fine-dish-26,ACCEPTED,AA:AAA-026,Test request,EUR 100.00,2022/05/21 23:59,2022/06/21 23:59,2022/07/21 23:59,https://acme.com,false,chef-01,epicure-01
 fine-dish-27,ACCEPTED,AA:AAA-027,Test request,EUR 100.00,2022/01/01 00:00,2022/02/01 00:00,2022/03/01 00:00,null,false,chef-01,epicure-01
