@@ -1,0 +1,16 @@
+administrator.admin-dashboard.form.title = Administrator Dashboard
+administrator.admin-dashboard.form.ingredients = Ingredients
+administrator.dashboard.form.total = Total number
+administrator.dashboard.form.average = Average price
+administrator.dashboard.form.deviation = Standard Deviation of the price
+administrator.dashboard.form.minimum = Minimum price
+administrator.dashboard.form.maximum = Maximum price
+administrator.admin-dashboard.form.utensils = Kitchen Utensils
+administrator.dashboard.form.dishes = Fine Dishes
+administrator.admin-dashboard.form.average-dished = Average price of Fine Dishes
+administrator.admin-dashboard.form.deviation-dishes = Standard Deviation in the price of Fine Dishes
+administrator.admin-dashboard.form.minimum-dishes = Minimum price of Fine Dishes
+administrator.admin-dashboard.form.maximum-dishes = Maximum price of Fine Dishes
+administrator.admin-dashboard.form.proposed = Proposed
+administrator.admin-dashboard.form.accepted = Accepted
+administrator.admin-dashboard.form.denied = Denied
