@@ -1,0 +1,22 @@
+key,moment,heading,text,critical,link
+bulletin-01,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com
+bulletin-02,2021/12/31 23:59,This is an example bulletin,This is an example text,FALSE,http://acme.com
+bulletin-03,2021/12/31 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com
+bulletin-04,2022/01/01 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com
+bulletin-05,2022/07/21 23:59,This is an example bulletin,This is an example text,FALSE,http://acme.com
+bulletin-06,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com
+bulletin-07,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com
+bulletin-08,2022/07/22 00:00,"!""#$%&'()*+-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~",This is an example text,FALSE,http://acme.com
+bulletin-09,2022/07/22 00:00,¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ,This is an example text,FALSE,http://acme.com
+bulletin-10,2022/07/22 00:00,This text contains 100 letters exactly for testing purposes I could also use the lorem ipsum to test,This is an example text,FALSE,http://acme.com
+bulletin-11,2022/07/22 00:00,This is an example bulletin,"!""#$%&'()*+-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~",FALSE,http://acme.com
+bulletin-12,2022/07/22 00:00,This is an example bulletin,¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ,FALSE,http://acme.com
+bulletin-13,2022/07/22 00:00,This is an example bulletin,This text contains 100 letters exactly for testing purposes I could also use the lorem ipsum to test,FALSE,http://acme.com
+bulletin-14,2022/07/22 00:00,This is an example bulletin,This is an example text,TRUE,http://acme.com
+bulletin-15,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,null
+bulletin-16,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com/xy
+bulletin-17,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com/x?y
+bulletin-18,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,http://acme.com/x/y
+bulletin-19,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,http://x.y/z?w&v
+bulletin-20,2022/07/22 00:00,This is an example bulletin,This is an example text,FALSE,ftp://recipes:user@acme.com
+bulletin-21,2022/07/22 00:00,New recipe list to be published in two days!,Stay tuned for this new recipe list.,FALSE,http://acme.com

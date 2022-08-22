@@ -33,7 +33,7 @@ public class SystemConfiguration extends AbstractEntity {
 
 	@NotBlank
 	@Pattern(
-			regexp = "todo",
+			regexp = "^(\\([\\w\\s\\d']*,\\d.\\d{2}\\),)*\\([\\w\\s\\d']*,\\d.\\d{2}\\)$",
 			message = "{acme.validation.system-configuration.spam-terms}")
 	protected String spamTerms;
 

@@ -1,3 +1,29 @@
 key,enabled,identity,password,username
 user-account-anonymous-01,false,"UserIdentity{name: 'John', surname: 'Doe', email: 'john.doe@acme.com'}",HIDDEN-PASSWORD,anonymous
 user-account-administrator-01,true,"UserIdentity{name: 'Administrator', surname: 'Acme', email: 'administrator@acme.com'}",administrator,administrator
+user-account-chef-01,true,"UserIdentity{name: 'Test', surname: 'Chef 1', email: 'testchef1@acme.com'}",chef01,chef01
+user-account-chef-02,true,"UserIdentity{name: 'Test', surname: 'Chef 2', email: 'testchef2@acme.com'}",chef02,chef02
+user-account-chef-03,true,"UserIdentity{name: 'Test', surname: 'Chef 3', email: 'testchef3@acme.com'}",chef03,chef03
+user-account-chef-04,true,"UserIdentity{name: 'Test', surname: 'Chef 4', email: 'testchef4@acme.com'}",chef04,chef04
+user-account-chef-05,true,"UserIdentity{name: 'Test', surname: 'Chef 5', email: 'testchef5@acme.com'}",chef05,chef05
+user-account-chef-06,true,"UserIdentity{name: 'Test', surname: 'Chef 6', email: 'testchef6@acme.com'}",chef06,chef06
+user-account-chef-07,true,"UserIdentity{name: 'Test', surname: 'Chef 7', email: 'testchef7@acme.com'}",chef07,chef07
+user-account-chef-08,true,"UserIdentity{name: 'Test', surname: 'Chef 8', email: 'testchef8@acme.com'}",chef08,chef08
+user-account-chef-09,true,"UserIdentity{name: 'Test', surname: 'Chef 9', email: 'testchef9@acme.com'}",chef09,chef09
+user-account-chef-10,true,"UserIdentity{name: 'Test', surname: 'Chef 10', email: 'testchef10@acme.com'}",chef10,chef10
+user-account-chef-11,true,"UserIdentity{name: 'Test', surname: 'Chef 11', email: 'testchef11@acme.com'}",chef11,chef11
+user-account-chef-12,true,"UserIdentity{name: 'Test', surname: 'Chef 12', email: 'testchef12@acme.com'}",chef12,chef12
+user-account-chef-13,true,"UserIdentity{name: 'Jane', surname: 'Parsley', email: 'jparsley@acme.com'}",jparsley,jparsley
+user-account-epicure-01,true,"UserIdentity{name: 'Test', surname: 'Epicure 1', email: 'testepicure1@acme.com'}",epicure01,epicure01
+user-account-epicure-02,true,"UserIdentity{name: 'Test', surname: 'Epicure 2', email: 'testepicure2@acme.com'}",epicure02,epicure02
+user-account-epicure-03,true,"UserIdentity{name: 'Test', surname: 'Epicure 3', email: 'testepicure3@acme.com'}",epicure03,epicure03
+user-account-epicure-04,true,"UserIdentity{name: 'Test', surname: 'Epicure 4', email: 'testepicure4@acme.com'}",epicure04,epicure04
+user-account-epicure-05,true,"UserIdentity{name: 'Test', surname: 'Epicure 5', email: 'testepicure5@acme.com'}",epicure05,epicure05
+user-account-epicure-06,true,"UserIdentity{name: 'Test', surname: 'Epicure 6', email: 'testepicure6@acme.com'}",epicure06,epicure06
+user-account-epicure-07,true,"UserIdentity{name: 'Test', surname: 'Epicure 7', email: 'testepicure7@acme.com'}",epicure07,epicure07
+user-account-epicure-08,true,"UserIdentity{name: 'Test', surname: 'Epicure 8', email: 'testepicure8@acme.com'}",epicure08,epicure08
+user-account-epicure-09,true,"UserIdentity{name: 'Test', surname: 'Epicure 9', email: 'testepicure9@acme.com'}",epicure09,epicure09
+user-account-epicure-10,true,"UserIdentity{name: 'Test', surname: 'Epicure 10', email: 'testepicure10@acme.com'}",epicure10,epicure10
+user-account-epicure-11,true,"UserIdentity{name: 'Test', surname: 'Epicure 11', email: 'testepicure11@acme.com'}",epicure11,epicure11
+user-account-epicure-12,true,"UserIdentity{name: 'Test', surname: 'Epicure 12', email: 'testepicure12@acme.com'}",epicure12,epicure12
+user-account-epicure-13,true,"UserIdentity{name: 'John', surname: 'Thyme', email: 'jthyme@acme.com'}",jthyme,jthyme
