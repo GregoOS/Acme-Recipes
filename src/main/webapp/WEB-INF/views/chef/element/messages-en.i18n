@@ -16,4 +16,6 @@ chef.element.error.spam=This contains spam
 chef.element.error.duplicated=Code duplicated
 chef.element.error.notacceptedcurrency=The currency is not accepted
 chef.element.error.negativeprice=The budget can not be negative
-chef.element.error.amountunit=An utensil can't have an unit
+chef.element.error.amountunitut=An utensil can't have an unit
+chef.element.error.amountuniting=An ingredient must have an unit
+acme.validation.element.code=The code is wrong

@@ -10,5 +10,5 @@
 	<acme:input-checkbox code="authenticated.bulletin.critical" path="critical"/>
 	<acme:input-url code="authenticated.bulletin.link" path="link"/>
 	<acme:input-checkbox code="administrator.bulletin.confirmation" path="confirmation"/>
-	<acme:submit code="administrator.bulletin.button.create" action="/administrator/announcement/create"/>
+	<acme:submit code="administrator.bulletin.button.create" action="/administrator/bulletin/create"/>
 </acme:form>

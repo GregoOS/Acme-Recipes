@@ -8,9 +8,7 @@
 	<acme:input-textbox code="chef.element.code" path="code" placeholder="AA:AAA-111"/>
 	<acme:input-textarea code="chef.element.description" path="description"/>
 	<acme:input-money code="chef.element.retailprice" path="retailPrice"/>	
-	<jstl:if test="${type == 'INGREDIENT'}">
-		<acme:input-money code="chef.element.unit" path="amountUnit"/>
-	</jstl:if>
+	<acme:input-textbox code="chef.element.unit" path="amountUnit"/>
 	<acme:input-url code="chef.element.link" path="link"/>
 	<acme:input-select code="chef.element.type" path="type">
 		<acme:input-option code="chef.element.type.ingredient" value="INGREDIENT" selected="${type == 'INGREDIENT'}"/>
