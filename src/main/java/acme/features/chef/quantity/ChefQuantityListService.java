@@ -54,14 +54,14 @@ public class ChefQuantityListService implements AbstractListService<Chef, Quanti
 
 		int id;
 		Recipe recipe;
-		boolean showAddItem;
+		boolean showAddElement;
 
 		id = request.getModel().getInteger("recipeId");
 		recipe = this.repository.findOneRecipeById(id);
-		showAddItem = (recipe.isDraft() && request.isPrincipal(recipe.getChef()));
+		showAddElement = (recipe.isDraft() && request.isPrincipal(recipe.getChef()));
 
 		model.setAttribute("recipeId", id);
-		model.setAttribute("showAddItem", showAddItem);
+		model.setAttribute("showAddElement", showAddElement);
 	}
 
 	@Override

@@ -10,6 +10,7 @@ import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractUpdateService;
+import acme.roles.Chef;
 import acme.roles.Epicure;
 
 @Service
@@ -103,6 +104,14 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 		assert errors != null;
 
 		request.bind(entity, errors, "code", "request", "budget", "startDate", "endDate", "link");
+		
+		Model model;
+		Chef selectedChef;
+
+		model = request.getModel();
+		selectedChef = this.repository.findOneChefById(Integer.parseInt(model.getString("chefs")));
+
+		entity.setChef(selectedChef);
 	}
 
 	@Override
@@ -116,13 +125,6 @@ public class EpicureFineDishUpdateService implements AbstractUpdateService<Epicu
 
 		final int masterId = request.getModel().getInteger("id");
 		model.setAttribute("masterId", masterId);
-
-		model.setAttribute("chefName", entity.getChef().getIdentity().getName());
-		model.setAttribute("chefSurname", entity.getChef().getIdentity().getSurname());
-		model.setAttribute("chefEmail", entity.getChef().getIdentity().getEmail());
-		model.setAttribute("chefOrganisation", entity.getChef().getOrganisation());
-		model.setAttribute("chefAssertion", entity.getChef().getAssertion());
-		model.setAttribute("chefLink", entity.getChef().getLink());
 	}
 
 	@Override

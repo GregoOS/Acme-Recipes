@@ -38,7 +38,7 @@ public class ChefMemorandumCreateService implements AbstractCreateService<Chef, 
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "request", "link");
+		request.bind(entity, errors, "report", "link");
 
 		Integer masterId;
 		FineDish fineDish;

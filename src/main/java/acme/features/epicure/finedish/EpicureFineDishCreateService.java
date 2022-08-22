@@ -1,6 +1,7 @@
 package acme.features.epicure.finedish;
 
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +36,7 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		FineDish res;
 		Epicure epicure;
 		Date creationDate;
-		int chefId;
-		Chef chef;
-
-		chefId = request.getModel().getInteger("chefId");
-		chef = this.repository.findOneChefById(chefId);
+		
 		creationDate = new Date(System.currentTimeMillis() - 1);
 		epicure = this.repository.findOneEpicureById(request.getPrincipal().getActiveRoleId());
 
@@ -48,7 +45,6 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		res.setStatus(Status.PROPOSED);
 		res.setEpicure(epicure);
 		res.setCreationDate(creationDate);
-		res.setChef(chef);
 
 		return res;
 	}
@@ -117,11 +113,14 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		Collection<Chef> chefs;
+		
+		chefs=this.repository.findAllChefs();
 
 		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "startDate", "endDate", "link", "draft");
 
-		final Integer chefId = request.getModel().getInteger("chefId");
-		model.setAttribute("chefId", chefId);
+		model.setAttribute("chefs", chefs);
 	}
 	
 	@Override
@@ -131,6 +130,16 @@ public class EpicureFineDishCreateService implements AbstractCreateService<Epicu
 		assert errors != null;
 
 		request.bind(entity, errors, "code", "request", "budget", "startDate", "endDate", "link");
+		
+		Model model;
+		Chef selectedChef;
+
+		model = request.getModel();
+		selectedChef = this.repository.findOneChefById(Integer.parseInt(model.getString("chefs")));
+
+		entity.setChef(selectedChef);
+		
+		entity.setDraft(true);
 	}
 
 	@Override

@@ -5,11 +5,9 @@
 
 <acme:list>
 	<acme:list-column code="chef.quantity.code" path="code" width="10%"/>
-	<acme:list-column code="chef.quantity.name" path="name" width="30%"/>
-	<acme:list-column code="chef.quantity.retailprice" path="retailPrice" width="10%"/>
-	<acme:list-column code="chef.quantity.type" path="type" width="10%"/>
-	<acme:list-column code="chef.quantity.recipe" path="recipeHeading" width="20%"/>
+	<acme:list-column code="chef.quantity.type" path="type" width="20%"/>
 	<acme:list-column code="chef.quantity.amount" path="amount" width="10%"/>
+	<acme:list-column code="chef.quantity.name" path="name" width="60%"/>
 	
 </acme:list>
 

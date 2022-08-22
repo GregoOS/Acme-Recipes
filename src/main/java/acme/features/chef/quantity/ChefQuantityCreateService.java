@@ -84,8 +84,9 @@ public class ChefQuantityCreateService implements AbstractCreateService<Chef, Qu
 		amount = model.getInteger("amount");
 		selectedElement = entity.getElement();
 
-		if (!errors.hasErrors("amount")) {
-			errors.state(request, !(selectedElement.getType().equals(Type.UTENSIL) && amount == 1.0), "amount","chef.quantity.error.toomuchutensil");
+		if (!errors.hasErrors("amount") && selectedElement.getType().equals(Type.UTENSIL)) {
+			errors.state(request, amount==1, "amount",
+					"chef.quantity.error.toomuchutensil");
 		}
 
 		if (!errors.hasErrors("elements")) {
