@@ -61,10 +61,13 @@ public class ChefQuantityShowService implements AbstractShowService<Chef, Quanti
 		String toolkitCurrency;
 		Collection<Element> elements;
 		Collection<Element> elementsInRecipe;
+		boolean showUpdateElement;
 
 		selectedElement = entity.getElement();
 		recipeId = entity.getRecipe().getId();
 		elementsInRecipe = this.repository.findManyElementByRecipeId(recipeId);
+		showUpdateElement = (entity.getRecipe().isDraft() && request.isPrincipal(entity.getRecipe().getChef()));
+
  		
  		if (elementsInRecipe.isEmpty()) {
 			elements = this.repository.findAllElements();
@@ -74,6 +77,7 @@ public class ChefQuantityShowService implements AbstractShowService<Chef, Quanti
 		}
 		model.setAttribute("elements", elements);
 		model.setAttribute("selected", selectedElement);
-		model.setAttribute("draft", entity.getRecipe().isDraft());
+		model.setAttribute("showUpdateElement", showUpdateElement);
+		
 	}
 }

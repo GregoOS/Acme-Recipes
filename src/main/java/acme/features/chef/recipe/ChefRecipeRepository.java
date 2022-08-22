@@ -1,6 +1,7 @@
 package acme.features.chef.recipe;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 
@@ -37,5 +38,5 @@ public interface ChefRecipeRepository extends AbstractRepository {
 	Collection<Quantity> findAmountsByRecipeId(int id);
 	
 	@Query("select sum(q.amount*q.element.retailPrice.amount) from Quantity q where q.recipe.id = :id")
-	Double findRetailPriceAmountByRecipeId(int id);
+	Optional<Double> findRetailPriceAmountByRecipeId(int id);
 }

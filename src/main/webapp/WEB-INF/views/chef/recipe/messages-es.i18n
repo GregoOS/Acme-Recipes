@@ -3,6 +3,7 @@ chef.recipe.heading=Cabecera
 chef.recipe.description=Descripción
 chef.recipe.preparationnotes=Notas de preparación
 chef.recipe.link=Link
+chef.recipe.published=Publicada
 chef.recipe.retailprice=Precio
 chef.recipe.button.elements=Elementos
 chef.recipe.button.update=Actualizar
