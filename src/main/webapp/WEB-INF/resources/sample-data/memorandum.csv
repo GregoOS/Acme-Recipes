@@ -1,6 +1,6 @@
 key,sequence-number,creationTime,report,link,key:fine-dish
 memorandum-01,AA:AAA-000:0001,2022/01/01 00:00,Test report,https://acme.com,fine-dish-01
-memorandum-02,ZZ:ZZZ-999:999,2022/01/01 00:00,Test report,https://acme.com,fine-dish-04
+memorandum-02,ZZ:ZZZ-999:9999,2022/01/01 00:00,Test report,https://acme.com,fine-dish-04
 memorandum-03,AB:CDE-456:7890,2022/01/01 00:00,Test report,https://acme.com,fine-dish-05
 memorandum-04,AAA-000:0000,2022/01/01 00:00,Test report,https://acme.com,fine-dish-06
 memorandum-05,ZZZ-999:9999,2022/01/01 00:00,Test report,https://acme.com,fine-dish-07
