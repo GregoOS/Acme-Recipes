@@ -34,4 +34,7 @@ public interface EpicureFineDishRepository extends AbstractRepository {
 
 	@Query("select count(sc) > 0 from SystemConfiguration sc where sc.acceptedCurrencies LIKE %:currency%")
 	boolean isAcceptedCurrency(String currency);
+
+	@Query("select c from Chef c")
+	Collection<Chef> findAllChefs();
 }
