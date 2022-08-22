@@ -89,10 +89,11 @@ public class ChefElementCreateService implements AbstractCreateService<Chef, Ele
 		}
 		
 		if (!errors.hasErrors("amountUnit")) {
-			Element existing;
-			
-			existing = this.repository.findOneElementByCode(entity.getCode());
-			errors.state(request, !(existing.getType()==Type.UTENSIL && existing.getAmountUnit().compareTo("")==0), "amountUnit","chef.element.error.amountunit");
+			if(entity.getType()==Type.UTENSIL) {
+				errors.state(request,entity.getAmountUnit().compareTo("")==0, "amountUnit","chef.element.error.amountunitut");
+			}else {
+				errors.state(request,entity.getAmountUnit().compareTo("")!=0, "amountUnit","chef.element.error.amountuniting");
+			}
 		}
 	}
 

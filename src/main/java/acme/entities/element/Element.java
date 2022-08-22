@@ -34,14 +34,14 @@ public class Element extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$")
+	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$",message = "{acme.validation.element.code}")
 	protected String code;
 
 	@NotBlank
 	@Length(max = 255)
 	protected String description;
 	
-	@NotBlank
+	@NotNull
 	@Length(max = 10)
 	protected String amountUnit;
 
