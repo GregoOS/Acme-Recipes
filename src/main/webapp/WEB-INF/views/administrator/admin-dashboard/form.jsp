@@ -146,16 +146,16 @@
 			</th>
 			<td>
 				<p>
-					<jstl:out value="${totalNumberIngredients.get('Proposed')}"/>
-					<acme:message code="administrator.dashboard.form.proposed"/>
+					<jstl:out value="${totalNumberFineDishes.get('PROPOSED')}"/>
+					<acme:message code="administrator.admin-dashboard.form.proposed"/>
 				</p>
 				<p>
-					<jstl:out value="${totalNumberIngredients.get('Accepted')}"/>
-					<acme:message code="administrator.dashboard.form.accepted"/>
+					<jstl:out value="${totalNumberFineDishes.get('ACCEPTED')}"/>
+					<acme:message code="administrator.admin-dashboard.form.accepted"/>
 				</p>
 				<p>
-					<jstl:out value="${totalNumberIngredients.get('Denied')}"/>
-					<acme:message code="administrator.dashboard.form.denied"/>
+					<jstl:out value="${totalNumberFineDishes.get('DENIED')}"/>
+					<acme:message code="administrator.admin-dashboard.form.denied"/>
 				</p>
 			</td>
 		</tr>
@@ -170,7 +170,7 @@
 					<acme:message code="administrator.admin-dashboard.form.proposed"/>
 				</th>
 				<td>
-					<jstl:out value="${avg.getValue().get('Proposed')}"></jstl:out>
+					<jstl:out value="${avg.getValue().get('PROPOSED')}"></jstl:out>
 					<jstl:out value="${avg.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -179,7 +179,7 @@
 					<acme:message code="administrator.admin-dashboard.form.accepted"/>
 				</th>
 				<td>
-					<jstl:out value="${avg.getValue().get('Accepted')}"></jstl:out>
+					<jstl:out value="${avg.getValue().get('ACCEPTED')}"></jstl:out>
 					<jstl:out value="${avg.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -188,7 +188,7 @@
 					<acme:message code="administrator.admin-dashboard.form.denied"/>
 				</th>
 				<td>
-					<jstl:out value="${avg.getValue().get('Denied')}"></jstl:out>
+					<jstl:out value="${avg.getValue().get('DENIED')}"></jstl:out>
 					<jstl:out value="${avg.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -204,7 +204,7 @@
 					<acme:message code="administrator.admin-dashboard.form.proposed"/>
 				</th>
 				<td>
-					<jstl:out value="${stddev.getValue().get('Proposed')}"></jstl:out>
+					<jstl:out value="${stddev.getValue().get('PROPOSED')}"></jstl:out>
 					<jstl:out value="${stddev.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -213,7 +213,7 @@
 					<acme:message code="administrator.admin-dashboard.form.accepted"/>
 				</th>
 				<td>
-					<jstl:out value="${stddev.getValue().get('Accepted')}"></jstl:out>
+					<jstl:out value="${stddev.getValue().get('ACCEPTED')}"></jstl:out>
 					<jstl:out value="${stddev.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -222,7 +222,7 @@
 					<acme:message code="administrator.admin-dashboard.form.denied"/>
 				</th>
 				<td>
-					<jstl:out value="${stddev.getValue().get('Denied')}"></jstl:out>
+					<jstl:out value="${stddev.getValue().get('DENIED')}"></jstl:out>
 					<jstl:out value="${stddev.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -238,7 +238,7 @@
 					<acme:message code="administrator.admin-dashboard.form.proposed"/>
 				</th>
 				<td>
-					<jstl:out value="${min.getValue().get('Proposed')}"></jstl:out>
+					<jstl:out value="${min.getValue().get('PROPOSED')}"></jstl:out>
 					<jstl:out value="${min.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -247,7 +247,7 @@
 					<acme:message code="administrator.admin-dashboard.form.accepted"/>
 				</th>
 				<td>
-					<jstl:out value="${min.getValue().get('Accepted')}"></jstl:out>
+					<jstl:out value="${min.getValue().get('ACCEPTED')}"></jstl:out>
 					<jstl:out value="${min.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -256,7 +256,7 @@
 					<acme:message code="administrator.admin-dashboard.form.denied"/>
 				</th>
 				<td>
-					<jstl:out value="${min.getValue().get('Denied')}"></jstl:out>
+					<jstl:out value="${min.getValue().get('DENIED')}"></jstl:out>
 					<jstl:out value="${min.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -272,7 +272,7 @@
 					<acme:message code="administrator.admin-dashboard.form.proposed"/>
 				</th>
 				<td>
-					<jstl:out value="${max.getValue().get('Proposed')}"></jstl:out>
+					<jstl:out value="${max.getValue().get('PROPOSED')}"></jstl:out>
 					<jstl:out value="${max.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -281,7 +281,7 @@
 					<acme:message code="administrator.admin-dashboard.form.accepted"/>
 				</th>
 				<td>
-					<jstl:out value="${max.getValue().get('Accepted')}"></jstl:out>
+					<jstl:out value="${max.getValue().get('ACCEPTED')}"></jstl:out>
 					<jstl:out value="${max.getKey()}"></jstl:out>
 				</td>
 			</tr>
@@ -290,7 +290,7 @@
 					<acme:message code="administrator.admin-dashboard.form.denied"/>
 				</th>
 				<td>
-					<jstl:out value="${max.getValue().get('Denied')}"></jstl:out>
+					<jstl:out value="${max.getValue().get('DENIED')}"></jstl:out>
 					<jstl:out value="${max.getKey()}"></jstl:out>
 				</td>
 			</tr>

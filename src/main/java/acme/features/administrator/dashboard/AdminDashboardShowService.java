@@ -32,7 +32,7 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 
 	@Override
 	public AdminDashboard findOne(final Request<AdminDashboard> request) {
-		final String[] currencies = this.configurationRepository.findSystemConfiguration().getCurrency().split(",");
+		final String[] currencies = this.configurationRepository.findSystemConfiguration().getAcceptedCurrencies().split(",");
 		
 		final AdminDashboard result;
 		

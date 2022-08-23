@@ -15,31 +15,31 @@ public interface AdminDashboardRepository extends AbstractRepository{
 	@Query("select count(ing) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT")
 	Long totalIngredients();
 	
-	@Query("select avg(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =: currency")
+	@Query("select avg(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =:currency")
 	Double averageIngredients(String currency);
 	
-	@Query("select stddev(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =: currency")
+	@Query("select stddev(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =:currency")
 	Double deviationIngredients(String currency);
 	
-	@Query("select min(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =: currency")
+	@Query("select min(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =:currency")
 	Double minimumIngredients(String currency);
 	
-	@Query("select max(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =: currency")
+	@Query("select max(ing.retailPrice.amount) from Element ing where ing.type=acme.entities.element.Type.INGREDIENT and ing.retailPrice.currency =:currency")
 	Double maximunIngredients(String currency);
 	
 	@Query("select count(ut) from Element ut where ut.type=acme.entities.element.Type.UTENSIL")
 	Long totalUtensils();
 	
-	@Query("select avg(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =: currency")
+	@Query("select avg(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =:currency")
 	Double averageUtensils(String currency);
 	
-	@Query("select stddev(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =: currency")
+	@Query("select stddev(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =:currency")
 	Double deviationUtensils(String currency);
 	
-	@Query("select min(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =: currency")
+	@Query("select min(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =:currency")
 	Double minimumUtensils(String currency);
 	
-	@Query("select max(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =: currency")
+	@Query("select max(ut.retailPrice.amount) from Element ut where ut.type=acme.entities.element.Type.UTENSIL and ut.retailPrice.currency =:currency")
 	Double maximumUtensils(String currency);
 	
 	@Query("select fd.status, count(fd) from FineDish fd group by fd.status")
