@@ -63,7 +63,7 @@ public class ChefElementCreateService implements AbstractCreateService<Chef, Ele
 		assert errors != null;
 
 		if (!errors.hasErrors("name")) {
-			errors.state(request, !!this.textValidator.spamChecker(entity.getName()), "name", "chef.element.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getName()), "name", "chef.element.error.spam");
 		}
 
 		if (!errors.hasErrors("code")) {

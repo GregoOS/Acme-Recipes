@@ -14,6 +14,7 @@ import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
+import acme.utility.TextValidator;
 
 @Service
 public class ChefRecipePublishService implements AbstractUpdateService<Chef, Recipe> {
@@ -21,8 +22,8 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 	@Autowired
 	protected ChefRecipeRepository repository;
 
-	// @Autowired
-	// protected SpamService spamService;
+	@Autowired
+	protected TextValidator textValidator;
 
 	@Override
 	public boolean authorise(final Request<Recipe> request) {
@@ -76,7 +77,7 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 			id = request.getModel().getInteger("id");
 			existing = this.repository.findOneRecipeByCode(entity.getCode());
 
-			errors.state(request, existing == null || existing.getId() == id, "code","chef.recipe.error.duplicated");
+			errors.state(request, existing == null || existing.getId() == id, "code", "chef.recipe.error.duplicated");
 		}
 
 		if (!errors.hasErrors("retailPrice")) {
@@ -85,17 +86,20 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 
 			id = request.getModel().getInteger("id");
 			amounts = this.repository.findAmountsByRecipeId(id);
-			errors.state(request, amounts != null && amounts.size() > 0, "retailPrice","chef.recipe.error.noElements");
+			errors.state(request, amounts != null && amounts.size() > 0, "retailPrice", "chef.recipe.error.noElements");
 		}
-		//if (!errors.hasErrors("heading")) {
-		//	errors.state(request, !this.spamService.isSpam(entity.getHeading()), "heading","chef.recipe.error.spam");
-		//}
-		//if (!errors.hasErrors("description")) {
-		//	errors.state(request, !this.spamService.isSpam(entity.getDescription()), "description","chef.recipe.error.spam");
-		//}
-		//if (!errors.hasErrors("preparationNotes")) {
-		//	errors.state(request, !this.spamService.isSpam(entity.getPreparationNotes()), "preparationNotes","chef.recipe.error.spam");
-		//}
+		if (!errors.hasErrors("heading")) {
+			errors.state(request, !this.textValidator.spamChecker(entity.getHeading()), "heading",
+					"chef.recipe.error.spam");
+		}
+		if (!errors.hasErrors("description")) {
+			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), "description",
+					"chef.recipe.error.spam");
+		}
+		if (!errors.hasErrors("preparationNotes")) {
+			errors.state(request, !this.textValidator.spamChecker(entity.getPreparationNotes()), "preparationNotes",
+					"chef.recipe.error.spam");
+		}
 	}
 
 	@Override
@@ -109,13 +113,13 @@ public class ChefRecipePublishService implements AbstractUpdateService<Chef, Rec
 
 		String currency;
 		Optional<Double> amount;
-		Double finalAmount=0.0;
+		Double finalAmount = 0.0;
 
 		amount = this.repository.findRetailPriceAmountByRecipeId(id);
 		if (!amount.isPresent()) {
 			currency = "";
-		}else {
-			finalAmount=amount.get();
+		} else {
+			finalAmount = amount.get();
 			currency = this.repository.findRetailPriceCurrencyByRecipeId(id);
 		}
 

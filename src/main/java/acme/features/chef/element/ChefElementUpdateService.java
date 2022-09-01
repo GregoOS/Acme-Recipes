@@ -10,6 +10,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
+import acme.utility.TextValidator;
 
 @Service
 public class ChefElementUpdateService implements AbstractUpdateService<Chef, Element> {
@@ -17,8 +18,8 @@ public class ChefElementUpdateService implements AbstractUpdateService<Chef, Ele
 	@Autowired
 	protected ChefElementRepository repository;
 
-	// @Autowired
-	// protected SpamService spamService;
+	@Autowired
+	protected TextValidator textValidator;
 
 	@Override
 	public boolean authorise(final Request<Element> request) {
@@ -53,7 +54,7 @@ public class ChefElementUpdateService implements AbstractUpdateService<Chef, Ele
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "name", "code", "description", "retailPrice", "link", "type","amountUnit");
+		request.bind(entity, errors, "name", "code", "description", "retailPrice", "link", "type", "amountUnit");
 	}
 
 	@Override
@@ -63,7 +64,7 @@ public class ChefElementUpdateService implements AbstractUpdateService<Chef, Ele
 		assert errors != null;
 
 		if (!errors.hasErrors("name")) {
-			//errors.state(request, !this.spamService.isSpam(entity.getName()), "name", "chef.element.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getName()), "name", "chef.element.error.spam");
 		}
 
 		if (!errors.hasErrors("code")) {
@@ -90,14 +91,17 @@ public class ChefElementUpdateService implements AbstractUpdateService<Chef, Ele
 		}
 
 		if (!errors.hasErrors("description")) {
-			// errors.state(request, !this.spamService.isSpam(entity.getDescription()),"description","chef.element.form.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), "description",
+					"chef.element.form.error.spam");
 		}
-		
+
 		if (!errors.hasErrors("amountUnit")) {
-			if(entity.getType()==Type.UTENSIL) {
-				errors.state(request,entity.getAmountUnit().compareTo("")==0, "amountUnit","chef.element.error.amountunitut");
-			}else {
-				errors.state(request,entity.getAmountUnit().compareTo("")!=0, "amountUnit","chef.element.error.amountuniting");
+			if (entity.getType() == Type.UTENSIL) {
+				errors.state(request, entity.getAmountUnit().compareTo("") == 0, "amountUnit",
+						"chef.element.error.amountunitut");
+			} else {
+				errors.state(request, entity.getAmountUnit().compareTo("") != 0, "amountUnit",
+						"chef.element.error.amountuniting");
 			}
 		}
 	}
@@ -108,7 +112,8 @@ public class ChefElementUpdateService implements AbstractUpdateService<Chef, Ele
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "code", "description", "retailPrice", "link", "type","draft","amountUnit");
+		request.unbind(entity, model, "name", "code", "description", "retailPrice", "link", "type", "draft",
+				"amountUnit");
 	}
 
 	@Override
