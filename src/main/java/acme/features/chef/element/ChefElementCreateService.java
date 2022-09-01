@@ -11,15 +11,16 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
+import acme.utility.TextValidator;
 
 @Service
 public class ChefElementCreateService implements AbstractCreateService<Chef, Element> {
 
 	@Autowired
 	protected ChefElementRepository repository;
-
-	//@Autowired
-	//protected SpamService spamService;
+	
+	@Autowired
+	protected TextValidator textValidator;
 
 	@Override
 	public boolean authorise(final Request<Element> request) {
@@ -62,7 +63,7 @@ public class ChefElementCreateService implements AbstractCreateService<Chef, Ele
 		assert errors != null;
 
 		if (!errors.hasErrors("name")) {
-			//errors.state(request, !this.spamService.isSpam(entity.getName()), "name", "chef.element.error.spam");
+			errors.state(request, !!this.textValidator.spamChecker(entity.getName()), "name", "chef.element.error.spam");
 		}
 
 		if (!errors.hasErrors("code")) {
@@ -85,7 +86,7 @@ public class ChefElementCreateService implements AbstractCreateService<Chef, Ele
 		}
 
 		if (!errors.hasErrors("description")) {
-			//errors.state(request, !this.spamService.isSpam(entity.getDescription()), "description","chef.element.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), "description","chef.element.error.spam");
 		}
 		
 		if (!errors.hasErrors("amountUnit")) {
