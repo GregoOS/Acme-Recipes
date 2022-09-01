@@ -1,5 +1,7 @@
 package acme.features.epicure.finedish;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +9,7 @@ import acme.entities.finedish.FineDish;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractShowService;
+import acme.roles.Chef;
 import acme.roles.Epicure;
 
 @Service
@@ -44,17 +47,17 @@ public class EpicureFineDishShowService implements AbstractShowService<Epicure, 
 		assert entity != null;
 		assert model != null;
 
+		Collection<Chef> chefs;
+		
+		chefs=this.repository.findAllChefs();
+		
 		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "startDate", "endDate",
 				"link", "draft");
 
 		final int masterId = request.getModel().getInteger("id");
 		model.setAttribute("masterId", masterId);
 
-		model.setAttribute("chefName", entity.getChef().getIdentity().getName());
-		model.setAttribute("chefSurname", entity.getChef().getIdentity().getSurname());
-		model.setAttribute("chefEmail", entity.getChef().getIdentity().getEmail());
-		model.setAttribute("chefOrganisation", entity.getChef().getOrganisation());
-		model.setAttribute("chefAssertion", entity.getChef().getAssertion());
-		model.setAttribute("chefLink", entity.getChef().getLink());
+		model.setAttribute("selected", entity.getChef());
+		model.setAttribute("chefs", chefs);
 	}
 }

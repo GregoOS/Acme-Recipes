@@ -80,8 +80,8 @@ public class ChefQuantityUpdateService implements AbstractUpdateService<Chef, Qu
 
 		model.setAttribute("selected", selectedElement);
 
-		if (!errors.hasErrors("amount")) {
-			errors.state(request, !(selectedElement.getType().equals(Type.UTENSIL) || amount == 1), "amount",
+		if (!errors.hasErrors("amount") && selectedElement.getType().equals(Type.UTENSIL)) {
+			errors.state(request, amount==1, "amount",
 					"chef.quantity.error.toomuchutensil");
 		}
 
@@ -104,7 +104,7 @@ public class ChefQuantityUpdateService implements AbstractUpdateService<Chef, Qu
 
 			errors.state(request,
 					!elementsInRecipe.contains(selectedElement) || selectedElement.equals(previousElement), "*",
-					"chef.quantity.error.repeated-Element");
+					"chef.quantity.error.repeatedelement");
 
 			errors.state(request, !selectedElement.isDraft(), "*", "chef.quantity.error.draftmodeelement");
 		}
@@ -127,6 +127,9 @@ public class ChefQuantityUpdateService implements AbstractUpdateService<Chef, Qu
 		selectedElement = entity.getElement();
 		recipeId = entity.getRecipe().getId();
 		elementsInRecipe = this.repository.findManyElementByRecipeId(recipeId);
+		boolean showUpdateElement;
+		
+		showUpdateElement = (entity.getRecipe().isDraft() && request.isPrincipal(entity.getRecipe().getChef()));
 
 		if (elementsInRecipe.isEmpty()) {
 			elements = this.repository.findAllElements();
@@ -141,7 +144,7 @@ public class ChefQuantityUpdateService implements AbstractUpdateService<Chef, Qu
 
 		model.setAttribute("elements", elements);
 		model.setAttribute("selected", selectedElement);
-		model.setAttribute("draftMode", entity.getRecipe().isDraft());
+		model.setAttribute("showUpdateElement", showUpdateElement);
 	}
 
 	@Override

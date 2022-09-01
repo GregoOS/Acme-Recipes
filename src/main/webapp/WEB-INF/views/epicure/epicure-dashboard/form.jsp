@@ -17,7 +17,7 @@
 					<jstl:out value="${averageState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${averageState.getValue().get('Proposed')}" />
+					<jstl:out value="${averageState.getValue().get('PROPOSED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -26,7 +26,7 @@
 					<jstl:out value="${averageState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${averageState.getValue().get('Accepted')}" />
+					<jstl:out value="${averageState.getValue().get('ACCEPTED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -35,7 +35,7 @@
 					<jstl:out value="${averageState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${averageState.getValue().get('Denied')}" />
+					<jstl:out value="${averageState.getValue().get('DENIED')}" />
 				</td>
 			</tr>
 		</jstl:forEach>
@@ -51,7 +51,7 @@
 					<jstl:out value="${deviationState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${deviationState.getValue().get('Proposed')}" />
+					<jstl:out value="${deviationState.getValue().get('PROPOSED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -60,7 +60,7 @@
 					<jstl:out value="${deviationState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${deviationState.getValue().get('Accepted')}" />
+					<jstl:out value="${deviationState.getValue().get('ACCEPTED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -69,7 +69,7 @@
 					<jstl:out value="${deviationState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${deviationState.getValue().get('Denied')}" />
+					<jstl:out value="${deviationState.getValue().get('DENIED')}" />
 				</td>
 			</tr>
 		</jstl:forEach>
@@ -85,7 +85,7 @@
 					<jstl:out value="${maxState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${maxState.getValue().get('Proposed')}" />
+					<jstl:out value="${maxState.getValue().get('PROPOSED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -94,7 +94,7 @@
 					<jstl:out value="${maxState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${maxState.getValue().get('Accepted')}" />
+					<jstl:out value="${maxState.getValue().get('ACCEPTED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -103,7 +103,7 @@
 					<jstl:out value="${maxState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${maxState.getValue().get('Denied')}" />
+					<jstl:out value="${maxState.getValue().get('DENIED')}" />
 				</td>
 			</tr>
 		</jstl:forEach>
@@ -119,7 +119,7 @@
 					<jstl:out value="${minState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${minState.getValue().get('Proposed')}" />
+					<jstl:out value="${minState.getValue().get('PROPOSED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -128,7 +128,7 @@
 					<jstl:out value="${minState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${minState.getValue().get('Accepted')}" />
+					<jstl:out value="${minState.getValue().get('ACCEPTED')}" />
 				</td>
 			</tr>
 			<tr>
@@ -137,7 +137,7 @@
 					<jstl:out value="${minState.getKey()}" />
 				</th>
 				<td>
-					<jstl:out value="${minState.getValue().get('Denied')}" />
+					<jstl:out value="${minState.getValue().get('DENIED')}" />
 				</td>
 			</tr>
 		</jstl:forEach>
@@ -158,9 +158,9 @@
 				datasets : [
 					{
 						data : [
-							<jstl:out value="${totalFineDishes.get('Proposed')}"/>,
-							<jstl:out value="${totalFineDishes.get('Accepted')}"/>,
-							<jstl:out value="${totalFineDishes.get('Denied')}"/>
+							<jstl:out value="${totalFineDishes.get('PROPOSED')}"/>,
+							<jstl:out value="${totalFineDishes.get('ACCEPTED')}"/>,
+							<jstl:out value="${totalFineDishes.get('DENIED')}"/>
 						]
 					}
 				]

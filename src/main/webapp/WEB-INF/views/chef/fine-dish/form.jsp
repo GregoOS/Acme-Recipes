@@ -28,8 +28,8 @@
 	<acme:input-textbox code="chef.finedish.epicure.link" path="epicureLink"/>
 
 	<jstl:if test="${status == 'PROPOSED'}">
-		<acme:submit code="chef.finedish.button.accept" action="/chef/finedish/accept"/>
-		<acme:submit code="chef.finedish.button.deny" action="/chef/finedish/deny"/>
+		<acme:submit code="chef.finedish.button.accept" action="/chef/fine-dish/accept"/>
+		<acme:submit code="chef.finedish.button.deny" action="/chef/fine-dish/deny"/>
 	</jstl:if>
 	<jstl:if test="${status == 'ACCEPTED'}">
 		<acme:button code="chef.finedish.memorandums" action="/chef/memorandum/list-by-finedish?masterId=${id}"/>

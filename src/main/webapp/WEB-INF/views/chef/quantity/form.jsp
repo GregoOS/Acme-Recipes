@@ -17,7 +17,7 @@
 	<acme:input-integer code="chef.quantity.amount" path="amount"/>
 	
 	<jstl:choose>
-		<jstl:when test="${acme:anyOf(command, 'show, update, delete')}">
+		<jstl:when test="${acme:anyOf(command, 'show, update, delete') && showUpdateElement}">
 			<acme:submit code="chef.quantity.button.update" action="/chef/quantity/update"/>
 			<acme:submit code="chef.quantity.button.delete" action="/chef/quantity/delete"/>
 		</jstl:when>

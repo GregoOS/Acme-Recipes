@@ -3,6 +3,7 @@ chef.recipe.heading=Heading
 chef.recipe.description=Description
 chef.recipe.preparationnotes=Preparation Notes
 chef.recipe.link=Link
+chef.recipe.published=Published
 chef.recipe.retailprice=Retail Price
 chef.recipe.button.elements=Elements
 chef.recipe.button.update=Update

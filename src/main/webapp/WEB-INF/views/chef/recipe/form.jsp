@@ -7,7 +7,7 @@
 	<acme:input-textbox code="chef.recipe.code" path="code" placeholder="AA:AAA-111"/>
 	<acme:input-textbox code="chef.recipe.heading" path="heading"/>
 	<acme:input-textarea code="chef.recipe.description" path="description"/>
-	<acme:input-textarea code="chef.recipe.preparationNotes" path="preparationNtes"/>
+	<acme:input-textarea code="chef.recipe.preparationnotes" path="preparationNotes"/>
 	<acme:input-url code="chef.recipe.link" path="link"/>
 		
 	<jstl:if test="${!(command == 'create')}">
