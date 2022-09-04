@@ -1,0 +1,4 @@
+administrator.systemconfiguration.form.label.currency = Divisa
+administrator.systemconfiguration.form.label.acceptedcurrencies = Divisas aceptadas
+administrator.systemconfiguration.form.label.spamThreshold = Umbral de spam
+administrator.systemconfiguration.form.label.spamTerms = Términos de spam
