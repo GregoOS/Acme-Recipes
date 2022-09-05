@@ -7,6 +7,79 @@
 </h2>
 <div>
 	<h2>
+		<acme:message code="administrator.admin-dashboard.form.pimpam"/>
+	</h2>
+	<table class="table table-sm">
+		<acme:message code="administrator.admin-dashboard.form.ratioPimpamIngredients"/>		
+		<jstl:forEach var="ratio" items="${ratioPimpamIngredients}">
+			<tr>
+				<th scope="row">
+					<jstl:out value="${ratio.getKey()}"/>
+				</th>
+				<td>
+					<jstl:out value="${ratio.getValue()}"/>
+				</td>
+			</tr>
+		</jstl:forEach>
+	</table>
+	
+	<table class="table table-sm">
+		<acme:message code="administrator.admin-dashboard.form.averageBudgetOfPimpam"/>
+		<jstl:forEach var="average" items="${averageBudgetOfPimpam}">
+			<tr>
+				<th scope="row">
+					<jstl:out value="${average.getKey()}"/>
+				</th>
+				<td>
+					<jstl:out value="${average.getValue()}"/>
+				</td>
+			</tr>
+		</jstl:forEach>
+	</table>
+		
+	<table class="table table-sm">
+		<acme:message code="administrator.admin-dashboard.form.deviationBudgetOfPimpam"/>
+		<jstl:forEach var="deviation" items="${deviationBudgetOfPimpam}">
+			<tr>
+				<th scope="row">
+					<jstl:out value="${deviation.getKey()}"/>
+				</th>
+				<td>
+					<jstl:out value="${deviation.getValue()}"/>
+				</td>
+			</tr>
+		</jstl:forEach>
+	</table>
+		
+	<table class="table table-sm">
+		<acme:message code="administrator.admin-dashboard.form.minimumBudgetOfPimpam"/>
+		<jstl:forEach var="minimum" items="${minimumBudgetOfPimpam}">
+			<tr>
+				<th scope="row">
+					<jstl:out value="${minimum.getKey()}"/>
+				</th>
+				<td>
+					<jstl:out value="${minimum.getValue()}"/>
+				</td>
+			</tr>
+		</jstl:forEach>
+	</table>
+	
+	<table class="table table-sm">
+		<acme:message code="administrator.admin-dashboard.form.maximumBudgetOfPimpam"/>
+		<jstl:forEach var="maximum" items="${maximumBudgetOfPimpam}">
+			<tr>
+				<th scope="row">
+					<jstl:out value="${maximum.getKey()}"/>
+				</th>
+				<td>
+					<jstl:out value="${maximum.getValue()}"/>
+				</td>
+			</tr>
+		</jstl:forEach>
+	</table>
+
+	<h2>
 		<acme:message code="administrator.admin-dashboard.form.ingredients"/>
 	</h2>
 	<table class="table table-sm">
@@ -292,86 +365,6 @@
 				<td>
 					<jstl:out value="${max.getValue().get('DENIED')}"></jstl:out>
 					<jstl:out value="${max.getKey()}"></jstl:out>
-				</td>
-			</tr>
-		</jstl:forEach>
-	</table>
-	
-	<h2>
-		<acme:message code="administrator.admin-dashboard.form.ratioPimpamIngredients"/>
-	</h2>
-	<table class="table table-sm">
-		<jstl:forEach var="ratio" items="${ratioPimpamIngredients}">
-			<tr>
-				<th scope="row">
-					<jstl:out value="${ratio.getKey()}"/>
-				</th>
-				<td>
-					<jstl:out value="${ratio.getValue()}"/>
-				</td>
-			</tr>
-		</jstl:forEach>
-	</table>
-	
-	<h2>
-		<acme:message code="administrator.admin-dashboard.form.averageBudgetOfPimpam"/>
-	</h2>
-	<table class="table table-sm">
-		<jstl:forEach var="average" items="${averageBudgetOfPimpam}">
-			<tr>
-				<th scope="row">
-					<jstl:out value="${average.getKey()}"/>
-				</th>
-				<td>
-					<jstl:out value="${average.getValue()}"/>
-				</td>
-			</tr>
-		</jstl:forEach>
-	</table>
-	
-	<h2>
-		<acme:message code="administrator.admin-dashboard.form.deviationBudgetOfPimpam"/>
-	</h2>	
-	<table class="table table-sm">
-		<jstl:forEach var="deviation" items="${deviationBudgetOfPimpam}">
-			<tr>
-				<th scope="row">
-					<jstl:out value="${deviation.getKey()}"/>
-				</th>
-				<td>
-					<jstl:out value="${deviation.getValue()}"/>
-				</td>
-			</tr>
-		</jstl:forEach>
-	</table>
-	
-	<h2>
-		<acme:message code="administrator.admin-dashboard.form.minimumBudgetOfPimpam"/>
-	</h2>	
-	<table class="table table-sm">
-		<jstl:forEach var="minimum" items="${minimumBudgetOfPimpam}">
-			<tr>
-				<th scope="row">
-					<jstl:out value="${minimum.getKey()}"/>
-				</th>
-				<td>
-					<jstl:out value="${minimum.getValue()}"/>
-				</td>
-			</tr>
-		</jstl:forEach>
-	</table>
-	
-	<h2>
-		<acme:message code="administrator.admin-dashboard.form.maximumBudgetOfPimpam"/>
-	</h2>
-	<table class="table table-sm">
-		<jstl:forEach var="maximum" items="${maximumBudgetOfChinpum}">
-			<tr>
-				<th scope="row">
-					<jstl:out value="${maximum.getKey()}"/>
-				</th>
-				<td>
-					<jstl:out value="${maximum.getValue()}"/>
 				</td>
 			</tr>
 		</jstl:forEach>
