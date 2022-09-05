@@ -11,15 +11,16 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractCreateService;
+import acme.utility.TextValidator;
 
 @Service
-public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
+public class AnyPeepCreateService implements AbstractCreateService<Any, Peep> {
 
 	@Autowired
 	AnyPeepRepository repository;
-	
-	//@Autowired
-	//protected SpamService spamService;
+
+	@Autowired
+	protected TextValidator textValidator;
 
 	@Override
 	public boolean authorise(final Request<Peep> request) {
@@ -33,7 +34,7 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "heading","writer","text","email");
+		request.bind(entity, errors, "heading", "writer", "text", "email");
 	}
 
 	@Override
@@ -42,7 +43,7 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "moment","heading","writer","text","email");
+		request.unbind(entity, model, "moment", "heading", "writer", "text", "email");
 	}
 
 	@Override
@@ -70,20 +71,24 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
 
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
-		
+
 		if (!errors.hasErrors("heading")) {
-			//errors.state(request, !this.spamService.isSpam(entity.getTitle()), "title","any.peep.form.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getHeading()),
+					"title", "any.peep.form.spam");
 		}
 		if (!errors.hasErrors("writer")) {
-			//errors.state(request, !this.spamService.isSpam(entity.getAuthor()), "author","any.peep.form.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getWriter()),
+					"author", "any.peep.form.spam");
 		}
 		if (!errors.hasErrors("text")) {
-			//errors.state(request, !this.spamService.isSpam(entity.getBody()), "body","any.peep.form.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getText()),
+					"body", "any.peep.form.spam");
 		}
 		if (!errors.hasErrors("email")) {
-			//errors.state(request, !this.spamService.isSpam(entity.getEmail()), "email","any.peep.form.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getEmail()),
+					"email", "any.peep.form.spam");
 		}
-		
+
 	}
 
 	@Override

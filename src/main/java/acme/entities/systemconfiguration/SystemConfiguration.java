@@ -15,31 +15,22 @@ import lombok.Setter;
 @Setter
 public class SystemConfiguration extends AbstractEntity {
 
-	// Serialisation identifier -----------------------------------------------
-
 	protected static final long serialVersionUID = 1L;
 
-	// Attributes -------------------------------------------------------------
-
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{3}$",
-			message = "{acme.validation.system-configuration.currency}")
+	@Pattern(regexp = "^[A-Z]{3}$", message = "{acme.validation.system-configuration.currency}")
 	protected String currency;
 
 	@NotBlank
-	@Pattern(regexp = "^([A-Z]{3})(,[A-Z]{3})*$",
-			message = "{acme.validation.system-configuration.accepted-currencies}")
+	@Pattern(regexp = "^([A-Z]{3})(,[A-Z]{3})*$", message = "{acme.validation.system-configuration.accepted-currencies}")
 	protected String acceptedCurrencies;
 
 	@NotBlank
-	@Pattern(
-			regexp = "^(\\([\\w\\s\\d']*,\\d.\\d{2}\\),)*\\([\\w\\s\\d']*,\\d.\\d{2}\\)$",
-			message = "{acme.validation.system-configuration.spam-terms}")
+	@Pattern(regexp = "^(\\([\\w\\s\\d';áéíóúÁÉÍÓÚçÇ€$&@]*,\\d.\\d{2}\\),)*\\([\\w\\s\\d'áéíóúÁÉÍÓÚçÇ€$&@]*,\\d.\\d{2}\\)$", message = "{acme.validation.system-configuration.spam-terms}")
 	protected String spamTerms;
 
 	@PositiveOrZero
 	@Max(1)
 	protected double spamThreshold;
-
 
 }
