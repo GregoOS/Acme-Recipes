@@ -23,6 +23,7 @@
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">			
 			<acme:menu-suboption code="master.menu.authenticated.bulletin.list-recent" action="/authenticated/bulletin/list-recent"/>
+			<acme:menu-suboption code="master.menu.authenticated.system-configuration.show" action="/authenticated/system-configuration/show"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
