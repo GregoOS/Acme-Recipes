@@ -14,3 +14,10 @@ administrator.admin-dashboard.form.maximum-dishes = Precio máximo de los platos
 administrator.admin-dashboard.form.proposed = Propuesto
 administrator.admin-dashboard.form.accepted = Aceptado
 administrator.admin-dashboard.form.denied = Denegado
+
+
+administrator.admin-dashboard.form.ratioPimpamIngredients = Ratio de pimpam por Ingredientes
+administrator.admin-dashboard.form.averageBudgetOfPimpam = Presupuesto medio de pimpam
+administrator.admin-dashboard.form.deviationBudgetOfPimpam = Desviación del presupuesto de pimpam
+administrator.admin-dashboard.form.minimumBudgetOfPimpam = Presupuesto mínimo de pimpam
+administrator.admin-dashboard.form.maximumBudgetOfPimpam = Presupuesto máximo de pimpam
