@@ -10,9 +10,6 @@ import lombok.Setter;
 @Setter
 public class AdminDashboard implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	Long totalNumberIngredients;
@@ -32,5 +29,7 @@ public class AdminDashboard implements Serializable{
 	Map<String, Map<String, Double>> deviationPriceFineDishes;
 	Map<String, Map<String, Double>> minimumPriceFineDishes;
 	Map<String, Map<String, Double>> maximumPriceFineDishes;
+	
+	Map<String,Double> ratioPimpamIngredients;
 	
 }
