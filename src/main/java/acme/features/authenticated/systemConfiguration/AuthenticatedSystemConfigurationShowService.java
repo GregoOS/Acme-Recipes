@@ -23,10 +23,6 @@ public class AuthenticatedSystemConfigurationShowService implements AbstractShow
 	public boolean authorise(final Request<SystemConfiguration> request) {
 		assert request != null;
 		
-//		final Integer id = request.getPrincipal().getAccountId();
-//		final UserAccount user = this.anyUserAccountRepository.findUserAccountById(id);
-//		if(user.hasRole(Authenticated.class)) return true;
-//		else return false;
 		return true;
 	}
 
