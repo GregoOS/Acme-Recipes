@@ -26,6 +26,7 @@ master.menu.any.useraccount.list=Listar cuentas de usuario
 
 master.menu.authenticated = Autentificado
 master.menu.authenticated.bulletin.list-recent = Listar boletines recientes
+master.menu.authenticated.system-configuration.show = Configuración de sistema
 
 # master.menu.administrator ###################################################
 
