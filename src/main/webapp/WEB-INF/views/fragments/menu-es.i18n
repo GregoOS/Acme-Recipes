@@ -49,6 +49,9 @@ master.menu.chef.finedish.listproposed=Listar mis platos propuestos
 master.menu.chef.memorandum.list=Listar mis memorandums
 master.menu.chef.recipe.list=Listar mis recetas
 
+master.menu.lists.pimpam=Mis pimpam
+
+
 # master.menu.epicure ##########################################################
 
 master.menu.epicure = Sibarita

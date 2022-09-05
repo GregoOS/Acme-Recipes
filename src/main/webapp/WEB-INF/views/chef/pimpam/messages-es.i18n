@@ -1,0 +1,23 @@
+pimpam.code=Código
+pimpam.title=Título
+pimpam.description=Descripción
+pimpam.budget=Presupuesto
+pimpam.instantiationMoment=Momento de instancia
+pimpam.startDate=Fecha de Inicio
+pimpam.finishDate=Fecha de finalización
+pimpam.link=Link
+
+chimpum.button.create = Crear
+chimpum.button.update = Actualizar
+chimpum.button.delete = Eliminar
+
+chef.pimpam.element.name = Nombre del elemento
+
+chef.name = Nombre del chef
+
+inventor.chimpum.form.error.negative-budget = No puede haber un presupuesto negativo
+inventor.chimpum.form.error.startDate-too-close-to-creationDate = La fecha de inicio tiene que ser al menos un mes posterior a la de creación
+inventor.chimpum.form.error.finishDate-too-close-to-startDate = La fecha final tiene que ser al menos una semana posterior a la de inicio
+inventor.chimpum.form.error.wrongCurrency = Divisa no permitida
+
+inventor.chimpum.code.duplicated=Este código ya está en uso
