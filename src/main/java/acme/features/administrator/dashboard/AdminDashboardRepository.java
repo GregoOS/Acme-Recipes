@@ -56,4 +56,23 @@ public interface AdminDashboardRepository extends AbstractRepository{
 	
 	@Query("select fd.status, max(fd.budget.amount) from FineDish fd where fd.budget.currency=:currency group by fd.status")
 	List<Tuple> maximumFineDishes(String currency);
+	
+	///////////////////
+	
+	@Query("select p.element.name, 1.0 * count(p)/(select count(pp) from Pimpam pp) from Pimpam p group by p.element")
+	List<Tuple> getRatioOfPimpamIngredients();
+	
+	@Query("select avg(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	Long getAverageBudget(String currency);
+	
+	@Query("select stddev(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	Long getDeviationBudget(String currency);
+	
+	@Query("select min(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	Long getMinimumBudget(String currency);
+	
+	@Query("select max(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	Long getMaximumBudget(String currency);
+	
+	
 }
