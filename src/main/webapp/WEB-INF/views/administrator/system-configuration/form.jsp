@@ -9,4 +9,10 @@
 	<acme:input-textbox code="administrator.systemconfiguration.form.label.acceptedcurrencies" path="acceptedCurrencies"/>
 	<acme:input-textbox code="administrator.systemconfiguration.form.label.spamThreshold" path="spamThreshold"/>
 	<acme:input-textbox code="administrator.systemconfiguration.form.label.spamTerms" path="spamTerms"/>
+	
+	<jstl:choose>	 
+		<jstl:when test="${acme:anyOf(command, 'show, update')}">
+			<acme:submit code="administrator.system-configuration.form.button.update" action="/administrator/system-configuration/update"/>
+		</jstl:when>
+	</jstl:choose>	
 </acme:form>
