@@ -64,6 +64,7 @@ public class Pimpam extends AbstractEntity {
 	@Valid
 	private Money budget;
 	
+//	Can be an ingredient or an utensil
 	@OneToOne(optional=false) //one to one optional false as the relation is convulsory
 	@Valid
 	@NotNull
