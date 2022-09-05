@@ -15,9 +15,13 @@ public class AdministratorSystemConfigurationController extends AbstractControll
 	@Autowired
 	protected AdministratorSystemConfigurationShowService administratorSystemConfigurationShowService;
 	
+	@Autowired
+	protected AdministratorSystemConfigurationUpdateService administratorSystemConfigurationUpdateService;
+	
 	@PostConstruct
 	protected void initialize() {
 		super.addCommand("show", "show", this.administratorSystemConfigurationShowService);
+		super.addCommand("update", "update", this.administratorSystemConfigurationUpdateService);
 	}
 
 }
