@@ -14,3 +14,9 @@ administrator.admin-dashboard.form.maximum-dishes = Maximum price of Fine Dishes
 administrator.admin-dashboard.form.proposed = Proposed
 administrator.admin-dashboard.form.accepted = Accepted
 administrator.admin-dashboard.form.denied = Denied
+
+administrator.admin-dashboard.form.ratioPimpamIngredients = Ratio pimpam per Ingredient
+administrator.admin-dashboard.form.averageBudgetOfPimpam = Average budget of pimpam
+administrator.admin-dashboard.form.deviationBudgetOfPimpam = Budget deviation of pimpam
+administrator.admin-dashboard.form.minimumBudgetOfPimpam = Minimum budget of pimpam
+administrator.admin-dashboard.form.maximumBudgetOfPimpam = Maximum budget of pimpam
