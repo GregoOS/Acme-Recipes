@@ -19,6 +19,7 @@
 			<acme:menu-suboption code="master.menu.any.peep.list-recent" action="/any/peep/list-recent"/>
 			<acme:menu-suboption code="master.menu.any.element.list" action="/any/element/list"/>
 			<acme:menu-suboption code="master.menu.any.useraccount.list" action="/any/user-account/list"/>
+			<acme:menu-suboption code="master.menu.any.recipe.list" action="/any/recipe/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">			
