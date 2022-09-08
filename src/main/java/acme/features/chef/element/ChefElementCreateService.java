@@ -63,7 +63,8 @@ public class ChefElementCreateService implements AbstractCreateService<Chef, Ele
 		assert errors != null;
 
 		if (!errors.hasErrors("name")) {
-			errors.state(request, !this.textValidator.spamChecker(entity.getName()), "name", "chef.element.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getName()), 
+				"name", "chef.element.error.spam");
 		}
 
 		if (!errors.hasErrors("code")) {
@@ -86,7 +87,8 @@ public class ChefElementCreateService implements AbstractCreateService<Chef, Ele
 		}
 
 		if (!errors.hasErrors("description")) {
-			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), "description","chef.element.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), 
+				"description","chef.element.error.spam");
 		}
 		
 		if (!errors.hasErrors("amountUnit")) {

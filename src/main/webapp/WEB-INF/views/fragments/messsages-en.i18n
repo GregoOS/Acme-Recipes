@@ -31,3 +31,6 @@ master.panic.label.request = Request:
 master.panic.label.status = Status:
 master.panic.label.exceptions = Exceptions:
 master.panic.text.consult-log = Please, consult the log to see them full stack trace.
+
+# master.regex ################################################################
+master.regex.code = Code must be in this format: AAA-000 or AA:AAA-000

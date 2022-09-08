@@ -34,7 +34,7 @@ public class Element extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$",message = "{acme.validation.element.code}")
+	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$", message = "{master.regex.code}")
 	protected String code;
 
 	@NotBlank

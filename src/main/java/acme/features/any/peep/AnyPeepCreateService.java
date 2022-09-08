@@ -70,7 +70,9 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep> {
 		boolean confirmation;
 
 		confirmation = request.getModel().getBoolean("confirmation");
-		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+		
+		errors.state(request, confirmation, "confirmation", 
+			"javax.validation.constraints.AssertTrue.message");
 
 		if (!errors.hasErrors("heading")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getHeading()),
@@ -83,10 +85,6 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep> {
 		if (!errors.hasErrors("text")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getText()),
 					"text", "any.peep.form.spam");
-		}
-		if (!errors.hasErrors("email")) {
-			errors.state(request, !this.textValidator.spamChecker(entity.getEmail()),
-					"email", "any.peep.form.spam");
 		}
 
 	}
