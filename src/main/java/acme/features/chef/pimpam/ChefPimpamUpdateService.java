@@ -75,8 +75,13 @@ public class ChefPimpamUpdateService implements AbstractUpdateService<Chef, Pimp
 		
 		if (!errors.hasErrors("code")) {
 			Pimpam existing;
+			Integer id;
+
 			existing = this.chefPimpamRepository.findPimpamByCode(entity.getCode());
-			errors.state(request, existing.equals(null), "code", "chef.pimpam.code.duplicated"); //TODO replace for a jsp valid thingy
+			id = request.getModel().getInteger("id");
+
+			errors.state(request, existing == null || existing.getId() == id, "code",
+					"chef.pimpam.code.duplicated");
 		}
 		
 		this.chefPimpamValidator.validatePimpam(request, entity, errors);
