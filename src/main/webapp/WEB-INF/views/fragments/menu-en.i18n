@@ -21,6 +21,7 @@ master.menu.any = Any
 master.menu.any.peep.list-recent = List recent peeps
 master.menu.any.element.list= List elements
 master.menu.any.useraccount.list=List user accounts
+master.menu.any.recipe.list=List recipes
 
 # master.menu.authenticated #######################################################
 
