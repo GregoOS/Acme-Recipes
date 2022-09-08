@@ -1,0 +1,15 @@
+epicure.memorandum.sequencenumber=Sequence number
+epicure.memorandum.creationtime=Creation time
+epicure.memorandum.report=Report
+epicure.memorandum.link=Link
+epicure.memorandum.finedish=FineDish
+epicure.memorandum.finedish.code=Code
+epicure.memorandum.finedish.status=Status
+epicure.memorandum.finedish.request=Request
+epicure.memorandum.finedish.budget=Budget
+epicure.memorandum.finedish.creationdate=Creation date
+epicure.memorandum.finedish.startdate=Start date
+epicure.memorandum.finedish.enddate=End date
+epicure.memorandum.finedish.link=Link
+epicure.memorandum.confirmation=Confirm
+epicure.memorandum.button.create=Create

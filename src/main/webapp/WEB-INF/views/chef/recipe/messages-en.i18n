@@ -1,0 +1,15 @@
+chef.recipe.code=Code
+chef.recipe.heading=Heading
+chef.recipe.description=Description
+chef.recipe.preparationnotes=Preparation Notes
+chef.recipe.link=Link
+chef.recipe.published=Published
+chef.recipe.retailprice=Retail Price
+chef.recipe.button.elements=Elements
+chef.recipe.button.update=Update
+chef.recipe.button.delete=Delete
+chef.recipe.button.publish=Publish
+chef.recipe.button.create=Create
+chef.recipe.error.duplicated=The code is duplicated
+chef.recipe.error.noElements=The recipe must contain elements
+chef.recipe.error.spam=There is spam in this text

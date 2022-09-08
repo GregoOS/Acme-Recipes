@@ -1,0 +1,26 @@
+epicure.finedish.status=Status
+epicure.finedish.code=Code
+epicure.finedish.request=Request
+epicure.finedish.budget=Budget
+epicure.finedish.creation-date=Creation date
+epicure.finedish.startdate=Start date
+epicure.finedish.enddate=End date
+epicure.finedish.link=Link
+epicure.finedish.chefdata=Chef data
+epicure.finedish.chefs=Chef
+epicure.finedish.chef.surname=Surname
+epicure.finedish.chef.email=Email
+epicure.finedish.chef.organisation=Organisation
+epicure.finedish.chef.link=Link
+epicure.finedish.memorandums=Memorandums
+epicure.finedish.button.update=Update
+epicure.finedish.button.delete=Delete
+epicure.finedish.button.publish=Publish
+epicure.finedish.button.create=Create
+
+epicure.finedish.error.startsearly=It has to start at least in a month
+epicure.finedish.error.endsearly=It has to be at least one month long
+epicure.finedish.error.codeduplicated=Code duplicated
+epicure.finedish.error.notacceptedcurrency=The currency is not accepted
+epicure.finedish.error.negativebudget=The budget must be positive
+acme.validation.finedish.code=The code must follow this pattern: ^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$

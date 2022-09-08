@@ -1,0 +1,16 @@
+chef.memorandum.sequencenumber=Sequence number
+chef.memorandum.creationtime=Creation time
+chef.memorandum.report=Report
+chef.memorandum.link=Link
+chef.memorandum.finedish=FineDish
+chef.memorandum.finedish.code=Code
+chef.memorandum.finedish.status=Status
+chef.memorandum.finedish.request=Request
+chef.memorandum.finedish.budget=Budget
+chef.memorandum.finedish.creationdate=Creation date
+chef.memorandum.finedish.startdate=Start date
+chef.memorandum.finedish.enddate=End date
+chef.memorandum.finedish.link=Link
+chef.memorandum.confirmation=Confirm
+chef.memorandum.button.create=Create
+chef.memorandum.error.spam=This cannot contain spam

@@ -1,0 +1,7 @@
+çauthenticated.bulletin.heading=Cabecera
+authenticated.bulletin.text=Texto
+authenticated.bulletin.critical=Crítico
+authenticated.bulletin.link=Enlace
+administrator.bulletin.confirmation=Confirmar
+administrator.bulletin.button.create=Crear
+administrator.bulletin.error.spam=No puede contener spam

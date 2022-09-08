@@ -1,0 +1,16 @@
+chef.memorandum.sequencenumber=Número de secuencia
+chef.memorandum.creationtime=Fecha de creación
+chef.memorandum.report=Informe
+chef.memorandum.link=Enlace
+chef.memorandum.finedish=Plato
+chef.memorandum.finedish.code=Código
+chef.memorandum.finedish.status=Estatus
+chef.memorandum.finedish.request=Solicitud
+chef.memorandum.finedish.budget=Presupuesto
+chef.memorandum.finedish.creationdate=Fecha de creación
+chef.memorandum.finedish.startdate=Fecha de comienzo
+chef.memorandum.finedish.enddate=Fecha de fin
+chef.memorandum.finedish.link=Enlace
+chef.memorandum.confirmation=Confirmar
+chef.memorandum.button.create=Crear
+chef.memorandum.error.spam=No puede contener spam

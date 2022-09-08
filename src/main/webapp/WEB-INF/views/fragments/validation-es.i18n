@@ -1,0 +1,3 @@
+acme.validation.system-configuration.pattern.currency = La divisa debe ser por tres letras mayúsculas
+acme.validation.system-configuration.pattern.accepted-currencies = La lista de divisas aceptadas debe introducirse como divisas separadas por comas
+acme.validation.system-configuration.pattern.spam-terms = Los términos de spam deben ser una lista de pares de palabras y pesos, entre parentesis y separadas por comas

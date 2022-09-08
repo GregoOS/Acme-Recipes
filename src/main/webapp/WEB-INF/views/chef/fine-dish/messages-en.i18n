@@ -1,0 +1,22 @@
+chef.finedish.status=Status
+chef.finedish.proposed=Proposed
+chef.finedish.accepted=Accepted
+chef.finedish.denied=Denied
+chef.finedish.code=Code
+chef.finedish.request=Request
+chef.finedish.budget=Budget
+chef.finedish.creationdate=Creation date
+chef.finedish.startdate=Start date
+chef.finedish.enddate=End date
+chef.finedish.link=Link
+chef.finedish.button.accept=Accept
+chef.finedish.button.deny=Deny
+chef.finedish.memorandums=Memorandums
+
+chef.finedish.epicuredata=Epicure data
+chef.finedish.epicure.name=Epicure name
+chef.finedish.epicure.surname=Epicure surmane
+chef.finedish.epicure.email=Epicure email
+chef.finedish.epicure.organisation=Epicure organisation
+chef.finedish.epicure.assertion=Epicure assertion
+chef.finedish.epicure.link=Epicure link
