@@ -74,15 +74,15 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep> {
 
 		if (!errors.hasErrors("heading")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getHeading()),
-					"title", "any.peep.form.spam");
+					"heading", "any.peep.form.spam");
 		}
 		if (!errors.hasErrors("writer")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getWriter()),
-					"author", "any.peep.form.spam");
+					"writer", "any.peep.form.spam");
 		}
 		if (!errors.hasErrors("text")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getText()),
-					"body", "any.peep.form.spam");
+					"text", "any.peep.form.spam");
 		}
 		if (!errors.hasErrors("email")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getEmail()),

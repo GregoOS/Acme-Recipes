@@ -26,7 +26,7 @@ public class SystemConfiguration extends AbstractEntity {
 	protected String acceptedCurrencies;
 
 	@NotBlank
-	@Pattern(regexp = "^(\\([\\w\\s\\d';áéíóúÁÉÍÓÚçÇ€$&@]*,\\d.\\d{2}\\),)*\\([\\w\\s\\d'áéíóúÁÉÍÓÚçÇ€$&@]*,\\d.\\d{2}\\)$", message = "{acme.validation.system-configuration.spam-terms}")
+	@Pattern(regexp = "^(\\([\\w\\s\\d';áéíóúÁÉÍÓÚçÇ€$&@]*,\\d.\\d{1,2}\\),)*\\([\\w\\s\\d'áéíóúÁÉÍÓÚçÇ€$&@]*,\\d.\\d{1,2}\\)$", message = "{acme.validation.system-configuration.spam-terms}")
 	protected String spamTerms;
 
 	@PositiveOrZero
