@@ -102,11 +102,6 @@ public class ChefMemorandumCreateService implements AbstractCreateService<Chef, 
 
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
-	
-		if(!errors.hasErrors("report")) {
-			errors.state(request, !this.textValidator.spamChecker(entity.getReport()), "description",
-				"chef.memorandum.error.spam");
-		}
 	}
 
 	@Override
