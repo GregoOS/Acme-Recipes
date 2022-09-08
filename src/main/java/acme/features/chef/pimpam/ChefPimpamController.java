@@ -18,10 +18,23 @@ public class ChefPimpamController extends AbstractController<Chef, Pimpam> {
 	@Autowired
 	protected ChefPimpamShowService chefPimpamShowService;
 	
+	@Autowired
+	protected ChefPimpamCreateService chefPimpamCreateService;
+	
+	@Autowired
+	protected ChefPimpamUpdateService chefPimpamUpdateService;
+	
+	@Autowired
+	protected ChefPimpamDeleteService chefPimpamDeleteService;
+	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.chefPimpamListService);
 		super.addCommand("show", this.chefPimpamShowService);
+		
+		super.addCommand("create", this.chefPimpamCreateService);
+		super.addCommand("update", this.chefPimpamUpdateService);
+		super.addCommand("delete", this.chefPimpamDeleteService);
 	}
 
 }

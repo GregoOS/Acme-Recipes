@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.element.Element;
 import acme.entities.pimpam.Pimpam;
 import acme.framework.repositories.AbstractRepository;
 
@@ -16,5 +17,11 @@ public interface ChefPimpamRepository extends AbstractRepository {
 	
 	@Query("SELECT p FROM Pimpam p WHERE p.id = :id")
 	Pimpam findOnePimpamById(int id);
+	
+	@Query("SELECT e FROM Element e WHERE e.chef.id = :id")
+	Collection<Element> findAllElementsByChef(int id);
+	
+	@Query("SELECT p FROM Pimpam p WHERE p.code = :code")
+	Pimpam findPimpamByCode(String code);
 
 }

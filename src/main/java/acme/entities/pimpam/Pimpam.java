@@ -32,13 +32,15 @@ public class Pimpam extends AbstractEntity {
 	
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp="^[A-Z]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$") //copied from item
+	@Pattern(regexp="^[A-Z]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$", message = "{pimpam.regex.code}") //copied from item
 	// patron valido -> PIM-12-34-56
 	// el patron es /^\w{3}-yy:\d{1,2}:mm:dd$
 	// XXX-22:00:05:31 sería un código válido hoy
 	// ABC-22:0:05:31 sería otro código válido hoy
 	// XXX-23:00:05:31 no sería un código válido hoy
 	// the regexp should contain /"^\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$"   d{2} is any 2 digits to make the yy the second segment is for mm and third for dd
+//	@Pattern(regexp="^\\w{6}:\\d{2}\\d{2}:\\d{2}$")
+//	objetivo -> ^\\w{6}:mmyy:dd$
 	private String code;
 	
 	@NotNull

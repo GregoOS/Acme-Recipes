@@ -10,6 +10,4 @@
 	<acme:list-column code="pimpam.budget" path="budget" width="10%"/>
 </acme:list>
 
-<!--  
-<acme:button code="chimpum.button.create" action="/inventor/chimpum/create"/>
--->
+<acme:button code="pimpam.button.create" action="/chef/pimpam/create"/>
