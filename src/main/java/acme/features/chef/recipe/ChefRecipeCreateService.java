@@ -9,6 +9,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
+import acme.utility.TextValidator;
 
 @Service
 public class ChefRecipeCreateService implements AbstractCreateService<Chef, Recipe> {
@@ -16,8 +17,8 @@ public class ChefRecipeCreateService implements AbstractCreateService<Chef, Reci
 	@Autowired
 	protected ChefRecipeRepository repository;
 
-	//@Autowired
-	//protected SpamService spamService;
+	@Autowired
+	protected TextValidator textValidator;
 
 	@Override
 	public boolean authorise(final Request<Recipe> request) {
@@ -62,15 +63,18 @@ public class ChefRecipeCreateService implements AbstractCreateService<Chef, Reci
 			existing = this.repository.findOneRecipeByCode(entity.getCode());
 			errors.state(request, existing == null, "code", "chef.recipe.error.duplicated");
 		}
-		//if (!errors.hasErrors("heading")) {
-		//	errors.state(request, !this.spamService.isSpam(entity.getHeading()), "heading","chef.recipe.error.spam");
-		//}
-		//if (!errors.hasErrors("description")) {
-		//	errors.state(request, !this.spamService.isSpam(entity.getDescription()), "description","chef.recipe.error.spam");
-		//}
-		//if (!errors.hasErrors("preparationNotes")) {
-		//	errors.state(request, !this.spamService.isSpam(entity.getPreparationNotes()), "preparationNotes","chef.recipe.error.spam");
-		//}
+		if (!errors.hasErrors("heading")) {
+			errors.state(request, !this.textValidator.spamChecker(entity.getHeading()), "heading",
+					"chef.recipe.error.spam");
+		}
+		if (!errors.hasErrors("description")) {
+			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), "description",
+					"chef.recipe.error.spam");
+		}
+		if (!errors.hasErrors("preparationNotes")) {
+			errors.state(request, !this.textValidator.spamChecker(entity.getPreparationNotes()), "preparationNotes",
+					"chef.recipe.error.spam");
+		}
 	}
 
 	@Override

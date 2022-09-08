@@ -1,26 +1,25 @@
 key,name,code,description,amountUnit,retailPrice,link,type,draft,key:chef
-element-01,Test element,AA:AAA-000,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
+element-01,Test element 1,AA:AAA-000,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
 element-02,"!""#$%&'()*+-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~",AA:AAA-001,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
 element-03,¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ,AA:AAA-002,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
 element-04,This text contains 100 letters exactly for testing purposes I could also use the lorem ipsum to test,AA:AAA-003,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-05,Test element,ZZ:ZZZ-999,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-06,Test element,AB:CDE-456,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-07,Test element,AAA-000,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-08,Test element,ZZZ-999,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-09,Test element,ABC-123,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-10,Test element,AA:AAA-010,"!""#$%&'()*+-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ",1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-11,Test element,AA:AAA-011,This text contains 255 letters exactly for testing purposes I could also use the lorem ipsum to test. Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This is 30 more to pad it out,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-12,Test element,AA:AAA-012,This is a test description,10,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-13,Test element,AA:AAA-013,This is a test description,4,USD 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-14,Test element,AA:AAA-014,This is a test description,1,GBP 100.00,https://acme.com,INGREDIENT,false,chef-01
-element-15,Test element,AA:AAA-015,This is a test description,1,EUR 0.01,https://acme.com,INGREDIENT,false,chef-01
-element-16,Test element,AA:AAA-016,This is a test description,1,EUR 99999.99,https://acme.com,INGREDIENT,false,chef-01
-element-17,Test element,AA:AAA-017,This is a test description,1,EUR 100.00,null,INGREDIENT,false,chef-01
-element-18,Test element,AA:AAA-018,This is a test description,1,EUR 100.00,http://acme.com/xy,INGREDIENT,false,chef-01
-element-19,Test element,AA:AAA-019,This is a test description,1,EUR 100.00,http://acme.com/x?y,INGREDIENT,false,chef-01
-element-20,Test element,AA:AAA-020,This is a test description,1,EUR 100.00,http://acme.com/x/y,INGREDIENT,false,chef-01
-element-21,Test element,AA:AAA-021,This is a test description,1,EUR 100.00,http://x.y/z?w&v,INGREDIENT,false,chef-01
-element-22,Test element,AA:AAA-022,This is a test description,1,EUR 100.00,ftp://recipes:user@acme.com,INGREDIENT,false,chef-01
-element-23,Test element,AA:AAA-023,This is a test description,1,EUR 100.00,https://acme.com,UTENSIL,false,chef-01
-element-24,Test element,AA:AAA-024,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,true,chef-01
-element-25,Parsley,ING-001,Parsley is an herb. Widely used as a garnish condiment food and flavoring.,5,EUR 2.20,https://parsleylovers.co.uk/where-to-buy-parsley,INGREDIENT,false,chef-13
+element-05,Test element 5,ZZ:ZZZ-999,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
+element-06,Test element 6,AB:CDE-456,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
+element-07,Test element 7,AAA-000,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
+element-08,Test element 8,ZZZ-999,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
+element-09,Test element 9,ABC-123,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,false,chef-01
+element-10,Test element 10,AA:AAA-010,"!""#$%&'()*+-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ",1,EUR 100.00,https://acme.com,UTENSIL,false,chef-01
+element-11,Test element 11,AA:AAA-011,This text contains 255 letters exactly for testing purposes I could also use the lorem ipsum to test. Lorem ipsum dolor sit amet; consectetur adipiscing elit; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This is 30 more to pad it out,1,EUR 100.00,https://acme.com,UTENSIL,false,chef-01
+element-12,Test element 12,AA:AAA-012,This is a test description,10,EUR 100.00,https://acme.com,UTENSIL,false,chef-01
+element-13,Test element 13,AA:AAA-013,This is a test description,4,USD 100.00,https://acme.com,UTENSIL,false,chef-01
+element-14,Test element 14,AA:AAA-014,This is a test description,1,GBP 100.00,https://acme.com,UTENSIL,false,chef-01
+element-15,Test element 15,AA:AAA-015,This is a test description,1,EUR 0.01,https://acme.com,UTENSIL,false,chef-01
+element-16,Test element 16,AA:AAA-016,This is a test description,1,EUR 99999.99,https://acme.com,UTENSIL,false,chef-01
+element-17,Test element 17,AA:AAA-017,This is a test description,1,EUR 100.00,null,UTENSIL,false,chef-01
+element-18,Test element 18,AA:AAA-018,This is a test description,1,EUR 100.00,http://acme.com/xy,UTENSIL,false,chef-01
+element-19,Test element 19,AA:AAA-019,This is a test description,1,EUR 100.00,http://acme.com/x?y,UTENSIL,false,chef-01
+element-20,Test element 20,AA:AAA-020,This is a test description,1,EUR 100.00,http://acme.com/x/y,UTENSIL,false,chef-01
+element-21,Test element 21,AA:AAA-021,This is a test description,1,EUR 100.00,http://x.y/z?w&v,INGREDIENT,false,chef-01
+element-22,Test element 22,AA:AAA-022,This is a test description,1,EUR 100.00,ftp://recipes:user@acme.com,INGREDIENT,false,chef-01
+element-23,Test element 23,AA:AAA-023,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,true,chef-01
+element-24,Parsley,ING-001,Parsley is an herb. Widely used as a garnish condiment food and flavoring.,5,EUR 2.20,https://parsleylovers.co.uk/where-to-buy-parsley,INGREDIENT,false,chef-13

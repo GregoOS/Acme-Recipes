@@ -1,0 +1,16 @@
+administrator.admin-dashboard.form.title = Tablero de Administrador
+administrator.admin-dashboard.form.ingredients = Ingredientes
+administrator.dashboard.form.total = Número total
+administrator.dashboard.form.average = Precio medio
+administrator.dashboard.form.deviation = Desviación estandar del precio
+administrator.dashboard.form.minimum = Precio mínimo
+administrator.dashboard.form.maximum = Precio máximo
+administrator.admin-dashboard.form.utensils = Utensilio de cocina
+administrator.dashboard.form.dishes = Platos
+administrator.admin-dashboard.form.average-dished = Precio medio de los platos
+administrator.admin-dashboard.form.deviation-dishes = Desviación estandar del precio de los platos
+administrator.admin-dashboard.form.minimum-dishes = Precio mínimo de los platos
+administrator.admin-dashboard.form.maximum-dishes = Precio máximo de los platos
+administrator.admin-dashboard.form.proposed = Propuesto
+administrator.admin-dashboard.form.accepted = Aceptado
+administrator.admin-dashboard.form.denied = Denegado
