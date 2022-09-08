@@ -24,3 +24,4 @@ chef.pimpam.code.duplicated=Este código ya está en uso
 chef.pimpam.form.error.code-not-correct = el codigo tiene que seguir un patron yy-mm-dd, usando el año, mes, dia actuales
 pimpam.regex.code = Código incorrecto
 chef.pimpam.error.spam=Hay spam en este texto
+chef.pimpam.element.notcorrect=Tiene que ser un ingrediente

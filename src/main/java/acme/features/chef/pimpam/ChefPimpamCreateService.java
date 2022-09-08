@@ -49,7 +49,7 @@ public class ChefPimpamCreateService implements AbstractCreateService<Chef, Pimp
 		assert model != null;
 		
 		request.unbind(entity, model, "code", "instantiationMoment","title", "description", "startDate", "finishDate", "budget", "link");
-		model.setAttribute("elements", this.chefPimpamRepository.findAllElementsByChef(request.getPrincipal().getActiveRoleId()));
+		model.setAttribute("elements", this.chefPimpamRepository.findAllIngredientsByChef(request.getPrincipal().getActiveRoleId()));
 	}
 
 	@Override
@@ -73,8 +73,9 @@ public class ChefPimpamCreateService implements AbstractCreateService<Chef, Pimp
 		
 		if (!errors.hasErrors("code")) {
 			Pimpam existing;
+
 			existing = this.chefPimpamRepository.findPimpamByCode(entity.getCode());
-			errors.state(request, existing == null, "code", "chef.pimpam.code.duplicated"); //TODO replace for a jsp valid thingy
+			errors.state(request, existing == null, "code", "chef.element.error.duplicated");
 		}
 		
 		this.chefPimpamValidator.validatePimpam(request, entity, errors);

@@ -6,6 +6,7 @@ import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.element.Type;
 import acme.entities.pimpam.Pimpam;
 import acme.features.authenticated.systemConfiguration.AuthenticatedSystemConfigurationRepository;
 import acme.framework.controllers.Errors;
@@ -73,6 +74,12 @@ public class ChefPimpamValidator {
 			errors.state(request, amount>0., "budget", "chef.pimpam.form.error.negative-budget");
 			errors.state(request, acceptedCurrencies.contains(currency), "budget", "chef.pimpam.form.error.wrongCurrency");
 		}
+		
+		
+		if(!errors.hasErrors("elementId")) {
+			errors.state(request, entity.getElement().getType().equals(Type.INGREDIENT), "elementId", "chef.pimpam.element.notcorrect"); 
+		}
+		
 	}
 	
 }
