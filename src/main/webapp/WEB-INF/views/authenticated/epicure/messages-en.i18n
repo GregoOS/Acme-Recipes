@@ -1,6 +1,0 @@
-authenticated.epicure.organisation=Organisation
-authenticated.epicure.assertion=Assertion
-authenticated.epicure.link=Link
-
-authenticated.epicure.button.create = Sign Up
-authenticated.epicure.button.update = Update

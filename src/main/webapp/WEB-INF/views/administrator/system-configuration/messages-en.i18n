@@ -1,8 +1,0 @@
-administrator.systemconfiguration.form.label.currency = Currency
-administrator.systemconfiguration.form.label.acceptedcurrencies = Accepted currencies
-administrator.systemconfiguration.form.label.spamThreshold = Spam threshold
-administrator.systemconfiguration.form.label.spamTerms = Spam terms
-
-administrator.system-configuration.form.error.currency-not-supported = The currency is not in the list of accepted currencies
-
-administrator.system-configuration.form.button.update = Update

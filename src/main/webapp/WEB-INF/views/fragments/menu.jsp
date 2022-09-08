@@ -14,38 +14,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.alegestor" action="https://twitter.com/juanminismo/status/1464982823874486274"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.jaistomen" action="http://www.gendesign.co.jp/E_index.html"/>
 		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.any">			
-			<acme:menu-suboption code="master.menu.any.peep.list-recent" action="/any/peep/list-recent"/>
-			<acme:menu-suboption code="master.menu.any.element.list" action="/any/element/list"/>
-			<acme:menu-suboption code="master.menu.any.useraccount.list" action="/any/user-account/list"/>
-			<acme:menu-suboption code="master.menu.any.recipe.list" action="/any/recipe/list"/>
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">			
-			<acme:menu-suboption code="master.menu.authenticated.bulletin.list-recent" action="/authenticated/bulletin/list-recent"/>
-			<acme:menu-suboption code="master.menu.authenticated.system-configuration.show" action="/authenticated/system-configuration/show"/>
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
-			<acme:menu-suboption code="master.menu.chef.element.list" action="/chef/element/list"/>
-			<acme:menu-suboption code="master.menu.chef.finedish.list" action="/chef/fine-dish/list"/>
-			<acme:menu-suboption code="master.menu.chef.finedish.listproposed" action="/chef/fine-dish/list-proposed"/>
-			<acme:menu-suboption code="master.menu.chef.memorandum.list" action="/chef/memorandum/list"/>
-			<acme:menu-suboption code="master.menu.chef.recipe.list" action="/chef/recipe/list"/>
-		</acme:menu-option>
-
-		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
-			<acme:menu-suboption code="master.menu.epicure.dashboard" action="/epicure/epicure-dashboard/show"/>
-			<acme:menu-suboption code="master.menu.epicure.finedish.list" action="/epicure/fine-dish/list"/>
-			<acme:menu-suboption code="master.menu.epicure.memorandum.list" action="/epicure/memorandum/list"/>
-		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
-			<acme:menu-suboption code="master.menu.administrator.admin-dashboard" action="/administrator/admin-dashboard/show"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.system-configuration.show" action="/administrator/system-configuration/show"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			
 			<acme:menu-separator/>

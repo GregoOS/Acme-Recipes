@@ -1,8 +1,0 @@
-administrator.systemconfiguration.form.label.currency = Divisa
-administrator.systemconfiguration.form.label.acceptedcurrencies = Divisas aceptadas
-administrator.systemconfiguration.form.label.spamThreshold = Umbral de spam
-administrator.systemconfiguration.form.label.spamTerms = Términos de spam
-
-administrator.system-configuration.form.error.currency-not-supported = La divisa no está en la lista de divisas permitidas
-
-administrator.system-configuration.form.button.update = Actualizar
