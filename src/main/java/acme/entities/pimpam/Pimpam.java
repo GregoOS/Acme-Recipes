@@ -73,6 +73,6 @@ public class Pimpam extends AbstractEntity {
 	@OneToOne(optional=false) //one to one optional false as the relation is convulsory
 	@Valid
 	@NotNull
-	private Element element;
+	protected Element element;
 
 }
