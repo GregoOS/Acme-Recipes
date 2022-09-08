@@ -60,7 +60,7 @@ public interface AdminDashboardRepository extends AbstractRepository{
 	///////////////////
 	
 	@Query("select p.element.name, 1.0 * count(p)/(select count(pp) from Pimpam pp) from Pimpam p group by p.element")
-	List<Tuple> getRatioOfPimpamIngredients();
+	List<Tuple> getRatioOfPimpamUtensils();
 	
 	@Query("select avg(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
 	Long getAverageBudget(String currency);

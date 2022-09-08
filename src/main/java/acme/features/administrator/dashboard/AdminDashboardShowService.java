@@ -54,7 +54,7 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		final Map<String, Map<String, Double>> minimumPriceFineDishes = new HashMap<String, Map<String,Double>>();
 		final Map<String, Map<String, Double>> maximumPriceFineDishes = new HashMap<String, Map<String,Double>>();
 		
-		final Map<String, Double> ratioPimpamIngredients;
+		final Map<String, Double> ratioPimpamUtensils;
 		final Map<String, Long> averageBudgetOfPimpam = new HashMap<String, Long>();
 		final Map<String, Long> deviationBudgetOfPimpam = new HashMap<String, Long>();
 		final Map<String, Long> minimumBudgetOfPimpam = new HashMap<String, Long>();
@@ -66,7 +66,7 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		totalNumberKitchenUtensils = this.repository.totalUtensils();
 		totalNumberFineDishes = this.repository.totalFineDishes().stream().collect(
 			Collectors.toMap(t->t.get(0).toString(), t->(Long)t.get(1)));
-		ratioPimpamIngredients = this.repository.getRatioOfPimpamIngredients().stream()
+		ratioPimpamUtensils = this.repository.getRatioOfPimpamUtensils().stream()
 			.collect(Collectors.toMap(p -> p.get(0).toString(), p -> (Double) p.get(1)));
 		
 		for(final String currency:currencies) {
@@ -114,7 +114,7 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		result.setMinimumPriceFineDishes(minimumPriceFineDishes);
 		result.setMaximumPriceFineDishes(maximumPriceFineDishes);
 		
-		result.setRatioPimpamIngredients(ratioPimpamIngredients);
+		result.setRatioPimpamUtensils(ratioPimpamUtensils);
 		result.setAverageBudgetOfPimpam(averageBudgetOfPimpam);
 		result.setDeviationBudgetOfPimpam(deviationBudgetOfPimpam);
 		result.setMinimumBudgetOfPimpam(minimumBudgetOfPimpam);
@@ -144,7 +144,7 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		"deviationPriceFineDishes",
 		"minimumPriceFineDishes",
 		"maximumPriceFineDishes",
-		"ratioPimpamIngredients",
+		"ratioPimpamUtensils",
 		"averageBudgetOfPimpam",
 		"deviationBudgetOfPimpam",
 		"minimumBudgetOfPimpam",

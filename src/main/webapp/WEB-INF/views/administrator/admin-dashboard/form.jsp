@@ -10,8 +10,8 @@
 		<acme:message code="administrator.admin-dashboard.form.pimpam"/>
 	</h2>
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.ratioPimpamIngredients"/>		
-		<jstl:forEach var="ratio" items="${ratioPimpamIngredients}">
+		<acme:message code="administrator.admin-dashboard.form.ratioPimpamUtensils"/>		
+		<jstl:forEach var="ratio" items="${ratioPimpamUtensils}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${ratio.getKey()}"/>

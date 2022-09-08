@@ -17,7 +17,7 @@ administrator.admin-dashboard.form.denied = Denegado
 
 
 administrator.admin-dashboard.form.pimpam = Pimpam
-administrator.admin-dashboard.form.ratioPimpamIngredients = Ratio de pimpam por Ingredientes
+administrator.admin-dashboard.form.ratioPimpamUtensils = Ratio de pimpam por utensilio de cocina
 administrator.admin-dashboard.form.averageBudgetOfPimpam = Presupuesto medio de pimpam
 administrator.admin-dashboard.form.deviationBudgetOfPimpam = Desviación del presupuesto de pimpam
 administrator.admin-dashboard.form.minimumBudgetOfPimpam = Presupuesto mínimo de pimpam

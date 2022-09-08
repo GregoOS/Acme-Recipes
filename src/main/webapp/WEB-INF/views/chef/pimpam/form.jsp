@@ -14,7 +14,6 @@
 	<acme:input-money code="pimpam.budget" path="budget"/>
 	<acme:input-url code="pimpam.link" path="link" placeholder="pimpam.link"/>
   	<acme:input-textbox code="chef.pimpam.element.name" path="elementName"/> 
-	<acme:input-textbox code="chef.name" path="chefName"/>
 </jstl:if>
 
 <jstl:if test="${command == 'create'}">

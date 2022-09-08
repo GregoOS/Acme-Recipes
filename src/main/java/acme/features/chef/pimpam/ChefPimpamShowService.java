@@ -51,6 +51,5 @@ public class ChefPimpamShowService implements AbstractShowService<Chef, Pimpam> 
 		
 		request.unbind(entity, model, "code", "instantiationMoment", "title", "description", "startDate", "finishDate", "budget", "link");
 		model.setAttribute("elementName", entity.getElement().getName());
-		model.setAttribute("chefName", entity.getElement().getChef().getIdentity().getFullName());
 	}
 }
