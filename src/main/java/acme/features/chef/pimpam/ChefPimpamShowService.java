@@ -25,8 +25,7 @@ public class ChefPimpamShowService implements AbstractShowService<Chef, Pimpam> 
 		
 		pimpamId = request.getModel().getInteger("id");
 		pimpam = this.chefPimpamRepository.findOnePimpamById(pimpamId);
-		final Chef chef = pimpam.getElement().getChef();
-		res = pimpam != null && request.isPrincipal(chef);
+		res = pimpam != null && request.isPrincipal(pimpam.getElement().getChef());
 		
 		return res;
 	}
