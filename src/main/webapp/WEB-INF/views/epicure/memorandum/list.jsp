@@ -8,7 +8,3 @@
 	<acme:list-column code="epicure.memorandum.creationtime" path="creationTime" width="30%"/>
 	<acme:list-column code="epicure.memorandum.link" path="link" width="30%"/>
 </acme:list>
-
-<jstl:if test="${masterId != null}">
-        <acme:button code="epicure.memorandum.button.create" action="/epicure/memorandum/create?masterId=${masterId}"/>
-</jstl:if>

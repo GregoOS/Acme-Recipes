@@ -2,7 +2,6 @@ package acme.features.any.recipe;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -32,5 +31,5 @@ public interface AnyRecipeRepository extends AbstractRepository{
 	String findRetailPriceCurrencyByRecipeId(int id);
 	
 	@Query("select sum(q.amount*q.element.retailPrice.amount) from Quantity q where q.recipe.id = :id")
-	Optional<Double> findRetailPriceAmountByRecipeId(int id);
+	Double findRetailPriceAmountByRecipeId(int id);
 }

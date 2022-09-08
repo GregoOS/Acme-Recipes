@@ -8,5 +8,3 @@
 	<acme:list-column code="chef.recipe.heading" path="heading" width="70%"/>
 	<acme:list-column code="chef.recipe.published" path="published" width="10%"/>
 </acme:list>
-
-<acme:button code="chef.recipe.button.create" action="/chef/recipe/create"/>

@@ -21,18 +21,6 @@ public class EpicureFineDishController extends AbstractController<Epicure, FineD
 		@Autowired
 		protected EpicureFineDishShowService show;
 		
-		@Autowired
-		protected EpicureFineDishCreateService create;
-		
-		@Autowired
-		protected EpicureFineDishUpdateService update;
-		
-		@Autowired
-		protected EpicureFineDishPublishService publish;
-		
-		@Autowired
-		protected EpicureFineDishDeleteService delete;
-		
 		
 		// Constructors -----------------------------------------------------------
 		
@@ -40,10 +28,6 @@ public class EpicureFineDishController extends AbstractController<Epicure, FineD
 		protected void initialise() {
 			super.addCommand("list", this.list);
 			super.addCommand("show", this.show);
-			super.addCommand("create", this.create);
-			super.addCommand("update", this.update);
-			super.addCommand("publish", "update", this.publish);
-			super.addCommand("delete", this.delete);
 			
 		}
 }

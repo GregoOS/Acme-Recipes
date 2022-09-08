@@ -10,6 +10,3 @@
 	<acme:list-column code="chef.quantity.name" path="name" width="60%"/>
 	
 </acme:list>
-
-<acme:button test="${showAddElement}" code="chef.quantity.button.addelement" action="/chef/quantity/create?recipeId=${recipeId}"/>
-

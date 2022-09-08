@@ -9,5 +9,3 @@
 	<acme:list-column code="any.peep.moment" path="moment" width="20%"/>
 	
 </acme:list>
-
-<acme:button code="any.peep.button.create" action="/any/peep/create"/>

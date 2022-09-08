@@ -8,5 +8,3 @@
 	<acme:list-column code="epicure.finedish.status" path="status" width="30%"/>
 	<acme:list-column code="epicure.finedish.budget" path="budget" width="30%"/>
 </acme:list>
-
-<acme:button code="epicure.finedish.button.create" action="/epicure/fine-dish/create"/>

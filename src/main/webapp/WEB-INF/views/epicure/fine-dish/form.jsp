@@ -5,7 +5,7 @@
 
 <acme:form>
 	
-	<jstl:if test="${command != 'create' && !draft}">
+	<jstl:if test="${!draft}">
 		<acme:input-textbox code="epicure.finedish.status" path="status" readonly="true"/>		
 	</jstl:if>
 	
@@ -13,9 +13,7 @@
 	<acme:input-textarea code="epicure.finedish.request" path="request"/>
 	<acme:input-money code="epicure.finedish.budget" path="budget"/>
 	
-	<jstl:if test="${command != 'create'}">
-		<acme:input-moment code="epicure.finedish.creation-date" path="creationDate" readonly="true"/>	
-	</jstl:if>
+	<acme:input-moment code="epicure.finedish.creation-date" path="creationDate" readonly="true"/>	
 
 	<acme:input-moment code="epicure.finedish.startdate" path="startDate"/>
 	<acme:input-moment code="epicure.finedish.enddate" path="endDate"/>
@@ -31,14 +29,6 @@
 	<jstl:choose>	 
 		<jstl:when test="${command == 'show' && !draft}">
 			<acme:button code="epicure.finedish.memorandums" action="/epicure/memorandum/list-by-finedish?masterId=${masterId}"/>			
-		</jstl:when>
-		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && draft}">
-			<acme:submit code="epicure.finedish.button.update" action="/epicure/fine-dish/update"/>
-			<acme:submit code="epicure.finedish.button.delete" action="/epicure/fine-dish/delete"/>
-			<acme:submit code="epicure.finedish.button.publish" action="/epicure/fine-dish/publish"/>
-		</jstl:when>
-		<jstl:when test="${command == 'create'}">
-			<acme:submit code="epicure.finedish.button.create" action="/epicure/fine-dish/create"/>
 		</jstl:when>		
 	</jstl:choose>
 </acme:form>

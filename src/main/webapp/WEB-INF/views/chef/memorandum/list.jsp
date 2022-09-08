@@ -9,7 +9,4 @@
 	<acme:list-column code="chef.memorandum.link" path="link" width="30%"/>
 </acme:list>
 
-<jstl:if test="${masterId != null}">
-        <acme:button code="chef.memorandum.button.create" action="/chef/memorandum/create?masterId=${masterId}"/>
-</jstl:if>
 

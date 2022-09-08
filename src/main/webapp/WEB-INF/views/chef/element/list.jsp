@@ -10,5 +10,3 @@
 	<acme:list-column code="chef.element.published" path="published" width="10%"/>
 	<acme:list-column code="chef.element.name" path="name" width="50%"/>
 </acme:list>
-
-<acme:button code="chef.element.button.create" action="/chef/element/create"/>

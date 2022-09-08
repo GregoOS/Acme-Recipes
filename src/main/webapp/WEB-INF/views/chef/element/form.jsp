@@ -14,16 +14,4 @@
 		<acme:input-option code="chef.element.type.ingredient" value="INGREDIENT" selected="${type == 'INGREDIENT'}"/>
 		<acme:input-option code="chef.element.type.utensil" value="UTENSIL" selected="${type == 'UTENSIL'}"/>
 	</acme:input-select>
-
-	<jstl:choose>
-		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && draft == true}">
-			<acme:submit code="chef.element.button.update" action="/chef/element/update"/>
-			<acme:submit code="chef.element.button.delete" action="/chef/element/delete"/>
-			<acme:submit code="chef.element.button.publish" action="/chef/element/publish"/>
-			
-		</jstl:when>
-		<jstl:when test="${command == 'create'}">
-			<acme:submit code="chef.element.button.create" action="/chef/element/create"/>
-		</jstl:when>
-	</jstl:choose>		
 </acme:form>

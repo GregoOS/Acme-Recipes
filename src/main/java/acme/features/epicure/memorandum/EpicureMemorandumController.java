@@ -23,9 +23,6 @@ public class EpicureMemorandumController extends AbstractController<Epicure, Mem
 	@Autowired
 	protected EpicureMemorandumShowService show;
 
-	@Autowired
-	protected EpicureMemorandumCreateService create;
-
 	// Constructors -----------------------------------------------------------
 
 	@PostConstruct
@@ -34,7 +31,6 @@ public class EpicureMemorandumController extends AbstractController<Epicure, Mem
 		super.addCommand("show", this.show);
 
 		super.addCommand("list-by-finedish", "list", this.listByFineDish);
-		super.addCommand("create", this.create);
 	}
 
 }

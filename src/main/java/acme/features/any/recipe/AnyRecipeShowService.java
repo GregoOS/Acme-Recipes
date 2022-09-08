@@ -1,8 +1,6 @@
 package acme.features.any.recipe;
 
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,19 +55,17 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 		request.unbind(entity, model, "code", "heading", "description", "preparationNotes", "link", "draft");
 
 		String currency;
-		Optional<Double> amount;
-		Double finalAmount=0.0;
+		double amount;
 
 		amount = this.repository.findRetailPriceAmountByRecipeId(id);
-		if (!amount.isPresent()) {
+		if (amount<=0.) {
 			currency = "";
 		}else {
-			finalAmount=amount.get();
 			currency = this.repository.findRetailPriceCurrencyByRecipeId(id);
 		}
 
 		final Money retailPrice = new Money();
-		retailPrice.setAmount(finalAmount);
+		retailPrice.setAmount(amount);
 		retailPrice.setCurrency(currency);
 
 		model.setAttribute("retailPrice", retailPrice);

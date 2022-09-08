@@ -17,15 +17,6 @@
 	<jstl:choose>
 		<jstl:when test="${command == 'show' && draft == false}">
 			<acme:button code="chef.recipe.button.elements" action="/chef/quantity/list?recipeId=${id}"/>
-		</jstl:when>	 
-		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && draft == true}">
-			<acme:button code="chef.recipe.button.elements" action="/chef/quantity/list?recipeId=${id}"/>
-			<acme:submit code="chef.recipe.button.update" action="/chef/recipe/update"/>
-			<acme:submit code="chef.recipe.button.delete" action="/chef/recipe/delete"/>
-			<acme:submit code="chef.recipe.button.publish" action="/chef/recipe/publish"/>
-		</jstl:when>
-		<jstl:when test="${command == 'create'}">
-			<acme:submit code="chef.recipe.button.create" action="/chef/recipe/create"/>
-		</jstl:when>		
+		</jstl:when>	 		
 	</jstl:choose>
 </acme:form>
