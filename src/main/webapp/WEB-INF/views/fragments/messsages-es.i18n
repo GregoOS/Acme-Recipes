@@ -31,3 +31,5 @@ master.panic.label.status = Estado:
 master.panic.label.exceptions = Excepciones:
 master.panic.text.consult-log = Por favor, consulte el log para ver más detalles.
 
+# master.regex ################################################################
+master.regex.code = Código debe seguir el siguiente formato: AAA-000 o AA:AAA-000

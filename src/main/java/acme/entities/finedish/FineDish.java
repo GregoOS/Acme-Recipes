@@ -39,7 +39,7 @@ public class FineDish extends AbstractEntity {
 
 	// AA:AAA-00  AAA-00
 	@NotNull
-	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$",message = "{acme.validation.finedish.code}")
+	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}$", message = "{master.regex.code}")
 	@Column(unique = true)
 	protected String code;
 

@@ -64,7 +64,8 @@ public class ChefElementUpdateService implements AbstractUpdateService<Chef, Ele
 		assert errors != null;
 
 		if (!errors.hasErrors("name")) {
-			errors.state(request, !this.textValidator.spamChecker(entity.getName()), "name", "chef.element.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(entity.getName()), 
+				"name", "chef.element.error.spam");
 		}
 
 		if (!errors.hasErrors("code")) {
@@ -92,7 +93,7 @@ public class ChefElementUpdateService implements AbstractUpdateService<Chef, Ele
 
 		if (!errors.hasErrors("description")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), "description",
-					"chef.element.form.error.spam");
+					"chef.element.error.spam");
 		}
 
 		if (!errors.hasErrors("amountUnit")) {
