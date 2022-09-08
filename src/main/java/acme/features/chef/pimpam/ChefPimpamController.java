@@ -20,7 +20,7 @@ public class ChefPimpamController extends AbstractController<Chef, Pimpam> {
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", this.chefPimpamShowService);
+		super.addCommand("list", this.chefPimpamListService);
 		super.addCommand("show", this.chefPimpamShowService);
 	}
 
