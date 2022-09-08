@@ -11,6 +11,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Administrator;
 import acme.framework.services.AbstractCreateService;
+import acme.utility.TextValidator;
 
 @Service
 public class AdministratorBulletinCreateService implements AbstractCreateService<Administrator, Bulletin> {
@@ -18,8 +19,8 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 	@Autowired
 	AdministratorBulletinRepository repository;
 
-	//@Autowired
-	//SpamService spamService;
+	@Autowired
+	TextValidator textValidator;
 
 	@Override
 	public boolean authorise(final Request<Bulletin> request) {
@@ -72,17 +73,20 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 
 		confirmation = request.getModel().getBoolean("confirmation");
 
-		errors.state(request, confirmation, "confirmation", "administrator.bulletin.error.confirmation");
+		errors.state(request, confirmation, "confirmation", 
+			"administrator.bulletin.error.confirmation");
 
 		if (!errors.hasErrors("heading")) {
 			String heading;
 			heading = entity.getHeading();
-			//errors.state(request, !this.spamService.isSpam(title), "title","administrator.bulletin.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(heading), 
+				"heading","administrator.bulletin.error.spam");
 		}
 		if (!errors.hasErrors("text")) {
 			String text;
 			text = entity.getText();
-			//errors.state(request, !this.spamService.isSpam(body), "body", "administrator.bulletin.error.spam");
+			errors.state(request, !this.textValidator.spamChecker(text), 
+				"text", "administrator.bulletin.error.spam");
 		}
 
 	}

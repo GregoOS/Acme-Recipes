@@ -13,12 +13,16 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
+import acme.utility.TextValidator;
 
 @Service
 public class ChefMemorandumCreateService implements AbstractCreateService<Chef, Memorandum> {
 
 	@Autowired
 	ChefMemorandumRepository repository;
+	
+	@Autowired
+	protected TextValidator textValidator;
 
 	@Override
 	public boolean authorise(final Request<Memorandum> request) {
@@ -98,12 +102,17 @@ public class ChefMemorandumCreateService implements AbstractCreateService<Chef, 
 
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+	
+		if(!errors.hasErrors("report")) {
+			errors.state(request, !this.textValidator.spamChecker(entity.getReport()), "description",
+				"chef.memorandum.error.spam");
+		}
 	}
 
 	@Override
 	public void create(final Request<Memorandum> request, final Memorandum entity) {
 		assert request != null;
-		assert entity != null;
+  		assert entity != null;
 
 		final Date creationTime = new Date(System.currentTimeMillis() - 1);
 		entity.setCreationTime(creationTime);
