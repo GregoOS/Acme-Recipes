@@ -12,8 +12,11 @@
 	<acme:input-moment code="pimpam.startDate" path="startDate"/>
 	<acme:input-moment code="pimpam.finishDate" path="finishDate"/>
 	<acme:input-money code="pimpam.budget" path="budget"/>
-	<acme:input-url code="pimpam.link" path="link" placeholder="pimpam.link"/>
-  	<acme:input-textbox code="chef.pimpam.element.name" path="elementName"/> 
+	<acme:input-url code="pimpam.link" path="link" placeholder="pimpam.link"/>  	
+  	<acme:input-select code="chef.pimpam.element.name" path="element">
+  		<acme:input-option code="${element.getName()}" value="${element.getId()}" selected="${element.getId() == elementId}"/>
+  	</acme:input-select>
+  	
 </jstl:if>
 
 <jstl:if test="${command == 'create'}">
@@ -34,8 +37,10 @@
 
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete')}">
-			<acme:submit code="pimpam.button.update" action="/chef/pimpam/update"/>
-			<acme:submit code="pimpam.button.delete" action="/chef/pimpam/delete"/>
+			<jstl:if test="${element.draft == true}">
+				<acme:submit code="pimpam.button.update" action="/chef/pimpam/update"/>
+				<acme:submit code="pimpam.button.delete" action="/chef/pimpam/delete"/>
+			</jstl:if>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(command, 'create')}">
 			<acme:submit code="pimpam.button.create" action="/chef/pimpam/create"/>

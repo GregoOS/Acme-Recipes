@@ -28,7 +28,7 @@ public class ChefPimpamDeleteService implements AbstractDeleteService<Chef, Pimp
 		id = request.getModel().getInteger("id");
 		pimpam = this.chefPimpamRepository.findOnePimpamById(id);
 		chef = pimpam.getElement().getChef();
-		res = request.isPrincipal(chef);
+		res = request.isPrincipal(chef) && pimpam.getElement().isDraft();
 
 		return res;
 	}

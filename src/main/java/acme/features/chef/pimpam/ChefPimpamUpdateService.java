@@ -31,7 +31,7 @@ public class ChefPimpamUpdateService implements AbstractUpdateService<Chef, Pimp
 		id = request.getModel().getInteger("id");
 		pimpam = this.chefPimpamRepository.findOnePimpamById(id);
 		chef = pimpam.getElement().getChef(); //supposing a one to one relation this should suffice
-		res = request.isPrincipal(chef);
+		res = request.isPrincipal(chef) && pimpam.getElement().isDraft();
 		
 		return res;
 	}
@@ -51,7 +51,8 @@ public class ChefPimpamUpdateService implements AbstractUpdateService<Chef, Pimp
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "instantiationMoment","title", "description", "startDate", "finishDate", "budget", "link");
+		request.unbind(entity, model, "code", "instantiationMoment", "title", "description", "startDate", "finishDate", "budget", "link");
+		model.setAttribute("element", entity.getElement());
 	}
 	
 	@Override

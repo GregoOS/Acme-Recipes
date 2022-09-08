@@ -24,3 +24,4 @@ chef.pimpam.code.duplicated=This code is already in use
 chef.pimpam.form.error.code-not-correct =  the code must follow the pattern yy-mm-dd, using year, month and day of today
 pimpam.regex.code = Wrong code
 chef.pimpam.error.spam=There is spam in this text
+chef.pimpam.element.notcorrect=The element must be an utensil

@@ -18,7 +18,7 @@ element-16,Test element 16,AA:AAA-016,This is a test description,1,EUR 99999.99,
 element-17,Test element 17,AA:AAA-017,This is a test description,1,EUR 100.00,null,UTENSIL,false,chef-01
 element-18,Test element 18,AA:AAA-018,This is a test description,1,EUR 100.00,http://acme.com/xy,UTENSIL,false,chef-01
 element-19,Test element 19,AA:AAA-019,This is a test description,1,EUR 100.00,http://acme.com/x?y,UTENSIL,false,chef-01
-element-20,Test element 20,AA:AAA-020,This is a test description,1,EUR 100.00,http://acme.com/x/y,UTENSIL,false,chef-01
+element-20,Test element 20,AA:AAA-020,This is a test description,1,EUR 100.00,http://acme.com/x/y,UTENSIL,true,chef-01
 element-21,Test element 21,AA:AAA-021,This is a test description,1,EUR 100.00,http://x.y/z?w&v,INGREDIENT,false,chef-01
 element-22,Test element 22,AA:AAA-022,This is a test description,1,EUR 100.00,ftp://recipes:user@acme.com,INGREDIENT,false,chef-01
 element-23,Test element 23,AA:AAA-023,This is a test description,1,EUR 100.00,https://acme.com,INGREDIENT,true,chef-01
