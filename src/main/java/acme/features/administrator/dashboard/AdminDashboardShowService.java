@@ -55,10 +55,10 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		final Map<String, Map<String, Double>> maximumPriceFineDishes = new HashMap<String, Map<String,Double>>();
 		
 		final Map<String, Double> ratioDelorIngredients;
-		final Map<String, Long> averageBudgetOfDelor = new HashMap<String, Long>();
-		final Map<String, Long> deviationBudgetOfDelor = new HashMap<String, Long>();
-		final Map<String, Long> minimumBudgetOfDelor = new HashMap<String, Long>();
-		final Map<String, Long> maximumBudgetOfDelor = new HashMap<String, Long>();
+		final Map<String, Long> averageIncomeOfDelor = new HashMap<String, Long>();
+		final Map<String, Long> deviationIncomeOfDelor = new HashMap<String, Long>();
+		final Map<String, Long> minimumIncomeOfDelor = new HashMap<String, Long>();
+		final Map<String, Long> maximumIncomeOfDelor = new HashMap<String, Long>();
 		
 		result = new AdminDashboard();
 		
@@ -90,10 +90,10 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 			maximumPriceFineDishes.put(c, this.repository.maximumFineDishes(c).stream()
 				.collect(Collectors.toMap(t->t.get(0).toString(), t->(Double)t.get(1))));
 			
-			averageBudgetOfDelor.put(c, this.repository.getAverageBudget(c));
-			deviationBudgetOfDelor.put(c, this.repository.getDeviationBudget(c));
-			minimumBudgetOfDelor.put(c, this.repository.getMinimumBudget(c));
-			maximumBudgetOfDelor.put(c, this.repository.getMaximumBudget(c));
+			averageIncomeOfDelor.put(c, this.repository.getAverageIncome(c));
+			deviationIncomeOfDelor.put(c, this.repository.getDeviationIncome(c));
+			minimumIncomeOfDelor.put(c, this.repository.getMinimumIncome(c));
+			maximumIncomeOfDelor.put(c, this.repository.getMaximumIncome(c));
 		}
 		
 		result.setTotalNumberIngredients(totalNumberIngredients);
@@ -115,10 +115,10 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		result.setMaximumPriceFineDishes(maximumPriceFineDishes);
 		
 		result.setRatioDelorIngredients(ratioDelorIngredients);
-		result.setAverageBudgetOfDelor(averageBudgetOfDelor);
-		result.setDeviationBudgetOfDelor(deviationBudgetOfDelor);
-		result.setMinimumBudgetOfDelor(minimumBudgetOfDelor);
-		result.setMaximumBudgetOfDelor(maximumBudgetOfDelor);
+		result.setAverageIncomeOfDelor(averageIncomeOfDelor);
+		result.setDeviationIncomeOfDelor(deviationIncomeOfDelor);
+		result.setMinimumIncomeOfDelor(minimumIncomeOfDelor);
+		result.setMaximumIncomeOfDelor(maximumIncomeOfDelor);
 		
 		return result;
 	}

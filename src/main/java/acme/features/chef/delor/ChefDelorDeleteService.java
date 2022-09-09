@@ -7,33 +7,29 @@ import acme.entities.delor.Delor;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.services.AbstractDeleteService;
 import acme.roles.Chef;
 
 @Service
-public class ChefDelorUpdateService implements AbstractUpdateService<Chef, Delor> {
+public class ChefDelorDeleteService implements AbstractDeleteService<Chef, Delor> {
 
 	@Autowired
 	protected ChefDelorRepository chefDelorRepository;
 	
-	@Autowired
-	protected ChefDelorValidator chefDelorValidator;
-	
 	@Override
 	public boolean authorise(final Request<Delor> request) {
 		assert request != null;
-		
+
 		boolean res;
 		int id;
 		Delor delor;
 		Chef chef;
-		
+
 		id = request.getModel().getInteger("id");
 		delor = this.chefDelorRepository.findOneDelorById(id);
-		chef = delor.getElement().getChef(); //supposing a one to one relation this should suffice
+		chef = delor.getElement().getChef();
 		res = request.isPrincipal(chef) && delor.getElement().isDraft();
-		
-		
+
 		return res;
 	}
 
@@ -42,8 +38,8 @@ public class ChefDelorUpdateService implements AbstractUpdateService<Chef, Delor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		request.bind(entity, errors, "code", "instantiationMoment","title", "description", "startDate", "finishDate", "budget", "link");
+
+		request.bind(entity, errors, "keylet", "instantiationMoment", "subject", "explanation", "startPeriod", "finishPeriod", "income", "moreInfo");
 	}
 
 	@Override
@@ -51,10 +47,10 @@ public class ChefDelorUpdateService implements AbstractUpdateService<Chef, Delor
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		request.unbind(entity, model, "code", "instantiationMoment", "title", "description", "startDate", "finishDate", "budget", "link");
-		model.setAttribute("element", entity.getElement());	}
-	
+
+		request.unbind(entity, model, "keylet", "instantiationMoment", "subject", "explanation", "startPeriod", "finishPeriod", "income", "moreInfo");
+	}
+
 	@Override
 	public Delor findOne(final Request<Delor> request) {
 		assert request != null;
@@ -73,27 +69,14 @@ public class ChefDelorUpdateService implements AbstractUpdateService<Chef, Delor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		if (!errors.hasErrors("code")) {
-			Delor existing;
-			Integer id;
-
-			existing = this.chefDelorRepository.findDelorByCode(entity.getCode());
-			id = request.getModel().getInteger("id");
-
-			errors.state(request, existing == null || existing.getId() == id, "code",
-					"chef.delor.code.duplicated");
-		}
-		
-		this.chefDelorValidator.validateDelor(request, entity, errors);
 	}
 
 	@Override
-	public void update(final Request<Delor> request, final Delor entity) {
+	public void delete(final Request<Delor> request, final Delor entity) {
 		assert request != null;
 		assert entity != null;
-
-		this.chefDelorRepository.save(entity);
+				
+		this.chefDelorRepository.delete(entity);
 	}
 	
 	

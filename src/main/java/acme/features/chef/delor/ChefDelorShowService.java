@@ -49,7 +49,7 @@ public class ChefDelorShowService implements AbstractShowService<Chef, Delor> {
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "instantiationMoment", "title", "description", "startDate", "finishDate", "budget", "link");
+		request.unbind(entity, model, "keylet", "instantiationMoment", "subject", "explanation", "startPeriod", "finishPeriod", "income", "moreInfo");
 		model.setAttribute("element", entity.getElement());
 	}
 }

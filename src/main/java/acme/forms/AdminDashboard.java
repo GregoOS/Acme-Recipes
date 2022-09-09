@@ -31,9 +31,9 @@ public class AdminDashboard implements Serializable{
 	Map<String, Map<String, Double>> maximumPriceFineDishes;
 	
 	Map<String, Double> ratioDelorIngredients;
-	Map<String, Long> averageBudgetOfDelor;
-	Map<String, Long> deviationBudgetOfDelor;
-	Map<String, Long> minimumBudgetOfDelor;
-	Map<String, Long> maximumBudgetOfDelor;
+	Map<String, Long> averageIncomeOfDelor;
+	Map<String, Long> deviationIncomeOfDelor;
+	Map<String, Long> minimumIncomeOfDelor;
+	Map<String, Long> maximumIncomeOfDelor;
 	
 }

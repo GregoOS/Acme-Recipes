@@ -24,8 +24,8 @@
 	</table>
 	
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.averageBudgetOfDelor"/>
-		<jstl:forEach var="average" items="${averageBudgetOfDelor}">
+		<acme:message code="administrator.admin-dashboard.form.averageIncomeOfDelor"/>
+		<jstl:forEach var="average" items="${averageIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${average.getKey()}"/>
@@ -38,8 +38,8 @@
 	</table>
 		
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.deviationBudgetOfDelor"/>
-		<jstl:forEach var="deviation" items="${deviationBudgetOfDelor}">
+		<acme:message code="administrator.admin-dashboard.form.deviationIncomeOfDelor"/>
+		<jstl:forEach var="deviation" items="${deviationIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${deviation.getKey()}"/>
@@ -52,8 +52,8 @@
 	</table>
 		
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.minimumBudgetOfDelor"/>
-		<jstl:forEach var="minimum" items="${minimumBudgetOfDelor}">
+		<acme:message code="administrator.admin-dashboard.form.minimumIncomeOfDelor"/>
+		<jstl:forEach var="minimum" items="${minimumIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${minimum.getKey()}"/>
@@ -66,8 +66,8 @@
 	</table>
 	
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.maximumBudgetOfDelor"/>
-		<jstl:forEach var="maximum" items="${maximumBudgetOfDelor}">
+		<acme:message code="administrator.admin-dashboard.form.maximumIncomeOfDelor"/>
+		<jstl:forEach var="maximum" items="${maximumIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${maximum.getKey()}"/>

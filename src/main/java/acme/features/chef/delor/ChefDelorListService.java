@@ -43,7 +43,7 @@ public class ChefDelorListService implements AbstractListService<Chef, Delor>{
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "title", "description", "budget");
+		request.unbind(entity, model, "keylet", "subject", "explanation", "income");
 	}
 	
 }
