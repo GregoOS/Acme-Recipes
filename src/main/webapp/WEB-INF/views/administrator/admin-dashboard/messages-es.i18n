@@ -18,7 +18,7 @@ administrator.admin-dashboard.form.denied = Denegado
 
 administrator.admin-dashboard.form.delor = Delor
 administrator.admin-dashboard.form.ratioDelorIngredients = Ratio de delor por Ingredientes
-administrator.admin-dashboard.form.averageBudgetOfDelor = Presupuesto medio de delor
-administrator.admin-dashboard.form.deviationBudgetOfDelor = Desviación del presupuesto de delor
-administrator.admin-dashboard.form.minimumBudgetOfDelor = Presupuesto mínimo de delor
-administrator.admin-dashboard.form.maximumBudgetOfDelor = Presupuesto máximo de delor
+administrator.admin-dashboard.form.averageIncomeOfDelor = Ingreso medio de delor
+administrator.admin-dashboard.form.deviationIncomeOfDelor = Desviación del presupuesto de delor
+administrator.admin-dashboard.form.minimumIncomeOfDelor = Ingreso mínimo de delor
+administrator.admin-dashboard.form.maximumIncomeOfDelor = Ingreso máximo de delor

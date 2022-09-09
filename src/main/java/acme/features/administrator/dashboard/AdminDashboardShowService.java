@@ -145,10 +145,10 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		"minimumPriceFineDishes",
 		"maximumPriceFineDishes",
 		"ratioDelorIngredients",
-		"averageBudgetOfDelor",
-		"deviationBudgetOfDelor",
-		"minimumBudgetOfDelor",
-		"maximumBudgetOfDelor");
+		"averageIncomeOfDelor",
+		"deviationIncomeOfDelor",
+		"minimumIncomeOfDelor",
+		"maximumIncomeOfDelor");
 	}
 
 }
