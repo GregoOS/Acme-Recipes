@@ -33,9 +33,9 @@ public class ChefDelorValidator {
 //			Code example -> 123456:001122
 			final String code = entity.getKeylet();
 			final String[] splitter = code.split(":");
-			final Integer yy = Integer.valueOf(splitter[1].substring(0,1));
-			final Integer mm = Integer.valueOf(splitter[1].substring(2,3));
-			final Integer dd = Integer.valueOf(splitter[3].substring(4,5));
+			final Integer yy = Integer.valueOf(splitter[1].substring(0,2));
+			final Integer mm = Integer.valueOf(splitter[1].substring(2,4));
+			final Integer dd = Integer.valueOf(splitter[1].substring(4));
 			
 			final Calendar calendar = new GregorianCalendar();
 
@@ -65,7 +65,7 @@ public class ChefDelorValidator {
 		if(!errors.hasErrors("finishPeriod")) {
 			final Date minimumFinishDate = DateUtils.addWeeks(entity.getStartPeriod(), 1);
 	
-			errors.state(request, entity.getFinishPeriod().after(minimumFinishDate), "finishPeriod", "chef.delor.form.error.finishDate-too-close-to-startDate"); 
+			errors.state(request, entity.getFinishPeriod().after(minimumFinishDate), "finishPeriod", "chef.delor.form.error.finishPeriod-too-close-to-startPeriod"); 
 		}
 		
 		if (!errors.hasErrors("income")) {

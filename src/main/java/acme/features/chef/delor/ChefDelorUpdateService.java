@@ -43,7 +43,7 @@ public class ChefDelorUpdateService implements AbstractUpdateService<Chef, Delor
 		assert entity != null;
 		assert errors != null;
 		
-		request.bind(entity, errors, "keylet", "instantiationMoment","subject", "explanation", "startPeriod", "finishPeriod", "income", "moreinfo");
+		request.bind(entity, errors, "keylet", "instantiationMoment","subject", "explanation", "startPeriod", "finishPeriod", "income", "moreInfo");
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class ChefDelorUpdateService implements AbstractUpdateService<Chef, Delor
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "keylet", "instantiationMoment","subject", "explanation", "startPeriod", "finishPeriod", "income", "moreinfo");
+		request.unbind(entity, model, "keylet", "instantiationMoment","subject", "explanation", "startPeriod", "finishPeriod", "income", "moreInfo");
 		model.setAttribute("element", entity.getElement());	}
 	
 	@Override

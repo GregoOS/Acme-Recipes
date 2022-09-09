@@ -1,6 +1,6 @@
 delor.keylet=Keylet
 delor.subject=Subject
-delor.budget=Income
+delor.income=Income
 delor.explanation=Explanation
 delor.instantiationMoment=Instantiation Moment
 delor.startPeriod=Start Period
@@ -10,18 +10,19 @@ delor.moreInfo=More Info
 delor.button.create = Create
 delor.button.update = Update
 delor.button.delete = Delete
+delor.button.publish = Publish
 
 chef.delor.element.name = Element Name
 
 chef.name = Chef's Name
 
 chef.delor.form.error.negative-budget = You can not have a negative budget
-chef.delor.form.error.startPeriod-too-close-to-creationDate = The start period has to be at least one month after the creation period  
+chef.delor.form.error.startPeriod-too-close-to-creationPeriod = The start period has to be at least one month after the creation period  
 chef.delor.form.error.finishPeriod-too-close-to-startPeriod = The finish period has to be at least one week after the start period
 chef.delor.form.error.wrongCurrency = The currency is not allowed
 
 chef.delor.keylet.duplicated=This keylet is already in use
 chef.delor.form.error.keylet-not-correct =  The keylet must follow the pattern yymmdd, using year, month and day of today
-delor.regex.keylet = Wrong keylet
+delor.regex.keylet = Keylet must follow format 123456:yymmdd, yymmdd being the creation date
 chef.delor.error.spam=There is spam in this text
 chef.delor.element.notcorrect=The element must be an ingredient

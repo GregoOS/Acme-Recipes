@@ -32,7 +32,7 @@ public class Delor extends AbstractEntity {
 	
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp="^\\d{6}:\\d{2}[0,1]\\d[0,3]\\d$", message = "{delor.regex.code}")
+	@Pattern(regexp="^\\d{6}:\\d{2}[0,1]\\d[0,3]\\d$", message = "{delor.regex.keylet}")
 	private String keylet;
 	
 	@NotNull
