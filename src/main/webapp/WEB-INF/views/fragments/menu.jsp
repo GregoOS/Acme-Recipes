@@ -34,7 +34,7 @@
 			<acme:menu-suboption code="master.menu.chef.memorandum.list" action="/chef/memorandum/list"/>
 			<acme:menu-suboption code="master.menu.chef.recipe.list" action="/chef/recipe/list"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.lists.pimpam" action="/chef/pimpam/list"/>
+			<acme:menu-suboption code="master.menu.lists.delor" action="/chef/delor/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
