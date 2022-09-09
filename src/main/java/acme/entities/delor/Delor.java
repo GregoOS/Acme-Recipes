@@ -1,4 +1,4 @@
-package acme.entities.pimpam;
+package acme.entities.delor;
 
 
 import java.util.Date;
@@ -26,13 +26,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Pimpam extends AbstractEntity {
+public class Delor extends AbstractEntity {
 	
 	private static final long serialVersionUID = 1L;
 	
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp="^[A-Z]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$", message = "{pimpam.regex.code}") //copied from item
+	@Pattern(regexp="^[A-Z]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$", message = "{delor.regex.code}") //copied from item
 	// patron valido -> PIM-12-34-56
 	// el patron es /^\w{3}-yy:\d{1,2}:mm:dd$
 	// XXX-22:00:05:31 sería un código válido hoy

@@ -1,9 +1,9 @@
-package acme.features.chef.pimpam;
+package acme.features.chef.delor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.pimpam.Pimpam;
+import acme.entities.delor.Delor;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -11,34 +11,34 @@ import acme.framework.services.AbstractUpdateService;
 import acme.roles.Chef;
 
 @Service
-public class ChefPimpamUpdateService implements AbstractUpdateService<Chef, Pimpam> {
+public class ChefDelorUpdateService implements AbstractUpdateService<Chef, Delor> {
 
 	@Autowired
-	protected ChefPimpamRepository chefPimpamRepository;
+	protected ChefDelorRepository chefDelorRepository;
 	
 	@Autowired
-	protected ChefPimpamValidator chefPimpamValidator;
+	protected ChefDelorValidator chefDelorValidator;
 	
 	@Override
-	public boolean authorise(final Request<Pimpam> request) {
+	public boolean authorise(final Request<Delor> request) {
 		assert request != null;
 		
 		boolean res;
 		int id;
-		Pimpam pimpam;
+		Delor delor;
 		Chef chef;
 		
 		id = request.getModel().getInteger("id");
-		pimpam = this.chefPimpamRepository.findOnePimpamById(id);
-		chef = pimpam.getElement().getChef(); //supposing a one to one relation this should suffice
-		res = request.isPrincipal(chef) && pimpam.getElement().isDraft();
+		delor = this.chefDelorRepository.findOneDelorById(id);
+		chef = delor.getElement().getChef(); //supposing a one to one relation this should suffice
+		res = request.isPrincipal(chef) && delor.getElement().isDraft();
 		
 		
 		return res;
 	}
 
 	@Override
-	public void bind(final Request<Pimpam> request, final Pimpam entity, final Errors errors) {
+	public void bind(final Request<Delor> request, final Delor entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -47,7 +47,7 @@ public class ChefPimpamUpdateService implements AbstractUpdateService<Chef, Pimp
 	}
 
 	@Override
-	public void unbind(final Request<Pimpam> request, final Pimpam entity, final Model model) {
+	public void unbind(final Request<Delor> request, final Delor entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -56,44 +56,44 @@ public class ChefPimpamUpdateService implements AbstractUpdateService<Chef, Pimp
 		model.setAttribute("element", entity.getElement());	}
 	
 	@Override
-	public Pimpam findOne(final Request<Pimpam> request) {
+	public Delor findOne(final Request<Delor> request) {
 		assert request != null;
 
-		Pimpam res;
+		Delor res;
 		int id;
 
 		id = request.getModel().getInteger("id");
-		res = this.chefPimpamRepository.findOnePimpamById(id);
+		res = this.chefDelorRepository.findOneDelorById(id);
 
 		return res;
 	}
 
 	@Override
-	public void validate(final Request<Pimpam> request, final Pimpam entity, final Errors errors) {
+	public void validate(final Request<Delor> request, final Delor entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 		
 		if (!errors.hasErrors("code")) {
-			Pimpam existing;
+			Delor existing;
 			Integer id;
 
-			existing = this.chefPimpamRepository.findPimpamByCode(entity.getCode());
+			existing = this.chefDelorRepository.findDelorByCode(entity.getCode());
 			id = request.getModel().getInteger("id");
 
 			errors.state(request, existing == null || existing.getId() == id, "code",
-					"chef.pimpam.code.duplicated");
+					"chef.delor.code.duplicated");
 		}
 		
-		this.chefPimpamValidator.validatePimpam(request, entity, errors);
+		this.chefDelorValidator.validateDelor(request, entity, errors);
 	}
 
 	@Override
-	public void update(final Request<Pimpam> request, final Pimpam entity) {
+	public void update(final Request<Delor> request, final Delor entity) {
 		assert request != null;
 		assert entity != null;
 
-		this.chefPimpamRepository.save(entity);
+		this.chefDelorRepository.save(entity);
 	}
 	
 	

@@ -1,7 +1,0 @@
-key,code,instantiation-moment,title,description,start-date,finish-date,budget,link,key:element
-pimpam-1,PIM-22-11-11,2022/09/09 00:50,titulo 1,descripcion 1,2056/09/14 10:34,2087/08/23 01:06,EUR 191513.58,null,element-01
-pimpam-2,PIM-22-11-31,2022/09/09 00:50,titulo 2,descripcion 2,2056/09/14 10:34,2087/08/23 01:06,EUR 113.58,null,element-02
-pimpam-3,PIM-22-11-12,2022/09/09 00:50,titulo 3,descripcion 3,2056/09/14 10:34,2087/08/23 01:06,GBP 654654.06,null,element-03
-pimpam-4,PIM-22-11-32,2022/09/09 00:50,titulo 4,descripcion 4,2056/09/14 10:34,2087/08/23 01:06,GBP 256.39,null,element-04
-pimpam-5,PIM-22-31-32,2022/09/09 00:50,titulo 5,descripcion 5,2056/09/14 10:34,2087/08/23 01:06,USD 65.9,null,element-05
-pimpam-6,PIM-32-31-32,2022/09/09 00:50,titulo 6,descripcion 6,2056/09/14 10:34,2087/08/23 01:06,USD 246448.4,null,element-06

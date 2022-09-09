@@ -1,4 +1,4 @@
-package acme.features.chef.pimpam;
+package acme.features.chef.delor;
 
 import java.util.Date;
 
@@ -7,17 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.element.Type;
-import acme.entities.pimpam.Pimpam;
+import acme.entities.delor.Delor;
 import acme.features.authenticated.systemConfiguration.AuthenticatedSystemConfigurationRepository;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.utility.TextValidator;
 
 @Service
-public class ChefPimpamValidator {
+public class ChefDelorValidator {
 	
 	@Autowired
-	protected ChefPimpamRepository chefPimpamRepository;
+	protected ChefDelorRepository chefDelorRepository;
 	
 	@Autowired
 	protected AuthenticatedSystemConfigurationRepository sysConfRepository;
@@ -25,7 +25,7 @@ public class ChefPimpamValidator {
 	@Autowired
 	protected TextValidator textValidator;
 	
-	public void validatePimpam(final Request<Pimpam> request, final Pimpam entity, final Errors errors) {
+	public void validateDelor(final Request<Delor> request, final Delor entity, final Errors errors) {
 		
 //		if(!errors.hasErrors("code")) {
 ////			Code example -> PIM-00-11-22
@@ -42,28 +42,28 @@ public class ChefPimpamValidator {
 //			final Integer mmInstantiation = Calendar.getInstance().get(Calendar.MONTH) + 1;
 //			final Integer ddInstantiation = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
 //			
-//			errors.state(request, yy.equals(yyInstantiation) && mm.equals(mmInstantiation) && dd.equals(ddInstantiation), "code", "chef.pimpam.form.error.code-not-correct");
+//			errors.state(request, yy.equals(yyInstantiation) && mm.equals(mmInstantiation) && dd.equals(ddInstantiation), "code", "chef.delor.form.error.code-not-correct");
 //		}
 		
 		if (!errors.hasErrors("title")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getTitle()), "title",
-					"chef.pimpam.error.spam");
+					"chef.delor.error.spam");
 		}
 		if (!errors.hasErrors("description")) {
 			errors.state(request, !this.textValidator.spamChecker(entity.getDescription()), "description",
-					"chef.pimpam.error.spam");
+					"chef.delor.error.spam");
 		}
 		
 		if(!errors.hasErrors("startDate")) {
 			final Date minimumStartDate = DateUtils.addMonths(entity.getInstantiationMoment(), 1);
 			
-			errors.state(request, entity.getStartDate().after(minimumStartDate), "startDate", "chef.pimpam.form.error.startDate-too-close-to-creationDate");
+			errors.state(request, entity.getStartDate().after(minimumStartDate), "startDate", "chef.delor.form.error.startDate-too-close-to-creationDate");
 		}
 		
 		if(!errors.hasErrors("finishDate")) {
 			final Date minimumFinishDate = DateUtils.addWeeks(entity.getStartDate(), 1);
 	
-			errors.state(request, entity.getFinishDate().after(minimumFinishDate), "finishDate", "chef.pimpam.form.error.finishDate-too-close-to-startDate"); 
+			errors.state(request, entity.getFinishDate().after(minimumFinishDate), "finishDate", "chef.delor.form.error.finishDate-too-close-to-startDate"); 
 		}
 		
 		if (!errors.hasErrors("budget")) {
@@ -71,13 +71,13 @@ public class ChefPimpamValidator {
 			final String currency=entity.getBudget().getCurrency();
 			final String acceptedCurrencies=this.sysConfRepository.findSystemConfiguration().getAcceptedCurrencies();
 
-			errors.state(request, amount>0., "budget", "chef.pimpam.form.error.negative-budget");
-			errors.state(request, acceptedCurrencies.contains(currency), "budget", "chef.pimpam.form.error.wrongCurrency");
+			errors.state(request, amount>0., "budget", "chef.delor.form.error.negative-budget");
+			errors.state(request, acceptedCurrencies.contains(currency), "budget", "chef.delor.form.error.wrongCurrency");
 		}
 		
 		
 		if(!errors.hasErrors("elementId")) {
-			errors.state(request, entity.getElement().getType().equals(Type.INGREDIENT), "elementId", "chef.pimpam.element.notcorrect"); 
+			errors.state(request, entity.getElement().getType().equals(Type.INGREDIENT), "elementId", "chef.delor.element.notcorrect"); 
 		}
 		
 	}

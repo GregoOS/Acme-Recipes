@@ -59,19 +59,19 @@ public interface AdminDashboardRepository extends AbstractRepository{
 	
 	///////////////////
 	
-	@Query("select p.element.name, 1.0 * count(p)/(select count(pp) from Pimpam pp) from Pimpam p group by p.element")
-	List<Tuple> getRatioOfPimpamIngredients();
+	@Query("select p.element.name, 1.0 * count(p)/(select count(pp) from Delor pp) from Delor p group by p.element")
+	List<Tuple> getRatioOfDelorIngredients();
 	
-	@Query("select avg(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	@Query("select avg(p.budget.amount) from Delor p where p.budget.currency =:currency")
 	Long getAverageBudget(String currency);
 	
-	@Query("select stddev(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	@Query("select stddev(p.budget.amount) from Delor p where p.budget.currency =:currency")
 	Long getDeviationBudget(String currency);
 	
-	@Query("select min(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	@Query("select min(p.budget.amount) from Delor p where p.budget.currency =:currency")
 	Long getMinimumBudget(String currency);
 	
-	@Query("select max(p.budget.amount) from Pimpam p where p.budget.currency =:currency")
+	@Query("select max(p.budget.amount) from Delor p where p.budget.currency =:currency")
 	Long getMaximumBudget(String currency);
 	
 	

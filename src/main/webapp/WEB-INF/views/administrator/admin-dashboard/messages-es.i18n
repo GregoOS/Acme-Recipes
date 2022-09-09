@@ -16,9 +16,9 @@ administrator.admin-dashboard.form.accepted = Aceptado
 administrator.admin-dashboard.form.denied = Denegado
 
 
-administrator.admin-dashboard.form.pimpam = Pimpam
-administrator.admin-dashboard.form.ratioPimpamIngredients = Ratio de pimpam por Ingredientes
-administrator.admin-dashboard.form.averageBudgetOfPimpam = Presupuesto medio de pimpam
-administrator.admin-dashboard.form.deviationBudgetOfPimpam = Desviación del presupuesto de pimpam
-administrator.admin-dashboard.form.minimumBudgetOfPimpam = Presupuesto mínimo de pimpam
-administrator.admin-dashboard.form.maximumBudgetOfPimpam = Presupuesto máximo de pimpam
+administrator.admin-dashboard.form.delor = Delor
+administrator.admin-dashboard.form.ratioDelorIngredients = Ratio de delor por Ingredientes
+administrator.admin-dashboard.form.averageBudgetOfDelor = Presupuesto medio de delor
+administrator.admin-dashboard.form.deviationBudgetOfDelor = Desviación del presupuesto de delor
+administrator.admin-dashboard.form.minimumBudgetOfDelor = Presupuesto mínimo de delor
+administrator.admin-dashboard.form.maximumBudgetOfDelor = Presupuesto máximo de delor
