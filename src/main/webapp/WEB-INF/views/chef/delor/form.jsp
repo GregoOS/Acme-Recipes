@@ -12,7 +12,7 @@
 	<acme:input-moment code="delor.startDate" path="startDate"/>
 	<acme:input-moment code="delor.finishDate" path="finishDate"/>
 	<acme:input-money code="delor.income" path="income"/>
-	<acme:input-url code="delor.link" path="link" placeholder="delor.link"/>
+	<acme:input-url code="delor.moreInfo" path="moreInfo" placeholder="delor.moreInfo"/>
   	<acme:input-select code="chef.delor.element.name" path="element">
 			<acme:input-option code="${element.getName()}" value="${element.getId()}" selected="${element.getId() == elementId}"/>
 	</acme:input-select> 
