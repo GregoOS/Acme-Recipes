@@ -5,29 +5,29 @@
 
 <acme:form>
 <jstl:if test="${command != 'create'}">
-	<acme:input-textbox code="pimpam.code" path="code"/>
-	<acme:input-textbox code="pimpam.title" path="title"/>
-	<acme:input-textbox code="pimpam.description" path="description"/>
-	<acme:input-moment code="pimpam.instantiationMoment" path="instantiationMoment"/>
-	<acme:input-moment code="pimpam.startDate" path="startDate"/>
-	<acme:input-moment code="pimpam.finishDate" path="finishDate"/>
-	<acme:input-money code="pimpam.budget" path="budget"/>
-	<acme:input-url code="pimpam.link" path="link" placeholder="pimpam.link"/>
-  	<acme:input-select code="chef.pimpam.element.name" path="element">
+	<acme:input-textbox code="delor.code" path="code"/>
+	<acme:input-textbox code="delor.title" path="title"/>
+	<acme:input-textbox code="delor.description" path="description"/>
+	<acme:input-moment code="delor.instantiationMoment" path="instantiationMoment"/>
+	<acme:input-moment code="delor.startDate" path="startDate"/>
+	<acme:input-moment code="delor.finishDate" path="finishDate"/>
+	<acme:input-money code="delor.budget" path="budget"/>
+	<acme:input-url code="delor.link" path="link" placeholder="delor.link"/>
+  	<acme:input-select code="chef.delor.element.name" path="element">
 			<acme:input-option code="${element.getName()}" value="${element.getId()}" selected="${element.getId() == elementId}"/>
 	</acme:input-select> 
 </jstl:if>
 
 <jstl:if test="${command == 'create'}">
-	<acme:input-textbox code="pimpam.code" path="code"/>
-	<acme:input-textbox code="pimpam.title" path="title"/>
-	<acme:input-textbox code="pimpam.description" path="description"/>
-	<acme:input-moment code="pimpam.startDate" path="startDate"/>
-	<acme:input-moment code="pimpam.finishDate" path="finishDate"/>
-	<acme:input-money code="pimpam.budget" path="budget"/>
-	<acme:input-url code="pimpam.link" path="link" placeholder="chimpum.link"/>
+	<acme:input-textbox code="delor.code" path="code"/>
+	<acme:input-textbox code="delor.title" path="title"/>
+	<acme:input-textbox code="delor.description" path="description"/>
+	<acme:input-moment code="delor.startDate" path="startDate"/>
+	<acme:input-moment code="delor.finishDate" path="finishDate"/>
+	<acme:input-money code="delor.budget" path="budget"/>
+	<acme:input-url code="delor.link" path="link" placeholder="chimpum.link"/>
 	
-	<acme:input-select code="chef.pimpam.element.name" path="elementId">
+	<acme:input-select code="chef.delor.element.name" path="elementId">
 		<jstl:forEach items="${elements}" var = "element">
 			<acme:input-option code="${element.getName()}" value="${element.getId()}" selected="${element.getId() == elementId}"/>
 		</jstl:forEach>
@@ -37,12 +37,12 @@
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete')}">
 			<jstl:if test="${element.draft == true}">
-				<acme:submit code="pimpam.button.update" action="/chef/pimpam/update"/>
-				<acme:submit code="pimpam.button.delete" action="/chef/pimpam/delete"/>
+				<acme:submit code="delor.button.update" action="/chef/delor/update"/>
+				<acme:submit code="delor.button.delete" action="/chef/delor/delete"/>
 			</jstl:if>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(command, 'create')}">
-			<acme:submit code="pimpam.button.create" action="/chef/pimpam/create"/>
+			<acme:submit code="delor.button.create" action="/chef/delor/create"/>
 		</jstl:when>	
 	</jstl:choose>
  

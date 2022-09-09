@@ -4,10 +4,10 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="pimpam.code" path="code" width="10%"/>
-	<acme:list-column code="pimpam.title" path="title" width="10%"/>
-	<acme:list-column code="pimpam.description" path="description" width="10%"/>
-	<acme:list-column code="pimpam.budget" path="budget" width="10%"/>
+	<acme:list-column code="delor.code" path="code" width="10%"/>
+	<acme:list-column code="delor.title" path="title" width="10%"/>
+	<acme:list-column code="delor.description" path="description" width="10%"/>
+	<acme:list-column code="delor.budget" path="budget" width="10%"/>
 </acme:list>
 
-<acme:button code="pimpam.button.create" action="/chef/pimpam/create"/>
+<acme:button code="delor.button.create" action="/chef/delor/create"/>
