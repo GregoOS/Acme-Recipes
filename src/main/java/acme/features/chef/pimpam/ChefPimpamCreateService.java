@@ -1,11 +1,11 @@
-package acme.features.chef.pimpam;
+package acme.features.chef.delor;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.pimpam.Pimpam;
+import acme.entities.delor.Delor;
 import acme.features.chef.element.ChefElementRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -14,26 +14,26 @@ import acme.framework.services.AbstractCreateService;
 import acme.roles.Chef;
 
 @Service
-public class ChefPimpamCreateService implements AbstractCreateService<Chef, Pimpam> {
+public class ChefDelorCreateService implements AbstractCreateService<Chef, Delor> {
 
 	@Autowired
-	protected ChefPimpamRepository chefPimpamRepository;
+	protected ChefDelorRepository chefDelorRepository;
 	
 	@Autowired
-	protected ChefPimpamValidator chefPimpamValidator;
+	protected ChefDelorValidator chefDelorValidator;
 	
 	@Autowired
 	protected ChefElementRepository chefElementRepository;
 	
 	@Override
-	public boolean authorise(final Request<Pimpam> request) {
+	public boolean authorise(final Request<Delor> request) {
 		assert request != null;
 		
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Pimpam> request, final Pimpam entity, final Errors errors) {
+	public void bind(final Request<Delor> request, final Delor entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -43,50 +43,50 @@ public class ChefPimpamCreateService implements AbstractCreateService<Chef, Pimp
 	}
 
 	@Override
-	public void unbind(final Request<Pimpam> request, final Pimpam entity, final Model model) {
+	public void unbind(final Request<Delor> request, final Delor entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
 		request.unbind(entity, model, "code", "instantiationMoment","title", "description", "startDate", "finishDate", "budget", "link");
-		model.setAttribute("elements", this.chefPimpamRepository.findAllIngredientsByChef(request.getPrincipal().getActiveRoleId()));
+		model.setAttribute("elements", this.chefDelorRepository.findAllIngredientsByChef(request.getPrincipal().getActiveRoleId()));
 	}
 
 	@Override
-	public Pimpam instantiate(final Request<Pimpam> request) {
+	public Delor instantiate(final Request<Delor> request) {
 		assert request != null;
 		
-		Pimpam res;
+		Delor res;
 		final Date instantiationMoment = new Date(System.currentTimeMillis()-1);
 		
-		res = new Pimpam();
+		res = new Delor();
 		res.setInstantiationMoment(instantiationMoment);
 		
 		return res;
 	}
 
 	@Override
-	public void validate(final Request<Pimpam> request, final Pimpam entity, final Errors errors) {
+	public void validate(final Request<Delor> request, final Delor entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 		
 		if (!errors.hasErrors("code")) {
-			Pimpam existing;
+			Delor existing;
 
-			existing = this.chefPimpamRepository.findPimpamByCode(entity.getCode());
+			existing = this.chefDelorRepository.findDelorByCode(entity.getCode());
 			errors.state(request, existing == null, "code", "chef.element.error.duplicated");
 		}
 		
-		this.chefPimpamValidator.validatePimpam(request, entity, errors);
+		this.chefDelorValidator.validateDelor(request, entity, errors);
 	}
 
 	@Override
-	public void create(final Request<Pimpam> request, final Pimpam entity) {
+	public void create(final Request<Delor> request, final Delor entity) {
 		assert request != null;
 		assert entity != null;
 
-		this.chefPimpamRepository.save(entity);
+		this.chefDelorRepository.save(entity);
 	}
 	
 	

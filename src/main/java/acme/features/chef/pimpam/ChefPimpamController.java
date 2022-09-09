@@ -1,40 +1,40 @@
-package acme.features.chef.pimpam;
+package acme.features.chef.delor;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.pimpam.Pimpam;
+import acme.entities.delor.Delor;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Chef;
 
 @Controller
-public class ChefPimpamController extends AbstractController<Chef, Pimpam> {
+public class ChefDelorController extends AbstractController<Chef, Delor> {
 	
 	@Autowired
-	protected ChefPimpamListService chefPimpamListService;
+	protected ChefDelorListService chefDelorListService;
 	
 	@Autowired
-	protected ChefPimpamShowService chefPimpamShowService;
+	protected ChefDelorShowService chefDelorShowService;
 	
 	@Autowired
-	protected ChefPimpamCreateService chefPimpamCreateService;
+	protected ChefDelorCreateService chefDelorCreateService;
 	
 	@Autowired
-	protected ChefPimpamUpdateService chefPimpamUpdateService;
+	protected ChefDelorUpdateService chefDelorUpdateService;
 	
 	@Autowired
-	protected ChefPimpamDeleteService chefPimpamDeleteService;
+	protected ChefDelorDeleteService chefDelorDeleteService;
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", this.chefPimpamListService);
-		super.addCommand("show", this.chefPimpamShowService);
+		super.addCommand("list", this.chefDelorListService);
+		super.addCommand("show", this.chefDelorShowService);
 		
-		super.addCommand("create", this.chefPimpamCreateService);
-		super.addCommand("update", this.chefPimpamUpdateService);
-		super.addCommand("delete", this.chefPimpamDeleteService);
+		super.addCommand("create", this.chefDelorCreateService);
+		super.addCommand("update", this.chefDelorUpdateService);
+		super.addCommand("delete", this.chefDelorDeleteService);
 	}
 
 }

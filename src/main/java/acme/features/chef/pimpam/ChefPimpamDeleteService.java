@@ -1,9 +1,9 @@
-package acme.features.chef.pimpam;
+package acme.features.chef.delor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.pimpam.Pimpam;
+import acme.entities.delor.Delor;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -11,30 +11,30 @@ import acme.framework.services.AbstractDeleteService;
 import acme.roles.Chef;
 
 @Service
-public class ChefPimpamDeleteService implements AbstractDeleteService<Chef, Pimpam> {
+public class ChefDelorDeleteService implements AbstractDeleteService<Chef, Delor> {
 
 	@Autowired
-	protected ChefPimpamRepository chefPimpamRepository;
+	protected ChefDelorRepository chefDelorRepository;
 	
 	@Override
-	public boolean authorise(final Request<Pimpam> request) {
+	public boolean authorise(final Request<Delor> request) {
 		assert request != null;
 
 		boolean res;
 		int id;
-		Pimpam pimpam;
+		Delor delor;
 		Chef chef;
 
 		id = request.getModel().getInteger("id");
-		pimpam = this.chefPimpamRepository.findOnePimpamById(id);
-		chef = pimpam.getElement().getChef();
-		res = request.isPrincipal(chef) && pimpam.getElement().isDraft();
+		delor = this.chefDelorRepository.findOneDelorById(id);
+		chef = delor.getElement().getChef();
+		res = request.isPrincipal(chef) && delor.getElement().isDraft();
 
 		return res;
 	}
 
 	@Override
-	public void bind(final Request<Pimpam> request, final Pimpam entity, final Errors errors) {
+	public void bind(final Request<Delor> request, final Delor entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -43,7 +43,7 @@ public class ChefPimpamDeleteService implements AbstractDeleteService<Chef, Pimp
 	}
 
 	@Override
-	public void unbind(final Request<Pimpam> request, final Pimpam entity, final Model model) {
+	public void unbind(final Request<Delor> request, final Delor entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -52,31 +52,31 @@ public class ChefPimpamDeleteService implements AbstractDeleteService<Chef, Pimp
 	}
 
 	@Override
-	public Pimpam findOne(final Request<Pimpam> request) {
+	public Delor findOne(final Request<Delor> request) {
 		assert request != null;
 
-		Pimpam res;
+		Delor res;
 		int id;
 
 		id = request.getModel().getInteger("id");
-		res = this.chefPimpamRepository.findOnePimpamById(id);
+		res = this.chefDelorRepository.findOneDelorById(id);
 
 		return res;
 	}
 
 	@Override
-	public void validate(final Request<Pimpam> request, final Pimpam entity, final Errors errors) {
+	public void validate(final Request<Delor> request, final Delor entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void delete(final Request<Pimpam> request, final Pimpam entity) {
+	public void delete(final Request<Delor> request, final Delor entity) {
 		assert request != null;
 		assert entity != null;
 				
-		this.chefPimpamRepository.delete(entity);
+		this.chefDelorRepository.delete(entity);
 	}
 	
 	
