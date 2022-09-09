@@ -7,11 +7,11 @@
 </h2>
 <div>
 	<h2>
-		<acme:message code="administrator.admin-dashboard.form.pimpam"/>
+		<acme:message code="administrator.admin-dashboard.form.delor"/>
 	</h2>
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.ratioPimpamIngredients"/>		
-		<jstl:forEach var="ratio" items="${ratioPimpamIngredients}">
+		<acme:message code="administrator.admin-dashboard.form.ratioDelorIngredients"/>		
+		<jstl:forEach var="ratio" items="${ratioDelorIngredients}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${ratio.getKey()}"/>
@@ -24,8 +24,8 @@
 	</table>
 	
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.averageBudgetOfPimpam"/>
-		<jstl:forEach var="average" items="${averageBudgetOfPimpam}">
+		<acme:message code="administrator.admin-dashboard.form.averageIncomeOfDelor"/>
+		<jstl:forEach var="average" items="${averageIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${average.getKey()}"/>
@@ -38,8 +38,8 @@
 	</table>
 		
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.deviationBudgetOfPimpam"/>
-		<jstl:forEach var="deviation" items="${deviationBudgetOfPimpam}">
+		<acme:message code="administrator.admin-dashboard.form.deviationIncomeOfDelor"/>
+		<jstl:forEach var="deviation" items="${deviationIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${deviation.getKey()}"/>
@@ -52,8 +52,8 @@
 	</table>
 		
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.minimumBudgetOfPimpam"/>
-		<jstl:forEach var="minimum" items="${minimumBudgetOfPimpam}">
+		<acme:message code="administrator.admin-dashboard.form.minimumIncomeOfDelor"/>
+		<jstl:forEach var="minimum" items="${minimumIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${minimum.getKey()}"/>
@@ -66,8 +66,8 @@
 	</table>
 	
 	<table class="table table-sm">
-		<acme:message code="administrator.admin-dashboard.form.maximumBudgetOfPimpam"/>
-		<jstl:forEach var="maximum" items="${maximumBudgetOfPimpam}">
+		<acme:message code="administrator.admin-dashboard.form.maximumIncomeOfDelor"/>
+		<jstl:forEach var="maximum" items="${maximumIncomeOfDelor}">
 			<tr>
 				<th scope="row">
 					<jstl:out value="${maximum.getKey()}"/>

@@ -1,0 +1,27 @@
+delor.keylet=keylet
+delor.subject=subject
+delor.explanation=explicacion
+delor.income=ingreso
+delor.instantiationMoment=Momento de instancia
+delor.startDate=Fecha de Inicio
+delor.finishDate=Fecha de finalización
+delor.moreInfo=MoreInfo
+
+delor.button.create = Crear
+delor.button.update = Actualizar
+delor.button.delete = Eliminar
+
+chef.delor.element.name = Nombre del elemento
+
+chef.name = Nombre del chef
+
+chef.delor.form.error.negative-income = No puede haber un ingreso negativo
+chef.delor.form.error.startDate-too-close-to-creationDate = La fecha de inicio tiene que ser al menos un mes posterior a la de creación
+chef.delor.form.error.finishDate-too-close-to-startDate = La fecha final tiene que ser al menos una semana posterior a la de inicio
+chef.delor.form.error.wrongCurrency = Divisa no permitida
+
+chef.delor.keylet.duplicated=Este keylet ya está en uso
+chef.delor.form.error.keylet-not-correct = el keylet tiene que seguir un patron nnnnnn:yymmdd, usando el año, mes, dia actuales y n siendo 6 numeros cualesquiera
+delor.regex.keylet = keylet incorrecto
+chef.delor.error.spam=Hay spam en este texto
+chef.delor.element.notcorrect=Tiene que ser un ingrediente

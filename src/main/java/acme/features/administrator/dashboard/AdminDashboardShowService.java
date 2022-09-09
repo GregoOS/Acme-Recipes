@@ -54,11 +54,11 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		final Map<String, Map<String, Double>> minimumPriceFineDishes = new HashMap<String, Map<String,Double>>();
 		final Map<String, Map<String, Double>> maximumPriceFineDishes = new HashMap<String, Map<String,Double>>();
 		
-		final Map<String, Double> ratioPimpamIngredients;
-		final Map<String, Long> averageBudgetOfPimpam = new HashMap<String, Long>();
-		final Map<String, Long> deviationBudgetOfPimpam = new HashMap<String, Long>();
-		final Map<String, Long> minimumBudgetOfPimpam = new HashMap<String, Long>();
-		final Map<String, Long> maximumBudgetOfPimpam = new HashMap<String, Long>();
+		final Map<String, Double> ratioDelorIngredients;
+		final Map<String, Long> averageIncomeOfDelor = new HashMap<String, Long>();
+		final Map<String, Long> deviationIncomeOfDelor = new HashMap<String, Long>();
+		final Map<String, Long> minimumIncomeOfDelor = new HashMap<String, Long>();
+		final Map<String, Long> maximumIncomeOfDelor = new HashMap<String, Long>();
 		
 		result = new AdminDashboard();
 		
@@ -66,7 +66,7 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		totalNumberKitchenUtensils = this.repository.totalUtensils();
 		totalNumberFineDishes = this.repository.totalFineDishes().stream().collect(
 			Collectors.toMap(t->t.get(0).toString(), t->(Long)t.get(1)));
-		ratioPimpamIngredients = this.repository.getRatioOfPimpamIngredients().stream()
+		ratioDelorIngredients = this.repository.getRatioOfDelorIngredients().stream()
 			.collect(Collectors.toMap(p -> p.get(0).toString(), p -> (Double) p.get(1)));
 		
 		for(final String currency:currencies) {
@@ -90,10 +90,10 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 			maximumPriceFineDishes.put(c, this.repository.maximumFineDishes(c).stream()
 				.collect(Collectors.toMap(t->t.get(0).toString(), t->(Double)t.get(1))));
 			
-			averageBudgetOfPimpam.put(c, this.repository.getAverageBudget(c));
-			deviationBudgetOfPimpam.put(c, this.repository.getDeviationBudget(c));
-			minimumBudgetOfPimpam.put(c, this.repository.getMinimumBudget(c));
-			maximumBudgetOfPimpam.put(c, this.repository.getMaximumBudget(c));
+			averageIncomeOfDelor.put(c, this.repository.getAverageIncome(c));
+			deviationIncomeOfDelor.put(c, this.repository.getDeviationIncome(c));
+			minimumIncomeOfDelor.put(c, this.repository.getMinimumIncome(c));
+			maximumIncomeOfDelor.put(c, this.repository.getMaximumIncome(c));
 		}
 		
 		result.setTotalNumberIngredients(totalNumberIngredients);
@@ -114,11 +114,11 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		result.setMinimumPriceFineDishes(minimumPriceFineDishes);
 		result.setMaximumPriceFineDishes(maximumPriceFineDishes);
 		
-		result.setRatioPimpamIngredients(ratioPimpamIngredients);
-		result.setAverageBudgetOfPimpam(averageBudgetOfPimpam);
-		result.setDeviationBudgetOfPimpam(deviationBudgetOfPimpam);
-		result.setMinimumBudgetOfPimpam(minimumBudgetOfPimpam);
-		result.setMaximumBudgetOfPimpam(maximumBudgetOfPimpam);
+		result.setRatioDelorIngredients(ratioDelorIngredients);
+		result.setAverageIncomeOfDelor(averageIncomeOfDelor);
+		result.setDeviationIncomeOfDelor(deviationIncomeOfDelor);
+		result.setMinimumIncomeOfDelor(minimumIncomeOfDelor);
+		result.setMaximumIncomeOfDelor(maximumIncomeOfDelor);
 		
 		return result;
 	}
@@ -144,11 +144,11 @@ public class AdminDashboardShowService implements AbstractShowService<Administra
 		"deviationPriceFineDishes",
 		"minimumPriceFineDishes",
 		"maximumPriceFineDishes",
-		"ratioPimpamIngredients",
-		"averageBudgetOfPimpam",
-		"deviationBudgetOfPimpam",
-		"minimumBudgetOfPimpam",
-		"maximumBudgetOfPimpam");
+		"ratioDelorIngredients",
+		"averageIncomeOfDelor",
+		"deviationIncomeOfDelor",
+		"minimumIncomeOfDelor",
+		"maximumIncomeOfDelor");
 	}
 
 }

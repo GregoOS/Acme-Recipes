@@ -1,0 +1,27 @@
+delor.keylet=Keylet
+delor.subject=Subject
+delor.income=Income
+delor.explanation=Explanation
+delor.instantiationMoment=Instantiation Moment
+delor.startDate=Start Date
+delor.finishDate=Finish Date
+delor.moreInfo=MoreInfo
+
+delor.button.create = Create
+delor.button.update = Update
+delor.button.delete = Delete
+
+chef.delor.element.name = Element Name
+
+chef.name = Chef's Name
+
+chef.delor.form.error.negative-income = You can not have a negative income
+chef.delor.form.error.startDate-too-close-to-creationDate = The start date has to be at least one month after the creation date  
+chef.delor.form.error.finishDate-too-close-to-startDate = The finish date has to be at least one week after the start date
+chef.delor.form.error.wrongCurrency = The currency is not allowed
+
+chef.delor.keylet.duplicated=This keylet is already in use
+chef.delor.form.error.keylet-not-correct =  the keylet must follow the pattern nnnnnn:yymmdd, using year, month and day of today and n being any number
+delor.regex.keylet = Wrong keylet
+chef.delor.error.spam=There is spam in this text
+chef.delor.element.notcorrect=The element must be an ingredient
